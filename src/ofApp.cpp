@@ -87,9 +87,11 @@ void ofApp::drawPanelsToOutputFrameBuffer() {
 void ofApp::drawInfoUi() {
     input.draw(infoUiInputRect);
     ofDrawRectangle(infoUiInputRect);
+    ofDrawBitmapString("Input Framebuffer: ",1300,185);
 
     output.draw(infoUiOutputRect);
     ofDrawRectangle(infoUiOutputRect);
+    ofDrawBitmapString("Output Framebuffer: ",1300,595);
 }
 
 void ofApp::keyPressed(int key) { }
