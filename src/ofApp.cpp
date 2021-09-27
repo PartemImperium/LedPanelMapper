@@ -38,12 +38,16 @@ void ofApp::setupInfoUi(Config config) {
 }
 
 void ofApp::setupSyphonServer(Config config) {
-    syphonServer.setName("PanelMapper");
+    if (config.Outputs.Syphon.IsOutputEnabled) {
+        syphonServer.setName(config.Outputs.Syphon.Name);
+    }
 }
 
 void ofApp::setupSyphonClient(Config config) {
-    syphonClient.setup();
-    syphonClient.set(config.SyphonServer,config.SyphonApplication);
+    if (config.Inputs.Syphon.IsInputEnabled){
+        syphonClient.setup();
+        syphonClient.set(config.Inputs.Syphon.ServerName,config.Inputs.Syphon.ApplicationName);
+    }
 }
 
 void ofApp::update() { }
@@ -57,19 +61,25 @@ const float syphonW = 281.6;
 const float syphonH = 540;
 
 void ofApp::draw() {
+    // Draw Input to Input Framebuffer (we call each possible input but only one can be on at once).
     drawSyphonToInputFrameBuffer();
     
+    // Draw Input Framebuffer into Output Framebuffer (with panels scalled and put into top left corner).
     drawPanelsToOutputFrameBuffer();
     
-    syphonServer.publishTexture(&output.getTexture());
+    // Draw Output Framebuffer to all outputs (Multiple outputs can be turned on at the same time).
+    drawOutputFramebuffertoSyphon();
     
+    //Draw Info UI to main window.
     drawInfoUi();
 }
 
 void ofApp::drawSyphonToInputFrameBuffer() {
-    input.begin();
-        syphonClient.draw(0,0);
-    input.end();
+    if (c.Inputs.Syphon.IsInputEnabled){
+        input.begin();
+            syphonClient.draw(0,0);
+        input.end();
+    }
 }
 
 void ofApp::drawPanelsToOutputFrameBuffer() {
@@ -82,6 +92,10 @@ void ofApp::drawPanelsToOutputFrameBuffer() {
             input.getTexture().drawSubsection(appX,appY,appW,appH,syphonX,syphonY,syphonW,syphonH);
         }
     output.end();
+}
+
+void ofApp::drawOutputFramebuffertoSyphon() {
+    syphonServer.publishTexture(&output.getTexture());
 }
 
 void ofApp::drawInfoUi() {

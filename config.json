@@ -1,6 +1,17 @@
 {
-    "syphonApplication":"ProPresenter",
-    "syphonServer":"Syphon - 1",
+    "inputs":{
+      "syphon":{
+          "applicationName":"ProPresenter",
+          "serverName":"Syphon - 1",
+          "isEnabled":true
+      }
+    },
+    "outputs":{
+        "syphon":{
+            "name":"LED Mapper",
+            "isEnabled":true
+        }
+    },
     "panels":[
         {
             "x":0,

@@ -499,6 +499,145 @@
 				<key>sourceTree</key>
 				<string>SOURCE_ROOT</string>
 			</dict>
+			<key>4C80B944A15F4E36E43B3BD7</key>
+			<dict>
+				<key>fileRef</key>
+				<string>A361D04BD31CA5126F826526</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>A361D04BD31CA5126F826526</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Outputs.cpp</string>
+				<key>path</key>
+				<string>src/Outputs.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>A70B4D662505242461FEDA7D</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Outputs.hpp</string>
+				<key>path</key>
+				<string>src/Outputs.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>E938620371CDEDCDBCB7975E</key>
+			<dict>
+				<key>fileRef</key>
+				<string>11C60D63C893EFE6C98B3A1E</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>11C60D63C893EFE6C98B3A1E</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>SyphonInput.cpp</string>
+				<key>path</key>
+				<string>src/config/Inputs/SyphonInput.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>C50750288F5A605EFFC4F51C</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>A82C69FA80FD9B3589BAF445</string>
+					<string>11C60D63C893EFE6C98B3A1E</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>Inputs</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>A82C69FA80FD9B3589BAF445</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>SyphonInput.hpp</string>
+				<key>path</key>
+				<string>src/config/Inputs/SyphonInput.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>2497C0D895125D45A3BE1464</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>SyphonOutput.hpp</string>
+				<key>path</key>
+				<string>src/config/Outputs/SyphonOutput.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>D5B1F2B9B73DA1EDFDE1C5C1</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>F51F29C52442A6C862F6B89D</string>
+					<string>2497C0D895125D45A3BE1464</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>Outputs</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>F757D4CF8930CC12F3E934A8</key>
+			<dict>
+				<key>fileRef</key>
+				<string>F51F29C52442A6C862F6B89D</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>F51F29C52442A6C862F6B89D</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>SyphonOutput.cpp</string>
+				<key>path</key>
+				<string>src/config/Outputs/SyphonOutput.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
 			<key>2D528D930C64BFEF0745C48B</key>
 			<dict>
 				<key>explicitFileType</key>
@@ -536,6 +675,28 @@
 				<key>sourceTree</key>
 				<string>SOURCE_ROOT</string>
 			</dict>
+			<key>9BB1E226B65308E60F0F4C95</key>
+			<dict>
+				<key>fileRef</key>
+				<string>BF7ABB14DF1DBB06877B1988</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>BF7ABB14DF1DBB06877B1988</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Inputs.cpp</string>
+				<key>path</key>
+				<string>src/config/Inputs.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
 			<key>034E5C8216CC9056F0421D3C</key>
 			<dict>
 				<key>fileRef</key>
@@ -558,22 +719,6 @@
 				<key>sourceTree</key>
 				<string>SOURCE_ROOT</string>
 			</dict>
-			<key>F88CAFA6EF122FC9CEE287C6</key>
-			<dict>
-				<key>children</key>
-				<array>
-					<string>BD72C6A0A78D8BC0A22C7314</string>
-					<string>43DE76DDF242991588AF46D6</string>
-					<string>D834A94BBDE84A443B7275D3</string>
-					<string>2D528D930C64BFEF0745C48B</string>
-				</array>
-				<key>isa</key>
-				<string>PBXGroup</string>
-				<key>name</key>
-				<string>config</string>
-				<key>sourceTree</key>
-				<string>&lt;group&gt;</string>
-			</dict>
 			<key>BD72C6A0A78D8BC0A22C7314</key>
 			<dict>
 				<key>explicitFileType</key>
@@ -586,6 +731,41 @@
 				<string>Config.hpp</string>
 				<key>path</key>
 				<string>src/config/Config.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>F88CAFA6EF122FC9CEE287C6</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>08FF2187B3B2F0CECE38497A</string>
+					<string>BD72C6A0A78D8BC0A22C7314</string>
+					<string>43DE76DDF242991588AF46D6</string>
+					<string>BF7ABB14DF1DBB06877B1988</string>
+					<string>D834A94BBDE84A443B7275D3</string>
+					<string>2D528D930C64BFEF0745C48B</string>
+					<string>D5B1F2B9B73DA1EDFDE1C5C1</string>
+					<string>C50750288F5A605EFFC4F51C</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>config</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>08FF2187B3B2F0CECE38497A</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Inputs.hpp</string>
+				<key>path</key>
+				<string>src/config/Inputs.hpp</string>
 				<key>sourceTree</key>
 				<string>SOURCE_ROOT</string>
 			</dict>
@@ -761,6 +941,8 @@ fi
 						<string>src</string>
 						<string>src</string>
 						<string>src/config</string>
+						<string>src/config/Inputs</string>
+						<string>src/config/Outputs</string>
 						<string>../../../addons/ofxJSON/libs</string>
 						<string>../../../addons/ofxJSON/libs/jsoncpp</string>
 						<string>../../../addons/ofxJSON/libs/jsoncpp/include</string>
@@ -818,6 +1000,8 @@ fi
 						<string>src</string>
 						<string>src</string>
 						<string>src/config</string>
+						<string>src/config/Inputs</string>
+						<string>src/config/Outputs</string>
 						<string>../../../addons/ofxJSON/libs</string>
 						<string>../../../addons/ofxJSON/libs/jsoncpp</string>
 						<string>../../../addons/ofxJSON/libs/jsoncpp/include</string>
@@ -3634,6 +3818,8 @@ fi
 						<string>src</string>
 						<string>src</string>
 						<string>src/config</string>
+						<string>src/config/Inputs</string>
+						<string>src/config/Outputs</string>
 						<string>../../../addons/ofxJSON/libs</string>
 						<string>../../../addons/ofxJSON/libs/jsoncpp</string>
 						<string>../../../addons/ofxJSON/libs/jsoncpp/include</string>
@@ -3710,6 +3896,8 @@ fi
 						<string>src</string>
 						<string>src</string>
 						<string>src/config</string>
+						<string>src/config/Inputs</string>
+						<string>src/config/Outputs</string>
 						<string>../../../addons/ofxJSON/libs</string>
 						<string>../../../addons/ofxJSON/libs/jsoncpp</string>
 						<string>../../../addons/ofxJSON/libs/jsoncpp/include</string>
@@ -3749,7 +3937,11 @@ fi
 					<string>E4B69E200A3A1BDC003C02F2</string>
 					<string>E4B69E210A3A1BDC003C02F2</string>
 					<string>034E5C8216CC9056F0421D3C</string>
+					<string>9BB1E226B65308E60F0F4C95</string>
 					<string>FCDEC2573F495CF9DB328EAE</string>
+					<string>F757D4CF8930CC12F3E934A8</string>
+					<string>E938620371CDEDCDBCB7975E</string>
+					<string>4C80B944A15F4E36E43B3BD7</string>
 					<string>FB84AAF8D1B7A95266DB5C09</string>
 					<string>BEDFEE7400C58EA4E412B757</string>
 					<string>C9109422648B170B07A778CF</string>
@@ -3859,6 +4051,8 @@ fi
 						<string>src</string>
 						<string>src</string>
 						<string>src/config</string>
+						<string>src/config/Inputs</string>
+						<string>src/config/Outputs</string>
 						<string>../../../addons/ofxJSON/libs</string>
 						<string>../../../addons/ofxJSON/libs/jsoncpp</string>
 						<string>../../../addons/ofxJSON/libs/jsoncpp/include</string>
@@ -3925,6 +4119,8 @@ fi
 						<string>src</string>
 						<string>src</string>
 						<string>src/config</string>
+						<string>src/config/Inputs</string>
+						<string>src/config/Outputs</string>
 						<string>../../../addons/ofxJSON/libs</string>
 						<string>../../../addons/ofxJSON/libs/jsoncpp</string>
 						<string>../../../addons/ofxJSON/libs/jsoncpp/include</string>
@@ -3976,6 +4172,8 @@ fi
 					<string>E4B69E1E0A3A1BDC003C02F2</string>
 					<string>E4B69E1F0A3A1BDC003C02F2</string>
 					<string>F88CAFA6EF122FC9CEE287C6</string>
+					<string>A70B4D662505242461FEDA7D</string>
+					<string>A361D04BD31CA5126F826526</string>
 				</array>
 				<key>isa</key>
 				<string>PBXGroup</string>

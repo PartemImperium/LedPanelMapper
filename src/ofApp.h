@@ -48,5 +48,8 @@ class ofApp : public ofBaseApp{
 
         ofxSyphonServer syphonServer;
         void setupSyphonServer(Config config);
+        void drawOutputFramebuffertoSyphon();
+    
+        // Panel scaling and selection.
         void drawPanelsToOutputFrameBuffer();
 };

@@ -8,12 +8,14 @@
 #include <string>
 #include "ofxJSONElement.h"
 #include "Panel.hpp"
+#include "Inputs.hpp"
+#include "Outputs.hpp"
 
 class Config {
     public:
-        std::string SyphonApplication;
-        std::string SyphonServer;
         
+        Inputs Inputs;
+        Outputs Outputs;
         std::vector<Panel> Panels;
 
         void setup(ofxJSONElement json);
