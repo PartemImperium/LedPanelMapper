@@ -29,14 +29,23 @@ class ofApp : public ofBaseApp{
     private:
         Config c;
         void setupConfig();
+    
+        // Info UI
+        ofRectangle infoUiInputRect;
+        ofRectangle infoUiOutputRect;
+        void setupInfoUi(Config config);
+        void drawInfoUi();
 
+        // Inputs
         ofFbo input;
-        ofFbo output;
     
         ofxSyphonClient syphonClient;
         void setupSyphonClient(Config config);
         void drawSyphonToInputFrameBuffer();
     
+        // Outputs
+        ofFbo output;
+
         ofxSyphonServer syphonServer;
         void setupSyphonServer(Config config);
         void drawPanelsToOutputFrameBuffer();
