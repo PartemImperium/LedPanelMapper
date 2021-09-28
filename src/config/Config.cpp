@@ -27,6 +27,10 @@ void Config::setup(ofxJSONElement json){
     ofxJSONElement syphonOutput = outputs["syphon"];
     Outputs.Syphon.Name = syphonOutput["name"].asString();
     Outputs.Syphon.IsOutputEnabled = syphonOutput["isEnabled"].asBool();
+    
+    ofxJSONElement ndiOutput = outputs["ndi"];
+    Outputs.Ndi.Name = syphonOutput["name"].asString();
+    Outputs.Ndi.IsOutputEnabled = syphonOutput["isEnabled"].asBool();
 
     // Panels
     ofxJSONElement panels = json["panels"];

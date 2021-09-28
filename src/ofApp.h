@@ -16,6 +16,8 @@
 #include "ofxNDIReceiver.h"
 #include "ofxNDIRecvStream.h"
 #include "ofxNDIFinder.h"
+#include "ofxNDISender.h"
+#include "ofxNDISendStream.h"
 
 class ofApp : public ofBaseApp{
 
@@ -72,6 +74,12 @@ class ofApp : public ofBaseApp{
         void setupSyphonServer(Config config);
         void drawOutputFramebuffertoSyphon();
     
+        ofxNDISender ndiSender;
+        ofxNDISendVideo ndiSendVideo;
+        void setupNdiSender(Config config);
+        void drawOutputFramebufferToNdi();
+        
+
         // Panel scaling and selection.
         void drawPanelsToOutputFrameBuffer();
 };

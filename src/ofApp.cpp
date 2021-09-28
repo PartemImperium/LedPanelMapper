@@ -18,6 +18,7 @@ void ofApp::setup() {
     output.allocate(1920, 1080);
     
     setupSyphonServer(c);
+    setupNdiSender(c);
 }
 
 void ofApp::setupConfig() {
@@ -39,11 +40,6 @@ void ofApp::setupInfoUi(Config config) {
     ofSetLineWidth(2);
 }
 
-void ofApp::setupSyphonServer(Config config) {
-    if (config.Outputs.Syphon.IsOutputEnabled) {
-        syphonServer.setName(config.Outputs.Syphon.Name);
-    }
-}
 void ofApp::setupVideoPlayer(Config config){
     if (config.Inputs.VideoPlayer.IsInputEnabled){
         videoPlayer.load(config.Inputs.VideoPlayer.FilePath);
@@ -72,6 +68,21 @@ void ofApp::setupNdiClient(Config config) {
                 ndiReceiver.setup();
                 ndiVideoFrameSync.setup(ndiReceiver);
             }
+        }
+    }
+}
+
+void ofApp::setupSyphonServer(Config config) {
+    if (config.Outputs.Syphon.IsOutputEnabled) {
+        syphonServer.setName(config.Outputs.Syphon.Name);
+    }
+}
+
+void ofApp::setupNdiSender(Config config){
+    if (c.Outputs.Ndi.IsOutputEnabled){
+        if(ndiSender.setup(c.Outputs.Ndi.Name)) {
+            ndiSendVideo.setup(ndiSender);
+            ndiSendVideo.setAsync(true);
         }
     }
 }
@@ -130,6 +141,7 @@ void ofApp::draw() {
     
     // Draw Output Framebuffer to all outputs (Multiple outputs can be turned on at the same time).
     drawOutputFramebuffertoSyphon();
+    drawOutputFramebufferToNdi();
     
     //Draw Info UI to main window.
     drawInfoUi();
@@ -143,7 +155,7 @@ void ofApp::drawVideoPlayerToInputFrameBuffer(){
 
 void ofApp::drawSyphonToInputFrameBuffer() {
     if (c.Inputs.Syphon.IsInputEnabled){
-            syphonClient.draw(0,0);
+        syphonClient.draw(0,0);
     }
 }
 
@@ -166,6 +178,14 @@ void ofApp::drawPanelsToOutputFrameBuffer() {
 void ofApp::drawOutputFramebuffertoSyphon() {
     if (c.Outputs.Syphon.IsOutputEnabled){
         syphonServer.publishTexture(&output.getTexture());
+    }
+}
+
+void ofApp::drawOutputFramebufferToNdi(){
+    if (c.Outputs.Ndi.IsOutputEnabled){
+        ofPixels tempPixels;
+        output.readToPixels(tempPixels);
+        ndiSendVideo.send(tempPixels);
     }
 }
 

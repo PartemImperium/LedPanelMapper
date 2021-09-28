@@ -18,6 +18,10 @@
         "syphon":{
             "name":"LED Mapper",
             "isEnabled":true
+        },
+        "ndi":{
+            "name":"LED Mapper",
+            "isEnabled":true
         }
     },
     "panels":[

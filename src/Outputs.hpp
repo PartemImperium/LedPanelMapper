@@ -5,8 +5,10 @@
 
 #endif /* Outputs_hpp */
 #include "SyphonOutput.hpp"
+#include "NdiOutput.hpp"
 
 class Outputs {
     public:
         SyphonOutput Syphon;
+        NdiOutput Ndi;
 };
