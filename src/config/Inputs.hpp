@@ -5,8 +5,10 @@
 
 #endif /* Inputs_hpp */
 #include "SyphonInput.hpp"
+#include "NdiInput.hpp"
 
 class Inputs {
     public:
         SyphonInput Syphon;
+        NdiInput Ndi;
 };

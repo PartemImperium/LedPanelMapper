@@ -1,11 +1,21 @@
 #pragma once
 
+// Open Frameworks
 #include "ofMain.h"
+
+// Project Code
 #include "Config.hpp"
 
-#include "ofxSyphonClient.h"
+// JSON addon
 #include "ofxJSONElement.h"
 
+// Syphon addon
+#include "ofxSyphonClient.h"
+
+// NDI addon
+#include "ofxNDIReceiver.h"
+#include "ofxNDIRecvStream.h"
+#include "ofxNDIFinder.h"
 
 class ofApp : public ofBaseApp{
 
@@ -42,6 +52,13 @@ class ofApp : public ofBaseApp{
         ofxSyphonClient syphonClient;
         void setupSyphonClient(Config config);
         void drawSyphonToInputFrameBuffer();
+        void updateSyphonInputFeed();
+
+        ofxNDIReceiver ndiReceiver;
+        ofxNDIRecvVideoFrameSync ndiVideoFrameSync;
+        void setupNdiClient(Config config);
+        void drawNdiToInputFrameBuffer();
+        void updateNdiInputFeed();
     
         // Outputs
         ofFbo output;

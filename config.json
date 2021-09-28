@@ -3,6 +3,10 @@
       "syphon":{
           "applicationName":"ProPresenter",
           "serverName":"Syphon - 1",
+          "isEnabled":false
+      },
+      "ndi":{
+          "feedName":"HOSTNAME (Test Patterns)",
           "isEnabled":true
       }
     },

@@ -11,6 +11,7 @@ void ofApp::setup() {
     input.allocate(1920, 1080);
     
     setupSyphonClient(c);
+    setupNdiClient(c);
     
     // Setup Outputs
     output.allocate(1920, 1080);
@@ -50,7 +51,48 @@ void ofApp::setupSyphonClient(Config config) {
     }
 }
 
-void ofApp::update() { }
+void ofApp::setupNdiClient(Config config) {
+    if (config.Inputs.Ndi.IsInputEnabled){
+        NDIlib_initialize();
+        
+        ofxNDIFinder ndiFinder;
+        auto sources = ndiFinder.listSources();
+        
+        for (int i = 0; i < sources.size(); i++) {
+            auto s = sources[i];
+            if (s.p_ndi_name == config.Inputs.Ndi.FeedName){
+                ndiReceiver.changeConnection(s);
+                ndiReceiver.setup();
+                ndiVideoFrameSync.setup(ndiReceiver);
+            }
+        }
+    }
+}
+
+void ofApp::update()
+{
+    updateSyphonInputFeed();
+    updateNdiInputFeed();
+}
+
+void ofApp::updateSyphonInputFeed(){
+    // Nothing to do here. Syphon Input uses draw not update.
+}
+
+void ofApp::updateNdiInputFeed(){
+    if (c.Inputs.Ndi.IsInputEnabled) {
+        if(ndiReceiver.isConnected()) {
+            ndiVideoFrameSync.update();
+            if(ndiVideoFrameSync.isFrameNew()) {
+                ofPixels tempPixels;
+                ndiVideoFrameSync.decodeTo(tempPixels);
+                input.begin();
+                ofImage(tempPixels).draw(0,0);
+                input.end();
+            }
+        }
+    }
+}
 
 const float appY = 0;
 
@@ -63,7 +105,7 @@ const float syphonH = 540;
 void ofApp::draw() {
     // Draw Input to Input Framebuffer (we call each possible input but only one can be on at once).
     drawSyphonToInputFrameBuffer();
-    
+    drawNdiToInputFrameBuffer();
     // Draw Input Framebuffer into Output Framebuffer (with panels scalled and put into top left corner).
     drawPanelsToOutputFrameBuffer();
     
@@ -80,6 +122,10 @@ void ofApp::drawSyphonToInputFrameBuffer() {
             syphonClient.draw(0,0);
         input.end();
     }
+}
+
+void ofApp::drawNdiToInputFrameBuffer() {
+    // Nothing to do here. NDI Input uses update not draw.
 }
 
 void ofApp::drawPanelsToOutputFrameBuffer() {

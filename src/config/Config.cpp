@@ -13,6 +13,10 @@ void Config::setup(ofxJSONElement json){
     Inputs.Syphon.ServerName = syphonInput["serverName"].asString();
     Inputs.Syphon.IsInputEnabled = syphonInput["isEnabled"].asBool();
     
+    ofxJSONElement ndiInput = inputs["ndi"];
+    Inputs.Ndi.FeedName = ndiInput["feedName"].asString();
+    Inputs.Ndi.IsInputEnabled = ndiInput["isEnabled"].asBool();
+    
     // Outputs
     ofxJSONElement outputs = json["outputs"];
     
