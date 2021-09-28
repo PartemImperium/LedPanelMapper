@@ -44,6 +44,7 @@ void ofApp::setupVideoPlayer(Config config){
     if (config.Inputs.VideoPlayer.IsInputEnabled){
         videoPlayer.load(config.Inputs.VideoPlayer.FilePath);
         videoPlayer.play();
+        inputName = "Video Player";
     }
 }
 
@@ -51,6 +52,7 @@ void ofApp::setupSyphonClient(Config config) {
     if (config.Inputs.Syphon.IsInputEnabled){
         syphonClient.setup();
         syphonClient.set(config.Inputs.Syphon.ServerName,config.Inputs.Syphon.ApplicationName);
+        inputName = "Syphon Client";
     }
 }
 
@@ -69,12 +71,14 @@ void ofApp::setupNdiClient(Config config) {
                 ndiVideoFrameSync.setup(ndiReceiver);
             }
         }
+        inputName = "NDI Receiver";
     }
 }
 
 void ofApp::setupSyphonServer(Config config) {
     if (config.Outputs.Syphon.IsOutputEnabled) {
         syphonServer.setName(config.Outputs.Syphon.Name);
+        outputNames+="Syphon Server ";
     }
 }
 
@@ -84,6 +88,7 @@ void ofApp::setupNdiSender(Config config){
             ndiSendVideo.setup(ndiSender);
             ndiSendVideo.setAsync(true);
         }
+        outputNames+="NDI Sender ";
     }
 }
 
@@ -190,13 +195,17 @@ void ofApp::drawOutputFramebufferToNdi(){
 }
 
 void ofApp::drawInfoUi() {
+    std::string fps = "FPS: " + std::to_string(ofGetFrameRate());
+    ofDrawBitmapString(fps,1300,170);
+    
     input.draw(infoUiInputRect);
     ofDrawRectangle(infoUiInputRect);
-    ofDrawBitmapString("Input Framebuffer: ",1300,185);
+    
+    ofDrawBitmapString("Input Framebuffer: " + inputName,1300,185);
 
     output.draw(infoUiOutputRect);
     ofDrawRectangle(infoUiOutputRect);
-    ofDrawBitmapString("Output Framebuffer: ",1300,595);
+    ofDrawBitmapString("Output Framebuffer: " + outputNames,1300,595);
 }
 
 void ofApp::keyPressed(int key) { }

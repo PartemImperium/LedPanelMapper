@@ -1,4 +1,6 @@
 #pragma once
+// std
+#include <string>
 
 // Open Frameworks
 #include "ofMain.h"
@@ -50,6 +52,7 @@ class ofApp : public ofBaseApp{
 
         // Inputs
         ofFbo input;
+        std::string inputName;
     
         ofVideoPlayer videoPlayer;
         void setupVideoPlayer(Config config);
@@ -69,7 +72,8 @@ class ofApp : public ofBaseApp{
     
         // Outputs
         ofFbo output;
-
+        std::string outputNames;
+    
         ofxSyphonServer syphonServer;
         void setupSyphonServer(Config config);
         void drawOutputFramebuffertoSyphon();
