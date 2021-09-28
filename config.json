@@ -1,5 +1,9 @@
 {
     "inputs":{
+        "videoPlayer":{
+            "filePath":"VideoSyncSource.mp4",
+            "isEnabled":true
+        },
       "syphon":{
           "applicationName":"ProPresenter",
           "serverName":"Syphon - 1",
@@ -7,7 +11,7 @@
       },
       "ndi":{
           "feedName":"HOSTNAME (Test Patterns)",
-          "isEnabled":true
+          "isEnabled":false
       }
     },
     "outputs":{

@@ -49,6 +49,11 @@ class ofApp : public ofBaseApp{
         // Inputs
         ofFbo input;
     
+        ofVideoPlayer videoPlayer;
+        void setupVideoPlayer(Config config);
+        void drawVideoPlayerToInputFrameBuffer();
+        void updateVideoPlayerInputFeed();
+    
         ofxSyphonClient syphonClient;
         void setupSyphonClient(Config config);
         void drawSyphonToInputFrameBuffer();

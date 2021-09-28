@@ -10,6 +10,7 @@ void ofApp::setup() {
     // Setup Inputs
     input.allocate(1920, 1080);
     
+    setupVideoPlayer(c);
     setupSyphonClient(c);
     setupNdiClient(c);
     
@@ -43,6 +44,12 @@ void ofApp::setupSyphonServer(Config config) {
         syphonServer.setName(config.Outputs.Syphon.Name);
     }
 }
+void ofApp::setupVideoPlayer(Config config){
+    if (config.Inputs.VideoPlayer.IsInputEnabled){
+        videoPlayer.load(config.Inputs.VideoPlayer.FilePath);
+        videoPlayer.play();
+    }
+}
 
 void ofApp::setupSyphonClient(Config config) {
     if (config.Inputs.Syphon.IsInputEnabled){
@@ -71,8 +78,15 @@ void ofApp::setupNdiClient(Config config) {
 
 void ofApp::update()
 {
+    updateVideoPlayerInputFeed();
     updateSyphonInputFeed();
     updateNdiInputFeed();
+}
+
+void ofApp::updateVideoPlayerInputFeed(){
+    if (c.Inputs.VideoPlayer.IsInputEnabled){
+        videoPlayer.update();
+    }
 }
 
 void ofApp::updateSyphonInputFeed(){
@@ -104,8 +118,13 @@ const float syphonH = 540;
 
 void ofApp::draw() {
     // Draw Input to Input Framebuffer (we call each possible input but only one can be on at once).
+    input.begin();
+
+    drawVideoPlayerToInputFrameBuffer();
     drawSyphonToInputFrameBuffer();
     drawNdiToInputFrameBuffer();
+
+    input.end();
     // Draw Input Framebuffer into Output Framebuffer (with panels scalled and put into top left corner).
     drawPanelsToOutputFrameBuffer();
     
@@ -116,11 +135,15 @@ void ofApp::draw() {
     drawInfoUi();
 }
 
+void ofApp::drawVideoPlayerToInputFrameBuffer(){
+    if (c.Inputs.VideoPlayer.IsInputEnabled){
+        videoPlayer.draw(0,0);
+    }
+}
+
 void ofApp::drawSyphonToInputFrameBuffer() {
     if (c.Inputs.Syphon.IsInputEnabled){
-        input.begin();
             syphonClient.draw(0,0);
-        input.end();
     }
 }
 
@@ -141,7 +164,9 @@ void ofApp::drawPanelsToOutputFrameBuffer() {
 }
 
 void ofApp::drawOutputFramebuffertoSyphon() {
-    syphonServer.publishTexture(&output.getTexture());
+    if (c.Outputs.Syphon.IsOutputEnabled){
+        syphonServer.publishTexture(&output.getTexture());
+    }
 }
 
 void ofApp::drawInfoUi() {

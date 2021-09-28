@@ -8,6 +8,10 @@ void Config::setup(ofxJSONElement json){
     // Inputs
     ofxJSONElement inputs = json["inputs"];
     
+    ofxJSONElement videoPlayerInput = inputs["videoPlayer"];
+    Inputs.VideoPlayer.FilePath = videoPlayerInput["filePath"].asString();
+    Inputs.VideoPlayer.IsInputEnabled = videoPlayerInput["isEnabled"].asBool();
+ 
     ofxJSONElement syphonInput = inputs["syphon"];
     Inputs.Syphon.ApplicationName = syphonInput["applicationName"].asString();
     Inputs.Syphon.ServerName = syphonInput["serverName"].asString();
