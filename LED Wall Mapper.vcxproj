@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="Debug|Win32">
+			<Configuration>Debug</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Debug|x64">
+			<Configuration>Debug</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|Win32">
+			<Configuration>Release</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|x64">
+			<Configuration>Release</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Condition="'$(WindowsTargetPlatformVersion)'==''">
+		<LatestTargetPlatformVersion>$([Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion('Windows', '10.0'))</LatestTargetPlatformVersion>
+		<WindowsTargetPlatformVersion Condition="'$(WindowsTargetPlatformVersion)' == ''">$(LatestTargetPlatformVersion)</WindowsTargetPlatformVersion>
+		<TargetPlatformVersion>$(WindowsTargetPlatformVersion)</TargetPlatformVersion>
+	</PropertyGroup>
+	<PropertyGroup Label="Globals">
+		<ProjectGuid>{7FD42DF7-442E-479A-BA76-D0022F99702A}</ProjectGuid>
+		<Keyword>Win32Proj</Keyword>
+		<RootNamespace>LED Wall Mapper</RootNamespace>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+		<ConfigurationType>Application</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+		<ConfigurationType>Application</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+		<ConfigurationType>Application</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<WholeProgramOptimization>true</WholeProgramOptimization>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+		<ConfigurationType>Application</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<WholeProgramOptimization>true</WholeProgramOptimization>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
+	</ImportGroup>
+	<PropertyGroup Label="UserMacros" />
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+		<OutDir>bin\</OutDir>
+		<IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
+		<TargetName>$(ProjectName)_debug</TargetName>
+		<LinkIncremental>true</LinkIncremental>
+		<GenerateManifest>true</GenerateManifest>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+		<OutDir>bin\</OutDir>
+		<IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
+		<TargetName>$(ProjectName)_debug</TargetName>
+		<LinkIncremental>true</LinkIncremental>
+		<GenerateManifest>true</GenerateManifest>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+		<OutDir>bin\</OutDir>
+		<IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
+		<LinkIncremental>false</LinkIncremental>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+		<OutDir>bin\</OutDir>
+		<IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
+		<LinkIncremental>false</LinkIncremental>
+	</PropertyGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+		<ClCompile>
+			<Optimization>Disabled</Optimization>
+			<BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+			<WarningLevel>Level3</WarningLevel>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\Inputs;src\Outputs;src\config;src\config\Inputs;src\config\Outputs;..\..\..\addons\ofxJSON\libs;..\..\..\addons\ofxJSON\libs\jsoncpp;..\..\..\addons\ofxJSON\libs\jsoncpp\include;..\..\..\addons\ofxJSON\libs\jsoncpp\include\json;..\..\..\addons\ofxJSON\libs\jsoncpp\src;..\..\..\addons\ofxJSON\src;..\..\..\addons\ofxNDI\libs\NDI\include;..\..\..\addons\ofxNDI\libs\utils;..\..\..\addons\ofxNDI\src;..\..\..\addons\ofxNDI\src\utils;..\..\..\addons\ofxSyphon\libs;..\..\..\addons\ofxSyphon\libs\Syphon;..\..\..\addons\ofxSyphon\libs\Syphon\lib;..\..\..\addons\ofxSyphon\libs\Syphon\src;..\..\..\addons\ofxSyphon\src</AdditionalIncludeDirectories>
+			<CompileAs>CompileAsCpp</CompileAs>
+			<ObjectFileName>$(IntDir)</ObjectFileName>
+		</ClCompile>
+		<Link>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<SubSystem>Console</SubSystem>
+			<RandomizedBaseAddress>false</RandomizedBaseAddress>
+			<AdditionalDependencies>%(AdditionalDependencies);Processing.NDI.Lib.x86.lib</AdditionalDependencies>
+			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\addons\ofxNDI\libs\NDI\lib\vs\Win32</AdditionalLibraryDirectories>
+		</Link>
+		<PostBuildEvent />
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+		<ClCompile>
+			<Optimization>Disabled</Optimization>
+			<BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+			<WarningLevel>Level3</WarningLevel>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\Inputs;src\Outputs;src\config;src\config\Inputs;src\config\Outputs;..\..\..\addons\ofxJSON\libs;..\..\..\addons\ofxJSON\libs\jsoncpp;..\..\..\addons\ofxJSON\libs\jsoncpp\include;..\..\..\addons\ofxJSON\libs\jsoncpp\include\json;..\..\..\addons\ofxJSON\libs\jsoncpp\src;..\..\..\addons\ofxJSON\src;..\..\..\addons\ofxNDI\libs\NDI\include;..\..\..\addons\ofxNDI\libs\utils;..\..\..\addons\ofxNDI\src;..\..\..\addons\ofxNDI\src\utils;..\..\..\addons\ofxSyphon\libs;..\..\..\addons\ofxSyphon\libs\Syphon;..\..\..\addons\ofxSyphon\libs\Syphon\lib;..\..\..\addons\ofxSyphon\libs\Syphon\src;..\..\..\addons\ofxSyphon\src</AdditionalIncludeDirectories>
+			<CompileAs>CompileAsCpp</CompileAs>
+			<MultiProcessorCompilation>true</MultiProcessorCompilation>
+			<ObjectFileName>$(IntDir)</ObjectFileName>
+		</ClCompile>
+		<Link>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<SubSystem>Console</SubSystem>
+			<RandomizedBaseAddress>false</RandomizedBaseAddress>
+			<AdditionalDependencies>%(AdditionalDependencies);Processing.NDI.Lib.x64.lib</AdditionalDependencies>
+			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\addons\ofxNDI\libs\NDI\lib\vs\x64</AdditionalLibraryDirectories>
+		</Link>
+		<PostBuildEvent />
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+		<ClCompile>
+			<WholeProgramOptimization>false</WholeProgramOptimization>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+			<WarningLevel>Level3</WarningLevel>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\Inputs;src\Outputs;src\config;src\config\Inputs;src\config\Outputs;..\..\..\addons\ofxJSON\libs;..\..\..\addons\ofxJSON\libs\jsoncpp;..\..\..\addons\ofxJSON\libs\jsoncpp\include;..\..\..\addons\ofxJSON\libs\jsoncpp\include\json;..\..\..\addons\ofxJSON\libs\jsoncpp\src;..\..\..\addons\ofxJSON\src;..\..\..\addons\ofxNDI\libs\NDI\include;..\..\..\addons\ofxNDI\libs\utils;..\..\..\addons\ofxNDI\src;..\..\..\addons\ofxNDI\src\utils;..\..\..\addons\ofxSyphon\libs;..\..\..\addons\ofxSyphon\libs\Syphon;..\..\..\addons\ofxSyphon\libs\Syphon\lib;..\..\..\addons\ofxSyphon\libs\Syphon\src;..\..\..\addons\ofxSyphon\src</AdditionalIncludeDirectories>
+			<CompileAs>CompileAsCpp</CompileAs>
+			<MultiProcessorCompilation>true</MultiProcessorCompilation>
+			<ObjectFileName>$(IntDir)</ObjectFileName>
+		</ClCompile>
+		<Link>
+			<IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+			<GenerateDebugInformation>false</GenerateDebugInformation>
+			<SubSystem>Console</SubSystem>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+			<RandomizedBaseAddress>false</RandomizedBaseAddress>
+			<AdditionalDependencies>%(AdditionalDependencies);Processing.NDI.Lib.x86.lib</AdditionalDependencies>
+			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\addons\ofxNDI\libs\NDI\lib\vs\Win32</AdditionalLibraryDirectories>
+		</Link>
+		<PostBuildEvent />
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+		<ClCompile>
+			<WholeProgramOptimization>false</WholeProgramOptimization>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+			<WarningLevel>Level3</WarningLevel>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\Inputs;src\Outputs;src\config;src\config\Inputs;src\config\Outputs;..\..\..\addons\ofxJSON\libs;..\..\..\addons\ofxJSON\libs\jsoncpp;..\..\..\addons\ofxJSON\libs\jsoncpp\include;..\..\..\addons\ofxJSON\libs\jsoncpp\include\json;..\..\..\addons\ofxJSON\libs\jsoncpp\src;..\..\..\addons\ofxJSON\src;..\..\..\addons\ofxNDI\libs\NDI\include;..\..\..\addons\ofxNDI\libs\utils;..\..\..\addons\ofxNDI\src;..\..\..\addons\ofxNDI\src\utils;..\..\..\addons\ofxSyphon\libs;..\..\..\addons\ofxSyphon\libs\Syphon;..\..\..\addons\ofxSyphon\libs\Syphon\lib;..\..\..\addons\ofxSyphon\libs\Syphon\src;..\..\..\addons\ofxSyphon\src</AdditionalIncludeDirectories>
+			<CompileAs>CompileAsCpp</CompileAs>
+			<ObjectFileName>$(IntDir)</ObjectFileName>
+		</ClCompile>
+		<Link>
+			<IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+			<GenerateDebugInformation>false</GenerateDebugInformation>
+			<SubSystem>Console</SubSystem>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+			<RandomizedBaseAddress>false</RandomizedBaseAddress>
+			<AdditionalDependencies>%(AdditionalDependencies);Processing.NDI.Lib.x64.lib</AdditionalDependencies>
+			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\addons\ofxNDI\libs\NDI\lib\vs\x64</AdditionalLibraryDirectories>
+		</Link>
+		<PostBuildEvent />
+	</ItemDefinitionGroup>
+	<ItemGroup>
+		<ClCompile Include="src\main.cpp" />
+		<ClCompile Include="src\ofApp.cpp" />
+		<ClCompile Include="src\config\Config.cpp" />
+		<ClCompile Include="src\Outputs\SyphonOutput.cpp" />
+		<ClCompile Include="src\Outputs\NdiOutput.cpp" />
+		<ClCompile Include="src\Inputs\NdiInput.cpp" />
+		<ClCompile Include="src\Inputs\SyphonInput.cpp" />
+		<ClCompile Include="src\Inputs\VideoPlayerInput.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxJSON\src\ofxJSONElement.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxJSON\libs\jsoncpp\src\jsoncpp.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDIFinder.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxNDI\src\utils\ofxNDIVideoGrabber.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxNDI\src\utils\ofxNDIVideoCaster.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDIReceiver.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDIPTZ.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDISender.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDIRecvStream.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDIFrame.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDIRecorder.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDIRouter.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDISendStream.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxSyphon\src\ofxSyphonServer.mm" />
+		<ClCompile Include="..\..\..\addons\ofxSyphon\src\ofxSyphonClient.mm" />
+		<ClCompile Include="..\..\..\addons\ofxSyphon\src\ofxSyphonServerDirectory.mm" />
+		<ClCompile Include="..\..\..\addons\ofxSyphon\libs\Syphon\src\SyphonNameboundClient.m" />
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="src\ofApp.h" />
+		<ClInclude Include="src\OutputsConfig.hpp" />
+		<ClInclude Include="src\config\InputsConfig.hpp" />
+		<ClInclude Include="src\config\Config.hpp" />
+		<ClInclude Include="src\config\Outputs\NdiOutputConfig.hpp" />
+		<ClInclude Include="src\config\Outputs\SyphonOutputConfig.hpp" />
+		<ClInclude Include="src\config\PanelConfig.hpp" />
+		<ClInclude Include="src\config\Inputs\NdiInputConfig.hpp" />
+		<ClInclude Include="src\config\Inputs\SyphonInputConfig.hpp" />
+		<ClInclude Include="src\config\Inputs\VideoPlayerInputConfig.hpp" />
+		<ClInclude Include="src\BaseOutput.hpp" />
+		<ClInclude Include="src\BaseInput.hpp" />
+		<ClInclude Include="src\Outputs\SyphonOutput.hpp" />
+		<ClInclude Include="src\Outputs\NdiOutput.hpp" />
+		<ClInclude Include="src\Inputs\VideoPlayerInput.hpp" />
+		<ClInclude Include="src\Inputs\SyphonInput.hpp" />
+		<ClInclude Include="src\Inputs\NdiInput.hpp" />
+		<ClInclude Include="..\..\..\addons\ofxJSON\src\ofxJSON.h" />
+		<ClInclude Include="..\..\..\addons\ofxJSON\src\ofxJSONElement.h" />
+		<ClInclude Include="..\..\..\addons\ofxJSON\libs\jsoncpp\include\json\json-forwards.h" />
+		<ClInclude Include="..\..\..\addons\ofxJSON\libs\jsoncpp\include\json\json.h" />
+		<ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDIRecorder.h" />
+		<ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDIFinder.h" />
+		<ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDIReceiver.h" />
+		<ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDI.h" />
+		<ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDIPTZ.h" />
+		<ClInclude Include="..\..\..\addons\ofxNDI\src\utils\ofxNDIVideoCaster.h" />
+		<ClInclude Include="..\..\..\addons\ofxNDI\src\utils\ofxNDIVideoGrabber.h" />
+		<ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDISender.h" />
+		<ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDIFrame.h" />
+		<ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDISendStream.h" />
+		<ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDIRouter.h" />
+		<ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDIRecvStream.h" />
+		<ClInclude Include="..\..\..\addons\ofxNDI\libs\utils\DoubleBuffer.h" />
+		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.compat.h" />
+		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.utilities.h" />
+		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.Recv.ex.h" />
+		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.deprecated.h" />
+		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.Routing.h" />
+		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.Send.h" />
+		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.structs.h" />
+		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.Lib.cplusplus.h" />
+		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.FrameSync.h" />
+		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.Find.h" />
+		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.DynamicLoad.h" />
+		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.Recv.h" />
+		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.Lib.h" />
+		<ClInclude Include="..\..\..\addons\ofxSyphon\src\ofxSyphon.h" />
+		<ClInclude Include="..\..\..\addons\ofxSyphon\src\ofxSyphonServer.h" />
+		<ClInclude Include="..\..\..\addons\ofxSyphon\src\ofxSyphonClient.h" />
+		<ClInclude Include="..\..\..\addons\ofxSyphon\src\ofxSyphonServerDirectory.h" />
+		<ClInclude Include="..\..\..\addons\ofxSyphon\libs\Syphon\src\SyphonNameboundClient.h" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">
+			<Project>{5837595d-aca9-485c-8e76-729040ce4b0b}</Project>
+		</ProjectReference>
+	</ItemGroup>
+	<ItemGroup>
+		<ResourceCompile Include="icon.rc">
+			<AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/D_DEBUG %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/D_DEBUG %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>$(OF_ROOT)\libs\openFrameworksCompiled\project\vs</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	</ItemGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+	<ProjectExtensions>
+		<VisualStudio>
+			<UserProperties RESOURCE_FILE="icon.rc" />
+		</VisualStudio>
+	</ProjectExtensions>
+</Project>
