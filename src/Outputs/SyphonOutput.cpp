@@ -1,3 +1,5 @@
+#if __APPLE__
+
 #include "SyphonOutput.hpp"
 
 std::string SyphonOutput::OutputName() {
@@ -13,3 +15,5 @@ void SyphonOutput::setup(Config config) {
 void SyphonOutput::draw(ofFbo output) {
     syphonServer.publishTexture(&output.getTexture());
 }
+
+#endif

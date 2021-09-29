@@ -1,3 +1,5 @@
+#if __APPLE__
+
 #include "SyphonInput.hpp"
 
 std::string SyphonInput::InputName() {
@@ -16,3 +18,5 @@ void SyphonInput::draw() {
 void SyphonInput::update() {
     
 }
+
+#endif

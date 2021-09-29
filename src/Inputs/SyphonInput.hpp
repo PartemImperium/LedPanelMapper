@@ -1,3 +1,5 @@
+#if __APPLE__
+
 #pragma once
 
 #include "Config.hpp"
@@ -17,3 +19,5 @@ class SyphonInput: public BaseInput {
         Config c;
         ofxSyphonClient syphonClient;
 };
+
+#endif

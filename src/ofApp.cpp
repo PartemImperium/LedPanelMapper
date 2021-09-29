@@ -26,9 +26,11 @@ void ofApp::setupInput() {
     if (c.Inputs.VideoPlayer.IsInputEnabled){
         input = new VideoPlayerInput();
     }
+#if __APPLE__
     else if (c.Inputs.Syphon.IsInputEnabled){
         input = new SyphonInput();
     }
+#endif
     else if (c.Inputs.Ndi.IsInputEnabled) {
         input = new NdiInput();
     }
@@ -40,9 +42,11 @@ void ofApp::setupOutputs() {
     if (c.Outputs.Ndi.IsOutputEnabled){
         outputs.push_back(std::move(std::make_unique<NdiOutput>()));
     }
+#if __APPLE__
     if (c.Outputs.Syphon.IsOutputEnabled) {
         outputs.push_back(std::move(std::make_unique<SyphonOutput>()));
     }
+#endif
     
     for(auto &o : outputs){
         o->setup(c);

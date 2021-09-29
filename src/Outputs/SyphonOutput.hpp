@@ -1,3 +1,5 @@
+#if __APPLE__
+
 #pragma once
 
 #include "BaseOutput.hpp"
@@ -21,3 +23,5 @@ class SyphonOutput: public BaseOutput {
         ofxSyphonServer syphonServer;
         ofTexture tempTexture;
 };
+
+#endif
