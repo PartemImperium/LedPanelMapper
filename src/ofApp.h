@@ -9,15 +9,12 @@
 #include "BaseInput.hpp"
 #include "VideoPlayerInput.hpp"
 #include "SyphonInput.hpp"
+#include "NdiInput.hpp"
 
 // JSON addon
 #include "ofxJSONElement.h"
 
 
-// NDI addon
-#include "ofxNDIReceiver.h"
-#include "ofxNDIRecvStream.h"
-#include "ofxNDIFinder.h"
 #include "ofxNDISender.h"
 #include "ofxNDISendStream.h"
 
@@ -55,12 +52,6 @@ class ofApp : public ofBaseApp{
         BaseInput* input;
     
         void setupInput();
-
-        ofxNDIReceiver ndiReceiver;
-        ofxNDIRecvVideoFrameSync ndiVideoFrameSync;
-        void setupNdiClient(Config config);
-        void drawNdiToInputFrameBuffer();
-        void updateNdiInputFeed();
     
         // Outputs
         ofFbo output;

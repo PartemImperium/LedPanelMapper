@@ -11,9 +11,7 @@ void ofApp::setup() {
     inputFrameBuffer.allocate(1920, 1080);
     
     setupInput();
-    
-    setupNdiClient(c);
-    
+        
     // Setup Outputs
     output.allocate(1920, 1080);
     
@@ -34,6 +32,9 @@ void ofApp::setupInput() {
     else if (c.Inputs.Syphon.IsInputEnabled){
         input = new SyphonInput();
     }
+    else if (c.Inputs.Ndi.IsInputEnabled) {
+        input = new NdiInput();
+    }
     
     input->setup(c);
 }
@@ -49,27 +50,6 @@ void ofApp::setupInfoUi(Config config) {
     
     ofNoFill();
     ofSetLineWidth(2);
-}
-
-
-
-void ofApp::setupNdiClient(Config config) {
-    if (config.Inputs.Ndi.IsInputEnabled){
-        NDIlib_initialize();
-        
-        ofxNDIFinder ndiFinder;
-        auto sources = ndiFinder.listSources();
-        
-        for (int i = 0; i < sources.size(); i++) {
-            auto s = sources[i];
-            if (s.p_ndi_name == config.Inputs.Ndi.FeedName){
-                ndiReceiver.changeConnection(s);
-                ndiReceiver.setup();
-                ndiVideoFrameSync.setup(ndiReceiver);
-            }
-        }
-        //inputName = "NDI Receiver";
-    }
 }
 
 void ofApp::setupSyphonServer(Config config) {
@@ -92,22 +72,6 @@ void ofApp::setupNdiSender(Config config){
 void ofApp::update()
 {
     input->update();
-    updateNdiInputFeed();
-}
-
-void ofApp::updateNdiInputFeed(){
-    if (c.Inputs.Ndi.IsInputEnabled) {
-        if(ndiReceiver.isConnected()) {
-            ndiVideoFrameSync.update();
-            if(ndiVideoFrameSync.isFrameNew()) {
-                ofPixels tempPixels;
-                ndiVideoFrameSync.decodeTo(tempPixels);
-                inputFrameBuffer.begin();
-                ofImage(tempPixels).draw(0,0);
-                inputFrameBuffer.end();
-            }
-        }
-    }
 }
 
 const float appY = 0;
@@ -135,10 +99,6 @@ void ofApp::draw() {
     
     //Draw Info UI to main window.
     drawInfoUi();
-}
-
-void ofApp::drawNdiToInputFrameBuffer() {
-    // Nothing to do here. NDI Input uses update not draw.
 }
 
 void ofApp::drawPanelsToOutputFrameBuffer() {
