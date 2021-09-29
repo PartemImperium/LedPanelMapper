@@ -13,10 +13,11 @@ void ofApp::setup() {
     setupInput();
         
     // Setup Outputs
-    output.allocate(1920, 1080);
+    outputFrameBuffer.allocate(1920, 1080);
+    
+    setupOutputs();
     
     setupSyphonServer(c);
-    setupNdiSender(c);
 }
 
 void ofApp::setupConfig() {
@@ -39,6 +40,17 @@ void ofApp::setupInput() {
     input->setup(c);
 }
 
+void ofApp::setupOutputs() {
+    if (c.Outputs.Ndi.IsOutputEnabled){
+        outputs.push_back(std::move(std::make_unique<NdiOutput>()));
+    }
+    
+    for(auto &o : outputs){
+        o->setup(c);
+        outputNames+= o->OutputName() + " ";
+    }
+}
+
 void ofApp::setupInfoUi(Config config) {
     ofRectangle tempRect(0,0,480,270);
     
@@ -59,16 +71,6 @@ void ofApp::setupSyphonServer(Config config) {
     }
 }
 
-void ofApp::setupNdiSender(Config config){
-    if (c.Outputs.Ndi.IsOutputEnabled){
-        if(ndiSender.setup(c.Outputs.Ndi.Name)) {
-            ndiSendVideo.setup(ndiSender);
-            ndiSendVideo.setAsync(true);
-        }
-        outputNames+="NDI Sender ";
-    }
-}
-
 void ofApp::update()
 {
     input->update();
@@ -83,7 +85,7 @@ const float syphonW = 281.6;
 const float syphonH = 540;
 
 void ofApp::draw() {
-    // Draw Input to Input Framebuffer (we call each possible input but only one can be on at once).
+    // Draw Input to Input Framebuffer.
     inputFrameBuffer.begin();
 
     input->draw();
@@ -95,14 +97,17 @@ void ofApp::draw() {
     
     // Draw Output Framebuffer to all outputs (Multiple outputs can be turned on at the same time).
     drawOutputFramebuffertoSyphon();
-    drawOutputFramebufferToNdi();
+    for (auto &o : outputs)
+    {
+        o->draw(outputFrameBuffer);
+    }
     
     //Draw Info UI to main window.
     drawInfoUi();
 }
 
 void ofApp::drawPanelsToOutputFrameBuffer() {
-    output.begin();
+    outputFrameBuffer.begin();
         for (int i = 0; i < c.Panels.size(); i++) {
             float appX = (i * appW) + 1;
             float syphonX = c.Panels[i].X;
@@ -110,22 +115,15 @@ void ofApp::drawPanelsToOutputFrameBuffer() {
             
             inputFrameBuffer.getTexture().drawSubsection(appX,appY,appW,appH,syphonX,syphonY,syphonW,syphonH);
         }
-    output.end();
+    outputFrameBuffer.end();
 }
 
 void ofApp::drawOutputFramebuffertoSyphon() {
     if (c.Outputs.Syphon.IsOutputEnabled){
-        syphonServer.publishTexture(&output.getTexture());
+        syphonServer.publishTexture(&outputFrameBuffer.getTexture());
     }
 }
 
-void ofApp::drawOutputFramebufferToNdi(){
-    if (c.Outputs.Ndi.IsOutputEnabled){
-        ofPixels tempPixels;
-        output.readToPixels(tempPixels);
-        ndiSendVideo.send(tempPixels);
-    }
-}
 
 void ofApp::drawInfoUi() {
     std::string fps = "FPS: " + std::to_string(ofGetFrameRate());
@@ -136,7 +134,7 @@ void ofApp::drawInfoUi() {
     
     ofDrawBitmapString("Input Framebuffer: " + input->InputName,1300,185);
 
-    output.draw(infoUiOutputRect);
+    outputFrameBuffer.draw(infoUiOutputRect);
     ofDrawRectangle(infoUiOutputRect);
     ofDrawBitmapString("Output Framebuffer: " + outputNames,1300,595);
 }

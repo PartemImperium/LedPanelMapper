@@ -1,6 +1,7 @@
 #pragma once
 // std
 #include <string>
+#include <vector>
 
 // Project Code
 #include "Config.hpp"
@@ -11,12 +12,13 @@
 #include "SyphonInput.hpp"
 #include "NdiInput.hpp"
 
+// Outputs
+#include "NdiOutput.hpp"
+
 // JSON addon
 #include "ofxJSONElement.h"
 
 
-#include "ofxNDISender.h"
-#include "ofxNDISendStream.h"
 
 class ofApp : public ofBaseApp{
 
@@ -54,19 +56,16 @@ class ofApp : public ofBaseApp{
         void setupInput();
     
         // Outputs
-        ofFbo output;
-        std::string outputNames;
+        ofFbo outputFrameBuffer;
+        std::vector<std::unique_ptr<BaseOutput>> outputs;
+        string outputNames;
+            
+        void setupOutputs();
     
         ofxSyphonServer syphonServer;
         void setupSyphonServer(Config config);
         void drawOutputFramebuffertoSyphon();
     
-        ofxNDISender ndiSender;
-        ofxNDISendVideo ndiSendVideo;
-        void setupNdiSender(Config config);
-        void drawOutputFramebufferToNdi();
-        
-
         // Panel scaling and selection.
         void drawPanelsToOutputFrameBuffer();
 };
