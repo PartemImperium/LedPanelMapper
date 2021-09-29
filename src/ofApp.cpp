@@ -12,7 +12,6 @@ void ofApp::setup() {
     
     setupInput();
     
-    setupSyphonClient(c);
     setupNdiClient(c);
     
     // Setup Outputs
@@ -32,6 +31,10 @@ void ofApp::setupInput() {
     if (c.Inputs.VideoPlayer.IsInputEnabled){
         input = new VideoPlayerInput();
     }
+    else if (c.Inputs.Syphon.IsInputEnabled){
+        input = new SyphonInput();
+    }
+    
     input->setup(c);
 }
 
@@ -49,13 +52,6 @@ void ofApp::setupInfoUi(Config config) {
 }
 
 
-void ofApp::setupSyphonClient(Config config) {
-    if (config.Inputs.Syphon.IsInputEnabled){
-        syphonClient.setup();
-        syphonClient.set(config.Inputs.Syphon.ServerName,config.Inputs.Syphon.ApplicationName);
-        //inputName = "Syphon Client";
-    }
-}
 
 void ofApp::setupNdiClient(Config config) {
     if (config.Inputs.Ndi.IsInputEnabled){
@@ -96,12 +92,7 @@ void ofApp::setupNdiSender(Config config){
 void ofApp::update()
 {
     input->update();
-    updateSyphonInputFeed();
     updateNdiInputFeed();
-}
-
-void ofApp::updateSyphonInputFeed(){
-    // Nothing to do here. Syphon Input uses draw not update.
 }
 
 void ofApp::updateNdiInputFeed(){
@@ -144,12 +135,6 @@ void ofApp::draw() {
     
     //Draw Info UI to main window.
     drawInfoUi();
-}
-
-void ofApp::drawSyphonToInputFrameBuffer() {
-    if (c.Inputs.Syphon.IsInputEnabled){
-        syphonClient.draw(0,0);
-    }
 }
 
 void ofApp::drawNdiToInputFrameBuffer() {

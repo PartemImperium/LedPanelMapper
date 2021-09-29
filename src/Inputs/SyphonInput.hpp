@@ -1,19 +1,19 @@
 #pragma once
 
-// Open Frameworks
-#include "ofMain.h"
-
 #include "Config.hpp"
 #include "BaseInput.hpp"
 
-class VideoPlayerInput: public BaseInput {
+// Syphon addon
+#include "ofxSyphonClient.h"
+
+class SyphonInput: public BaseInput {
     public:
         virtual void setup(Config config);
         virtual void draw();
         virtual void update();
-        std::string InputName = "Video Player";
+        std::string InputName = "Syphon Client";
 
     private:
         Config c;
-        ofVideoPlayer videoPlayer;
+        ofxSyphonClient syphonClient;
 };

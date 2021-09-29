@@ -8,12 +8,11 @@
 // Inputs
 #include "BaseInput.hpp"
 #include "VideoPlayerInput.hpp"
+#include "SyphonInput.hpp"
 
 // JSON addon
 #include "ofxJSONElement.h"
 
-// Syphon addon
-#include "ofxSyphonClient.h"
 
 // NDI addon
 #include "ofxNDIReceiver.h"
@@ -56,12 +55,6 @@ class ofApp : public ofBaseApp{
         BaseInput* input;
     
         void setupInput();
-
-    
-        ofxSyphonClient syphonClient;
-        void setupSyphonClient(Config config);
-        void drawSyphonToInputFrameBuffer();
-        void updateSyphonInputFeed();
 
         ofxNDIReceiver ndiReceiver;
         ofxNDIRecvVideoFrameSync ndiVideoFrameSync;
