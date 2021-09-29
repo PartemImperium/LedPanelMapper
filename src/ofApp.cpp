@@ -9,15 +9,11 @@ void ofApp::setup() {
 
     // Setup Inputs
     inputFrameBuffer.allocate(1920, 1080);
-    
     setupInput();
         
     // Setup Outputs
     outputFrameBuffer.allocate(1920, 1080);
-    
     setupOutputs();
-    
-    setupSyphonServer(c);
 }
 
 void ofApp::setupConfig() {
@@ -44,10 +40,13 @@ void ofApp::setupOutputs() {
     if (c.Outputs.Ndi.IsOutputEnabled){
         outputs.push_back(std::move(std::make_unique<NdiOutput>()));
     }
+    if (c.Outputs.Syphon.IsOutputEnabled) {
+        outputs.push_back(std::move(std::make_unique<SyphonOutput>()));
+    }
     
     for(auto &o : outputs){
         o->setup(c);
-        outputNames+= o->OutputName() + " ";
+        outputNames += o->OutputName() + " ";
     }
 }
 
@@ -59,16 +58,6 @@ void ofApp::setupInfoUi(Config config) {
     
     infoUiOutputRect = ofRectangle(tempRect);
     infoUiOutputRect.setPosition(1300,610);
-    
-    ofNoFill();
-    ofSetLineWidth(2);
-}
-
-void ofApp::setupSyphonServer(Config config) {
-    if (config.Outputs.Syphon.IsOutputEnabled) {
-        syphonServer.setName(config.Outputs.Syphon.Name);
-        outputNames+="Syphon Server ";
-    }
 }
 
 void ofApp::update()
@@ -96,7 +85,6 @@ void ofApp::draw() {
     drawPanelsToOutputFrameBuffer();
     
     // Draw Output Framebuffer to all outputs (Multiple outputs can be turned on at the same time).
-    drawOutputFramebuffertoSyphon();
     for (auto &o : outputs)
     {
         o->draw(outputFrameBuffer);
@@ -118,25 +106,22 @@ void ofApp::drawPanelsToOutputFrameBuffer() {
     outputFrameBuffer.end();
 }
 
-void ofApp::drawOutputFramebuffertoSyphon() {
-    if (c.Outputs.Syphon.IsOutputEnabled){
-        syphonServer.publishTexture(&outputFrameBuffer.getTexture());
-    }
-}
-
-
 void ofApp::drawInfoUi() {
+    ofNoFill();
+    
     std::string fps = "FPS: " + std::to_string(ofGetFrameRate());
     ofDrawBitmapString(fps,1300,170);
     
     inputFrameBuffer.draw(infoUiInputRect);
     ofDrawRectangle(infoUiInputRect);
     
-    ofDrawBitmapString("Input Framebuffer: " + input->InputName,1300,185);
+    ofDrawBitmapString("Input Framebuffer: " + input->InputName(),1300,185);
 
     outputFrameBuffer.draw(infoUiOutputRect);
     ofDrawRectangle(infoUiOutputRect);
     ofDrawBitmapString("Output Framebuffer: " + outputNames,1300,595);
+    
+    ofFill();
 }
 
 void ofApp::keyPressed(int key) { }

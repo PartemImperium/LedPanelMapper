@@ -14,6 +14,7 @@
 
 // Outputs
 #include "NdiOutput.hpp"
+#include "SyphonOutput.hpp"
 
 // JSON addon
 #include "ofxJSONElement.h"
@@ -61,10 +62,6 @@ class ofApp : public ofBaseApp{
         string outputNames;
             
         void setupOutputs();
-    
-        ofxSyphonServer syphonServer;
-        void setupSyphonServer(Config config);
-        void drawOutputFramebuffertoSyphon();
     
         // Panel scaling and selection.
         void drawPanelsToOutputFrameBuffer();

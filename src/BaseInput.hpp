@@ -8,7 +8,7 @@ class BaseInput {
         virtual void setup(Config config) = 0;
         virtual void draw() = 0;
         virtual void update() = 0;
-        std::string InputName;
+        virtual std::string InputName() = 0;
 
     private:
         Config c;

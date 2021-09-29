@@ -11,7 +11,7 @@ class VideoPlayerInput: public BaseInput {
         virtual void setup(Config config);
         virtual void draw();
         virtual void update();
-        std::string InputName = "Video Player";
+        virtual std::string InputName();
 
     private:
         Config c;

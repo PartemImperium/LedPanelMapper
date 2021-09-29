@@ -11,6 +11,7 @@
 		05024FBB2703E9B600941F93 /* NdiInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05024FB92703E9B600941F93 /* NdiInput.cpp */; };
 		05024FC22703F3F700941F93 /* NdiOutput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05024FC02703F3F700941F93 /* NdiOutput.cpp */; };
 		05C6EFD72703BFC600944405 /* VideoPlayerInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05C6EFD52703BFC600944405 /* VideoPlayerInput.cpp */; };
+		05FCD63227041246005C4F74 /* SyphonOutput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 05FCD63027041246005C4F74 /* SyphonOutput.cpp */; };
 		11DF9AB1B4EAA63E3B190CA0 /* ofxSyphonServerDirectory.mm in Sources */ = {isa = PBXBuildFile; fileRef = E723BEF4C55D236E24639608 /* ofxSyphonServerDirectory.mm */; };
 		1F558B76FB3412843DDAA031 /* ofxSyphonClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = 03EA4DA95B5E1B8409FC058E /* ofxSyphonClient.mm */; };
 		222937AE58FD5FB49FAABDE8 /* ofxNDISender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88DF45D0623D6E64CBA08FBC /* ofxNDISender.cpp */; };
@@ -66,6 +67,8 @@
 		05C6EFD22703BBFE00944405 /* BaseInput.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BaseInput.hpp; sourceTree = "<group>"; };
 		05C6EFD52703BFC600944405 /* VideoPlayerInput.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VideoPlayerInput.cpp; sourceTree = "<group>"; };
 		05C6EFD62703BFC600944405 /* VideoPlayerInput.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VideoPlayerInput.hpp; sourceTree = "<group>"; };
+		05FCD63027041246005C4F74 /* SyphonOutput.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SyphonOutput.cpp; sourceTree = "<group>"; };
+		05FCD63127041246005C4F74 /* SyphonOutput.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SyphonOutput.hpp; sourceTree = "<group>"; };
 		08FF2187B3B2F0CECE38497A /* InputsConfig.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = InputsConfig.hpp; path = src/config/InputsConfig.hpp; sourceTree = SOURCE_ROOT; };
 		09417F3BCD7E6FB6CE3AD0C0 /* Processing.NDI.Send.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Processing.NDI.Send.h; path = ../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Send.h; sourceTree = SOURCE_ROOT; };
 		0B2CB21FCA3A6FE3D640E9F1 /* Processing.NDI.Recv.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Processing.NDI.Recv.h; path = ../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Recv.h; sourceTree = SOURCE_ROOT; };
@@ -322,6 +325,8 @@
 			children = (
 				05024FC02703F3F700941F93 /* NdiOutput.cpp */,
 				05024FC12703F3F700941F93 /* NdiOutput.hpp */,
+				05FCD63027041246005C4F74 /* SyphonOutput.cpp */,
+				05FCD63127041246005C4F74 /* SyphonOutput.hpp */,
 			);
 			path = Outputs;
 			sourceTree = "<group>";
@@ -1032,6 +1037,7 @@
 				9E711A648739952859F3FAEB /* ofxNDIRouter.cpp in Sources */,
 				68A19D836E5BA0ED60A3DE5B /* ofxNDISendStream.cpp in Sources */,
 				222937AE58FD5FB49FAABDE8 /* ofxNDISender.cpp in Sources */,
+				05FCD63227041246005C4F74 /* SyphonOutput.cpp in Sources */,
 				4646B7152CDEF740798028B5 /* ofxNDIVideoCaster.cpp in Sources */,
 				05024FC22703F3F700941F93 /* NdiOutput.cpp in Sources */,
 				F7299359A3F71835269422B1 /* ofxNDIVideoGrabber.cpp in Sources */,

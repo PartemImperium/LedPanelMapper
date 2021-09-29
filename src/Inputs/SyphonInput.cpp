@@ -1,5 +1,8 @@
 #include "SyphonInput.hpp"
 
+std::string SyphonInput::InputName() {
+    return "Syphon Client";
+}
 void SyphonInput::setup(Config config) {
     c = config;
     syphonClient.setup();

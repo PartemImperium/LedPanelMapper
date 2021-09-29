@@ -1,8 +1,13 @@
 #include "NdiInput.hpp"
 
+std::string NdiInput::InputName() {
+    return "NDI Receiver";
+}
+
 void NdiInput::setup(Config config) {
     NDIlib_initialize();
-    
+    c = config;
+
     ofxNDIFinder ndiFinder;
     auto sources = ndiFinder.listSources();
     

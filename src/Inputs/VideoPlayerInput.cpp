@@ -1,5 +1,9 @@
 #include "VideoPlayerInput.hpp"
 
+std::string VideoPlayerInput::InputName() {
+    return "Video Player";
+}
+
 void VideoPlayerInput::setup(Config config) {
     c = config;
     videoPlayer.load(c.Inputs.VideoPlayer.FilePath);

@@ -5,6 +5,8 @@ std::string NdiOutput::OutputName() {
 }
 
 void NdiOutput::setup(Config config) {
+    NDIlib_initialize();
+    c = config;
     if(ndiSender.setup(c.Outputs.Ndi.Name)) {
         ndiSendVideo.setup(ndiSender);
         ndiSendVideo.setAsync(true);
