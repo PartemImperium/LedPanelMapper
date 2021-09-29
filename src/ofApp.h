@@ -9,12 +9,18 @@
 // Inputs
 #include "BaseInput.hpp"
 #include "VideoPlayerInput.hpp"
-#include "SyphonInput.hpp"
 #include "NdiInput.hpp"
+
+#if __APPLE__
+#include "SyphonInput.hpp"
+#endif
 
 // Outputs
 #include "NdiOutput.hpp"
+
+#if __APPLE__
 #include "SyphonOutput.hpp"
+#endif
 
 // JSON addon
 #include "ofxJSONElement.h"
