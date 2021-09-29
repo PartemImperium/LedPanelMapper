@@ -8,9 +8,10 @@ void ofApp::setup() {
     setupInfoUi(c);
 
     // Setup Inputs
-    input.allocate(1920, 1080);
+    inputFrameBuffer.allocate(1920, 1080);
     
-    setupVideoPlayer(c);
+    setupInput();
+    
     setupSyphonClient(c);
     setupNdiClient(c);
     
@@ -27,6 +28,13 @@ void ofApp::setupConfig() {
     c.setup(config);
 }
 
+void ofApp::setupInput() {
+    if (c.Inputs.VideoPlayer.IsInputEnabled){
+        input = new VideoPlayerInput();
+    }
+    input->setup(c);
+}
+
 void ofApp::setupInfoUi(Config config) {
     ofRectangle tempRect(0,0,480,270);
     
@@ -40,19 +48,12 @@ void ofApp::setupInfoUi(Config config) {
     ofSetLineWidth(2);
 }
 
-void ofApp::setupVideoPlayer(Config config){
-    if (config.Inputs.VideoPlayer.IsInputEnabled){
-        videoPlayer.load(config.Inputs.VideoPlayer.FilePath);
-        videoPlayer.play();
-        inputName = "Video Player";
-    }
-}
 
 void ofApp::setupSyphonClient(Config config) {
     if (config.Inputs.Syphon.IsInputEnabled){
         syphonClient.setup();
         syphonClient.set(config.Inputs.Syphon.ServerName,config.Inputs.Syphon.ApplicationName);
-        inputName = "Syphon Client";
+        //inputName = "Syphon Client";
     }
 }
 
@@ -71,7 +72,7 @@ void ofApp::setupNdiClient(Config config) {
                 ndiVideoFrameSync.setup(ndiReceiver);
             }
         }
-        inputName = "NDI Receiver";
+        //inputName = "NDI Receiver";
     }
 }
 
@@ -94,15 +95,9 @@ void ofApp::setupNdiSender(Config config){
 
 void ofApp::update()
 {
-    updateVideoPlayerInputFeed();
+    input->update();
     updateSyphonInputFeed();
     updateNdiInputFeed();
-}
-
-void ofApp::updateVideoPlayerInputFeed(){
-    if (c.Inputs.VideoPlayer.IsInputEnabled){
-        videoPlayer.update();
-    }
 }
 
 void ofApp::updateSyphonInputFeed(){
@@ -116,9 +111,9 @@ void ofApp::updateNdiInputFeed(){
             if(ndiVideoFrameSync.isFrameNew()) {
                 ofPixels tempPixels;
                 ndiVideoFrameSync.decodeTo(tempPixels);
-                input.begin();
+                inputFrameBuffer.begin();
                 ofImage(tempPixels).draw(0,0);
-                input.end();
+                inputFrameBuffer.end();
             }
         }
     }
@@ -134,13 +129,12 @@ const float syphonH = 540;
 
 void ofApp::draw() {
     // Draw Input to Input Framebuffer (we call each possible input but only one can be on at once).
-    input.begin();
+    inputFrameBuffer.begin();
 
-    drawVideoPlayerToInputFrameBuffer();
-    drawSyphonToInputFrameBuffer();
-    drawNdiToInputFrameBuffer();
+    input->draw();
 
-    input.end();
+    inputFrameBuffer.end();
+    
     // Draw Input Framebuffer into Output Framebuffer (with panels scalled and put into top left corner).
     drawPanelsToOutputFrameBuffer();
     
@@ -150,12 +144,6 @@ void ofApp::draw() {
     
     //Draw Info UI to main window.
     drawInfoUi();
-}
-
-void ofApp::drawVideoPlayerToInputFrameBuffer(){
-    if (c.Inputs.VideoPlayer.IsInputEnabled){
-        videoPlayer.draw(0,0);
-    }
 }
 
 void ofApp::drawSyphonToInputFrameBuffer() {
@@ -175,7 +163,7 @@ void ofApp::drawPanelsToOutputFrameBuffer() {
             float syphonX = c.Panels[i].X;
             float syphonY = c.Panels[i].Y;
             
-            input.getTexture().drawSubsection(appX,appY,appW,appH,syphonX,syphonY,syphonW,syphonH);
+            inputFrameBuffer.getTexture().drawSubsection(appX,appY,appW,appH,syphonX,syphonY,syphonW,syphonH);
         }
     output.end();
 }
@@ -198,10 +186,10 @@ void ofApp::drawInfoUi() {
     std::string fps = "FPS: " + std::to_string(ofGetFrameRate());
     ofDrawBitmapString(fps,1300,170);
     
-    input.draw(infoUiInputRect);
+    inputFrameBuffer.draw(infoUiInputRect);
     ofDrawRectangle(infoUiInputRect);
     
-    ofDrawBitmapString("Input Framebuffer: " + inputName,1300,185);
+    ofDrawBitmapString("Input Framebuffer: " + input->InputName,1300,185);
 
     output.draw(infoUiOutputRect);
     ofDrawRectangle(infoUiOutputRect);

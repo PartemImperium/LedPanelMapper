@@ -1,5 +1,5 @@
 #include "Config.hpp"
-#include "Panel.hpp"
+#include "PanelConfig.hpp"
 
 Config::Config(){}
 
@@ -35,7 +35,7 @@ void Config::setup(ofxJSONElement json){
     // Panels
     ofxJSONElement panels = json["panels"];
     for (int i = 0; i < panels.size(); i++){
-        Panel p;
+        PanelConfig p;
         p.X = panels[i]["x"].asFloat();
         p.Y = panels[i]["y"].asFloat();
         

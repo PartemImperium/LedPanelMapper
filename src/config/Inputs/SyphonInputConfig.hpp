@@ -1,12 +1,8 @@
-#ifndef SyphonInput_hpp
-#define SyphonInput_hpp
+#pragma once
 
-#include <stdio.h>
-
-#endif /* SyphonInput_hpp */
 #include <string>
 
-class SyphonInput {
+class SyphonInputConfig {
     public:
         bool IsInputEnabled;
         std::string ApplicationName;

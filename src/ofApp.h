@@ -2,11 +2,12 @@
 // std
 #include <string>
 
-// Open Frameworks
-#include "ofMain.h"
-
 // Project Code
 #include "Config.hpp"
+
+// Inputs
+#include "BaseInput.hpp"
+#include "VideoPlayerInput.hpp"
 
 // JSON addon
 #include "ofxJSONElement.h"
@@ -51,13 +52,11 @@ class ofApp : public ofBaseApp{
         void drawInfoUi();
 
         // Inputs
-        ofFbo input;
-        std::string inputName;
+        ofFbo inputFrameBuffer;
+        BaseInput* input;
     
-        ofVideoPlayer videoPlayer;
-        void setupVideoPlayer(Config config);
-        void drawVideoPlayerToInputFrameBuffer();
-        void updateVideoPlayerInputFeed();
+        void setupInput();
+
     
         ofxSyphonClient syphonClient;
         void setupSyphonClient(Config config);

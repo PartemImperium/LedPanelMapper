@@ -1,22 +1,17 @@
 #pragma once
-#ifndef config_hpp
-#define config_hpp
 
-#include <stdio.h>
-
-#endif /* config_hpp */
 #include <string>
 #include "ofxJSONElement.h"
-#include "Panel.hpp"
-#include "Inputs.hpp"
-#include "Outputs.hpp"
+#include "PanelConfig.hpp"
+#include "InputsConfig.hpp"
+#include "OutputsConfig.hpp"
 
 class Config {
     public:
         
-        Inputs Inputs;
-        Outputs Outputs;
-        std::vector<Panel> Panels;
+        InputsConfig Inputs;
+        OutputsConfig Outputs;
+        std::vector<PanelConfig> Panels;
 
         void setup(ofxJSONElement json);
         Config();
