@@ -1,321 +1,286 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<ItemGroup>
-		<ClCompile Include="src\ofApp.cpp">
-			<Filter>src</Filter>
-		</ClCompile>
-		<ClCompile Include="src\main.cpp">
-			<Filter>src</Filter>
-		</ClCompile>
-		<ClCompile Include="src\config\Config.cpp">
-			<Filter>src\config</Filter>
-		</ClCompile>
-		<ClCompile Include="src\Outputs\SyphonOutput.cpp">
-			<Filter>src\Outputs</Filter>
-		</ClCompile>
-		<ClCompile Include="src\Outputs\NdiOutput.cpp">
-			<Filter>src\Outputs</Filter>
-		</ClCompile>
-		<ClCompile Include="src\Inputs\NdiInput.cpp">
-			<Filter>src\Inputs</Filter>
-		</ClCompile>
-		<ClCompile Include="src\Inputs\SyphonInput.cpp">
-			<Filter>src\Inputs</Filter>
-		</ClCompile>
-		<ClCompile Include="src\Inputs\VideoPlayerInput.cpp">
-			<Filter>src\Inputs</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxJSON\src\ofxJSONElement.cpp">
-			<Filter>addons\ofxJSON\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxJSON\libs\jsoncpp\src\jsoncpp.cpp">
-			<Filter>addons\ofxJSON\libs\jsoncpp\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDIFinder.cpp">
-			<Filter>addons\ofxNDI\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxNDI\src\utils\ofxNDIVideoGrabber.cpp">
-			<Filter>addons\ofxNDI\src\utils</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxNDI\src\utils\ofxNDIVideoCaster.cpp">
-			<Filter>addons\ofxNDI\src\utils</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDIReceiver.cpp">
-			<Filter>addons\ofxNDI\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDIPTZ.cpp">
-			<Filter>addons\ofxNDI\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDISender.cpp">
-			<Filter>addons\ofxNDI\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDIRecvStream.cpp">
-			<Filter>addons\ofxNDI\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDIFrame.cpp">
-			<Filter>addons\ofxNDI\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDIRecorder.cpp">
-			<Filter>addons\ofxNDI\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDIRouter.cpp">
-			<Filter>addons\ofxNDI\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDISendStream.cpp">
-			<Filter>addons\ofxNDI\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxSyphon\src\ofxSyphonServer.mm">
-			<Filter>addons\ofxSyphon\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxSyphon\src\ofxSyphonClient.mm">
-			<Filter>addons\ofxSyphon\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxSyphon\src\ofxSyphonServerDirectory.mm">
-			<Filter>addons\ofxSyphon\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxSyphon\libs\Syphon\src\SyphonNameboundClient.m">
-			<Filter>addons\ofxSyphon\libs\Syphon\src</Filter>
-		</ClCompile>
-	</ItemGroup>
-	<ItemGroup>
-		<Filter Include="src">
-			<UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="src\config">
-			<UniqueIdentifier>{6605C095-DCC6-E901-6144-F29A}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="src\config\Outputs">
-			<UniqueIdentifier>{0B7F5FE0-AA91-66B3-25CB-6A2A}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="src\config\Inputs">
-			<UniqueIdentifier>{FE127F1B-12B4-E3BC-ED83-EF18}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="src\Outputs">
-			<UniqueIdentifier>{FA039FB3-E8F9-45B4-D3AA-E1B8}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="src\Inputs">
-			<UniqueIdentifier>{2D1E197B-AA20-E442-08AE-5953}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons">
-			<UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxJSON">
-			<UniqueIdentifier>{CF86E01B-D8D7-A112-88F3-5883}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxJSON\src">
-			<UniqueIdentifier>{CE83AFE9-FE4A-682E-D5C9-50B4}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxJSON\libs">
-			<UniqueIdentifier>{5302B3F8-ECDD-0465-334A-F39E}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxJSON\libs\jsoncpp">
-			<UniqueIdentifier>{87D6C548-39D9-FD9F-093E-9F4E}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxJSON\libs\jsoncpp\include">
-			<UniqueIdentifier>{0B6CA981-484E-6E8C-776C-7298}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxJSON\libs\jsoncpp\include\json">
-			<UniqueIdentifier>{5FF260B2-1497-3EFE-19D5-40DB}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxJSON\libs\jsoncpp\src">
-			<UniqueIdentifier>{6D569A5B-6719-AEFD-C08E-5CE5}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxNDI">
-			<UniqueIdentifier>{577C5AAC-F44E-A0BE-E58F-B066}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxNDI\src">
-			<UniqueIdentifier>{3BB183CD-62BF-E58A-FD5C-A603}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxNDI\src\utils">
-			<UniqueIdentifier>{23EC56A6-F7F6-87B6-89BC-D0AE}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxNDI\libs">
-			<UniqueIdentifier>{C2091C9D-63A5-7B51-5F40-CF0C}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxNDI\libs\utils">
-			<UniqueIdentifier>{458DF67A-3660-63B8-3D92-F65D}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxNDI\libs\NDI">
-			<UniqueIdentifier>{50DDA443-51F6-CCFC-46D7-85CE}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxNDI\libs\NDI\include">
-			<UniqueIdentifier>{B9E7D45F-AC3D-9349-FCD4-7EA6}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxSyphon">
-			<UniqueIdentifier>{702862E9-2C7F-D5E7-AC3D-4A04}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxSyphon\src">
-			<UniqueIdentifier>{8737A6AD-A31E-0FAD-2327-9136}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxSyphon\libs">
-			<UniqueIdentifier>{31622136-B02D-FF2E-3DFD-430D}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxSyphon\libs\Syphon">
-			<UniqueIdentifier>{1E89AEE5-AE15-7664-C53A-EBED}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxSyphon\libs\Syphon\src">
-			<UniqueIdentifier>{44224CCE-2F78-7C11-2F9C-26A6}</UniqueIdentifier>
-		</Filter>
-	</ItemGroup>
-	<ItemGroup>
-		<ClInclude Include="src\ofApp.h">
-			<Filter>src</Filter>
-		</ClInclude>
-		<ClInclude Include="src\OutputsConfig.hpp">
-			<Filter>src</Filter>
-		</ClInclude>
-		<ClInclude Include="src\config\InputsConfig.hpp">
-			<Filter>src\config</Filter>
-		</ClInclude>
-		<ClInclude Include="src\config\Config.hpp">
-			<Filter>src\config</Filter>
-		</ClInclude>
-		<ClInclude Include="src\config\Outputs\NdiOutputConfig.hpp">
-			<Filter>src\config\Outputs</Filter>
-		</ClInclude>
-		<ClInclude Include="src\config\Outputs\SyphonOutputConfig.hpp">
-			<Filter>src\config\Outputs</Filter>
-		</ClInclude>
-		<ClInclude Include="src\config\PanelConfig.hpp">
-			<Filter>src\config</Filter>
-		</ClInclude>
-		<ClInclude Include="src\config\Inputs\NdiInputConfig.hpp">
-			<Filter>src\config\Inputs</Filter>
-		</ClInclude>
-		<ClInclude Include="src\config\Inputs\SyphonInputConfig.hpp">
-			<Filter>src\config\Inputs</Filter>
-		</ClInclude>
-		<ClInclude Include="src\config\Inputs\VideoPlayerInputConfig.hpp">
-			<Filter>src\config\Inputs</Filter>
-		</ClInclude>
-		<ClInclude Include="src\BaseOutput.hpp">
-			<Filter>src</Filter>
-		</ClInclude>
-		<ClInclude Include="src\BaseInput.hpp">
-			<Filter>src</Filter>
-		</ClInclude>
-		<ClInclude Include="src\Outputs\SyphonOutput.hpp">
-			<Filter>src\Outputs</Filter>
-		</ClInclude>
-		<ClInclude Include="src\Outputs\NdiOutput.hpp">
-			<Filter>src\Outputs</Filter>
-		</ClInclude>
-		<ClInclude Include="src\Inputs\VideoPlayerInput.hpp">
-			<Filter>src\Inputs</Filter>
-		</ClInclude>
-		<ClInclude Include="src\Inputs\SyphonInput.hpp">
-			<Filter>src\Inputs</Filter>
-		</ClInclude>
-		<ClInclude Include="src\Inputs\NdiInput.hpp">
-			<Filter>src\Inputs</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxJSON\src\ofxJSON.h">
-			<Filter>addons\ofxJSON\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxJSON\src\ofxJSONElement.h">
-			<Filter>addons\ofxJSON\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxJSON\libs\jsoncpp\include\json\json-forwards.h">
-			<Filter>addons\ofxJSON\libs\jsoncpp\include\json</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxJSON\libs\jsoncpp\include\json\json.h">
-			<Filter>addons\ofxJSON\libs\jsoncpp\include\json</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDIRecorder.h">
-			<Filter>addons\ofxNDI\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDIFinder.h">
-			<Filter>addons\ofxNDI\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDIReceiver.h">
-			<Filter>addons\ofxNDI\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDI.h">
-			<Filter>addons\ofxNDI\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDIPTZ.h">
-			<Filter>addons\ofxNDI\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxNDI\src\utils\ofxNDIVideoCaster.h">
-			<Filter>addons\ofxNDI\src\utils</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxNDI\src\utils\ofxNDIVideoGrabber.h">
-			<Filter>addons\ofxNDI\src\utils</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDISender.h">
-			<Filter>addons\ofxNDI\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDIFrame.h">
-			<Filter>addons\ofxNDI\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDISendStream.h">
-			<Filter>addons\ofxNDI\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDIRouter.h">
-			<Filter>addons\ofxNDI\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDIRecvStream.h">
-			<Filter>addons\ofxNDI\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxNDI\libs\utils\DoubleBuffer.h">
-			<Filter>addons\ofxNDI\libs\utils</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.compat.h">
-			<Filter>addons\ofxNDI\libs\NDI\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.utilities.h">
-			<Filter>addons\ofxNDI\libs\NDI\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.Recv.ex.h">
-			<Filter>addons\ofxNDI\libs\NDI\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.deprecated.h">
-			<Filter>addons\ofxNDI\libs\NDI\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.Routing.h">
-			<Filter>addons\ofxNDI\libs\NDI\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.Send.h">
-			<Filter>addons\ofxNDI\libs\NDI\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.structs.h">
-			<Filter>addons\ofxNDI\libs\NDI\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.Lib.cplusplus.h">
-			<Filter>addons\ofxNDI\libs\NDI\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.FrameSync.h">
-			<Filter>addons\ofxNDI\libs\NDI\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.Find.h">
-			<Filter>addons\ofxNDI\libs\NDI\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.DynamicLoad.h">
-			<Filter>addons\ofxNDI\libs\NDI\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.Recv.h">
-			<Filter>addons\ofxNDI\libs\NDI\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.Lib.h">
-			<Filter>addons\ofxNDI\libs\NDI\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxSyphon\src\ofxSyphon.h">
-			<Filter>addons\ofxSyphon\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxSyphon\src\ofxSyphonServer.h">
-			<Filter>addons\ofxSyphon\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxSyphon\src\ofxSyphonClient.h">
-			<Filter>addons\ofxSyphon\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxSyphon\src\ofxSyphonServerDirectory.h">
-			<Filter>addons\ofxSyphon\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxSyphon\libs\Syphon\src\SyphonNameboundClient.h">
-			<Filter>addons\ofxSyphon\libs\Syphon\src</Filter>
-		</ClInclude>
-	</ItemGroup>
-	<ItemGroup>
-		<ResourceCompile Include="icon.rc" />
-	</ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ofApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\config\Config.cpp">
+      <Filter>src\config</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Outputs\SyphonOutput.cpp">
+      <Filter>src\Outputs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Outputs\NdiOutput.cpp">
+      <Filter>src\Outputs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Inputs\NdiInput.cpp">
+      <Filter>src\Inputs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Inputs\SyphonInput.cpp">
+      <Filter>src\Inputs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Inputs\VideoPlayerInput.cpp">
+      <Filter>src\Inputs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxJSON\src\ofxJSONElement.cpp">
+      <Filter>addons\ofxJSON\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxJSON\libs\jsoncpp\src\jsoncpp.cpp">
+      <Filter>addons\ofxJSON\libs\jsoncpp\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDIFinder.cpp">
+      <Filter>addons\ofxNDI\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxNDI\src\utils\ofxNDIVideoGrabber.cpp">
+      <Filter>addons\ofxNDI\src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxNDI\src\utils\ofxNDIVideoCaster.cpp">
+      <Filter>addons\ofxNDI\src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDIReceiver.cpp">
+      <Filter>addons\ofxNDI\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDIPTZ.cpp">
+      <Filter>addons\ofxNDI\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDISender.cpp">
+      <Filter>addons\ofxNDI\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDIRecvStream.cpp">
+      <Filter>addons\ofxNDI\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDIFrame.cpp">
+      <Filter>addons\ofxNDI\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDIRecorder.cpp">
+      <Filter>addons\ofxNDI\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDIRouter.cpp">
+      <Filter>addons\ofxNDI\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDISendStream.cpp">
+      <Filter>addons\ofxNDI\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\config">
+      <UniqueIdentifier>{6605C095-DCC6-E901-6144-F29A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\config\Outputs">
+      <UniqueIdentifier>{0B7F5FE0-AA91-66B3-25CB-6A2A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\config\Inputs">
+      <UniqueIdentifier>{FE127F1B-12B4-E3BC-ED83-EF18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Outputs">
+      <UniqueIdentifier>{FA039FB3-E8F9-45B4-D3AA-E1B8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Inputs">
+      <UniqueIdentifier>{2D1E197B-AA20-E442-08AE-5953}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons">
+      <UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxJSON">
+      <UniqueIdentifier>{CF86E01B-D8D7-A112-88F3-5883}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxJSON\src">
+      <UniqueIdentifier>{CE83AFE9-FE4A-682E-D5C9-50B4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxJSON\libs">
+      <UniqueIdentifier>{5302B3F8-ECDD-0465-334A-F39E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxJSON\libs\jsoncpp">
+      <UniqueIdentifier>{87D6C548-39D9-FD9F-093E-9F4E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxJSON\libs\jsoncpp\include">
+      <UniqueIdentifier>{0B6CA981-484E-6E8C-776C-7298}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxJSON\libs\jsoncpp\include\json">
+      <UniqueIdentifier>{5FF260B2-1497-3EFE-19D5-40DB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxJSON\libs\jsoncpp\src">
+      <UniqueIdentifier>{6D569A5B-6719-AEFD-C08E-5CE5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxNDI">
+      <UniqueIdentifier>{577C5AAC-F44E-A0BE-E58F-B066}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxNDI\src">
+      <UniqueIdentifier>{3BB183CD-62BF-E58A-FD5C-A603}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxNDI\src\utils">
+      <UniqueIdentifier>{23EC56A6-F7F6-87B6-89BC-D0AE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxNDI\libs">
+      <UniqueIdentifier>{C2091C9D-63A5-7B51-5F40-CF0C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxNDI\libs\utils">
+      <UniqueIdentifier>{458DF67A-3660-63B8-3D92-F65D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxNDI\libs\NDI">
+      <UniqueIdentifier>{50DDA443-51F6-CCFC-46D7-85CE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxNDI\libs\NDI\include">
+      <UniqueIdentifier>{B9E7D45F-AC3D-9349-FCD4-7EA6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ofApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OutputsConfig.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\config\InputsConfig.hpp">
+      <Filter>src\config</Filter>
+    </ClInclude>
+    <ClInclude Include="src\config\Config.hpp">
+      <Filter>src\config</Filter>
+    </ClInclude>
+    <ClInclude Include="src\config\Outputs\NdiOutputConfig.hpp">
+      <Filter>src\config\Outputs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\config\Outputs\SyphonOutputConfig.hpp">
+      <Filter>src\config\Outputs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\config\PanelConfig.hpp">
+      <Filter>src\config</Filter>
+    </ClInclude>
+    <ClInclude Include="src\config\Inputs\NdiInputConfig.hpp">
+      <Filter>src\config\Inputs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\config\Inputs\SyphonInputConfig.hpp">
+      <Filter>src\config\Inputs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\config\Inputs\VideoPlayerInputConfig.hpp">
+      <Filter>src\config\Inputs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BaseOutput.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BaseInput.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Outputs\SyphonOutput.hpp">
+      <Filter>src\Outputs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Outputs\NdiOutput.hpp">
+      <Filter>src\Outputs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Inputs\VideoPlayerInput.hpp">
+      <Filter>src\Inputs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Inputs\SyphonInput.hpp">
+      <Filter>src\Inputs</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Inputs\NdiInput.hpp">
+      <Filter>src\Inputs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxJSON\src\ofxJSON.h">
+      <Filter>addons\ofxJSON\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxJSON\src\ofxJSONElement.h">
+      <Filter>addons\ofxJSON\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxJSON\libs\jsoncpp\include\json\json-forwards.h">
+      <Filter>addons\ofxJSON\libs\jsoncpp\include\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxJSON\libs\jsoncpp\include\json\json.h">
+      <Filter>addons\ofxJSON\libs\jsoncpp\include\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDIRecorder.h">
+      <Filter>addons\ofxNDI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDIFinder.h">
+      <Filter>addons\ofxNDI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDIReceiver.h">
+      <Filter>addons\ofxNDI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDI.h">
+      <Filter>addons\ofxNDI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDIPTZ.h">
+      <Filter>addons\ofxNDI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxNDI\src\utils\ofxNDIVideoCaster.h">
+      <Filter>addons\ofxNDI\src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxNDI\src\utils\ofxNDIVideoGrabber.h">
+      <Filter>addons\ofxNDI\src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDISender.h">
+      <Filter>addons\ofxNDI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDIFrame.h">
+      <Filter>addons\ofxNDI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDISendStream.h">
+      <Filter>addons\ofxNDI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDIRouter.h">
+      <Filter>addons\ofxNDI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxNDI\src\ofxNDIRecvStream.h">
+      <Filter>addons\ofxNDI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxNDI\libs\utils\DoubleBuffer.h">
+      <Filter>addons\ofxNDI\libs\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.compat.h">
+      <Filter>addons\ofxNDI\libs\NDI\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.utilities.h">
+      <Filter>addons\ofxNDI\libs\NDI\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.Recv.ex.h">
+      <Filter>addons\ofxNDI\libs\NDI\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.deprecated.h">
+      <Filter>addons\ofxNDI\libs\NDI\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.Routing.h">
+      <Filter>addons\ofxNDI\libs\NDI\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.Send.h">
+      <Filter>addons\ofxNDI\libs\NDI\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.structs.h">
+      <Filter>addons\ofxNDI\libs\NDI\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.Lib.cplusplus.h">
+      <Filter>addons\ofxNDI\libs\NDI\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.FrameSync.h">
+      <Filter>addons\ofxNDI\libs\NDI\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.Find.h">
+      <Filter>addons\ofxNDI\libs\NDI\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.DynamicLoad.h">
+      <Filter>addons\ofxNDI\libs\NDI\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.Recv.h">
+      <Filter>addons\ofxNDI\libs\NDI\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.Lib.h">
+      <Filter>addons\ofxNDI\libs\NDI\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="icon.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\addons\ofxNDI\windows-copy-to-bin\Processing.NDI.Lib.x64.dll" />
+    <None Include="..\..\..\addons\ofxNDI\windows-copy-to-bin\Processing.NDI.Lib.x86.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="config.json" />
+  </ItemGroup>
 </Project>

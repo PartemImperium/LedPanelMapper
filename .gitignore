@@ -37,5 +37,8 @@ bin
 # Xcode User data.
 xcuserdata/
 
+# Visual Studio files
+obj/
+.vs/
 
 .DS_STORE
