@@ -4,6 +4,9 @@ void ofApp::setup() {
 	ofSetEscapeQuitsApp(false);
 	ofDisableArbTex();
 
+    ofSetVerticalSync(true);
+    ofSetFrameRate(60);
+    
 	setupConfig();
 	setupInfoUi(c);
 
@@ -37,6 +40,9 @@ void ofApp::setupInput() {
 	else if (c.Inputs.Ndi.IsInputEnabled) {
 		input = new NdiInput();
 	}
+    else if (c.Inputs.DeckLink.IsInputEnabled) {
+		input = new DeckLinkInput();
+	}
 
 	input->setup(c);
 }
@@ -50,6 +56,9 @@ void ofApp::setupOutputs() {
 		outputs.push_back(std::move(std::make_unique<SyphonOutput>()));
 	}
 #endif
+    if (c.Outputs.DeckLink.IsOutputEnabled) {
+        outputs.push_back(std::move(std::make_unique<DeckLinkOutput>()));
+    }
 
 	for (auto& o : outputs) {
 		o->setup(c);

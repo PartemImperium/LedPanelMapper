@@ -4,6 +4,7 @@
 #include "VideoPlayerInputConfig.hpp"
 #include "SyphonInputConfig.hpp"
 #include "NdiInputConfig.hpp"
+#include "DeckLinkInputConfig.hpp"
 
 class InputsConfig {
     public:
@@ -11,4 +12,5 @@ class InputsConfig {
         VideoPlayerInputConfig VideoPlayer;
         SyphonInputConfig Syphon;
         NdiInputConfig Ndi;
+        DeckLinkInputConfig DeckLink;
 };

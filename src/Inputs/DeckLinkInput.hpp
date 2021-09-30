@@ -1,12 +1,11 @@
 #pragma once
 
-// Open Frameworks
-#include "ofMain.h"
+#include "ofxDeckLink.h"
 
 #include "Config.hpp"
 #include "BaseInput.hpp"
 
-class VideoPlayerInput: public BaseInput {
+class DeckLinkInput: public BaseInput {
     public:
         virtual void setup(Config config);
         virtual void draw();
@@ -15,5 +14,5 @@ class VideoPlayerInput: public BaseInput {
 
     private:
         Config c;
-        ofVideoPlayer videoPlayer;// TODO: Move this to something that works without installing Quicktime on windows
+        ofxDeckLinkAPI::Input deckLinkInput;
 };

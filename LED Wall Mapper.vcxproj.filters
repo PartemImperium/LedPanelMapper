@@ -16,7 +16,13 @@
 		<ClCompile Include="src\Outputs\NdiOutput.cpp">
 			<Filter>src\Outputs</Filter>
 		</ClCompile>
+		<ClCompile Include="src\Outputs\DeckLinkOutput.cpp">
+			<Filter>src\Outputs</Filter>
+		</ClCompile>
 		<ClCompile Include="src\Inputs\NdiInput.cpp">
+			<Filter>src\Inputs</Filter>
+		</ClCompile>
+		<ClCompile Include="src\Inputs\DeckLinkInput.cpp">
 			<Filter>src\Inputs</Filter>
 		</ClCompile>
 		<ClCompile Include="src\Inputs\SyphonInput.cpp">
@@ -27,6 +33,21 @@
 		</ClCompile>
 		<ClCompile Include="src\Inputs\StaticImageInput.cpp">
 			<Filter>src\Inputs</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxDeckLink\src\ofxDeckLinkOutput.cpp">
+			<Filter>addons\ofxDeckLink\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxDeckLink\src\ofxDeckLinkInput.cpp">
+			<Filter>addons\ofxDeckLink\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxDeckLink\src\ofxDeckLink.cpp">
+			<Filter>addons\ofxDeckLink\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxDeckLink\src\ofxDeckLinkAPIConstants.cpp">
+			<Filter>addons\ofxDeckLink\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include\DeckLinkAPIDispatch.cpp">
+			<Filter>addons\ofxDeckLink\libs\DeckLinkAPI\include</Filter>
 		</ClCompile>
 		<ClCompile Include="..\..\..\addons\ofxJSON\src\ofxJSONElement.cpp">
 			<Filter>addons\ofxJSON\src</Filter>
@@ -90,6 +111,21 @@
 		<Filter Include="addons">
 			<UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
 		</Filter>
+		<Filter Include="addons\ofxDeckLink">
+			<UniqueIdentifier>{DB59108A-C1EB-C52C-6390-E66E}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxDeckLink\src">
+			<UniqueIdentifier>{9898D02E-374D-DC15-B300-AFEE}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxDeckLink\libs">
+			<UniqueIdentifier>{FD018EE5-7DAE-FA38-C34B-E4FE}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxDeckLink\libs\DeckLinkAPI">
+			<UniqueIdentifier>{D54E22BD-5F1D-8101-6839-8583}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxDeckLink\libs\DeckLinkAPI\include">
+			<UniqueIdentifier>{33648C44-0740-42D0-03D5-67C4}</UniqueIdentifier>
+		</Filter>
 		<Filter Include="addons\ofxJSON">
 			<UniqueIdentifier>{CF86E01B-D8D7-A112-88F3-5883}</UniqueIdentifier>
 		</Filter>
@@ -146,6 +182,9 @@
 		<ClInclude Include="src\config\Config.hpp">
 			<Filter>src\config</Filter>
 		</ClInclude>
+		<ClInclude Include="src\config\Outputs\DeckLinkOutputConfig.hpp">
+			<Filter>src\config\Outputs</Filter>
+		</ClInclude>
 		<ClInclude Include="src\config\Outputs\NdiOutputConfig.hpp">
 			<Filter>src\config\Outputs</Filter>
 		</ClInclude>
@@ -164,6 +203,9 @@
 		<ClInclude Include="src\config\Inputs\SyphonInputConfig.hpp">
 			<Filter>src\config\Inputs</Filter>
 		</ClInclude>
+		<ClInclude Include="src\config\Inputs\DeckLinkInputConfig.hpp">
+			<Filter>src\config\Inputs</Filter>
+		</ClInclude>
 		<ClInclude Include="src\config\Inputs\VideoPlayerInputConfig.hpp">
 			<Filter>src\config\Inputs</Filter>
 		</ClInclude>
@@ -172,6 +214,9 @@
 		</ClInclude>
 		<ClInclude Include="src\BaseInput.hpp">
 			<Filter>src</Filter>
+		</ClInclude>
+		<ClInclude Include="src\Outputs\DeckLinkOutput.hpp">
+			<Filter>src\Outputs</Filter>
 		</ClInclude>
 		<ClInclude Include="src\Outputs\SyphonOutput.hpp">
 			<Filter>src\Outputs</Filter>
@@ -185,11 +230,50 @@
 		<ClInclude Include="src\Inputs\StaticImageInput.hpp">
 			<Filter>src\Inputs</Filter>
 		</ClInclude>
+		<ClInclude Include="src\Inputs\DeckLinkInput.hpp">
+			<Filter>src\Inputs</Filter>
+		</ClInclude>
 		<ClInclude Include="src\Inputs\SyphonInput.hpp">
 			<Filter>src\Inputs</Filter>
 		</ClInclude>
 		<ClInclude Include="src\Inputs\NdiInput.hpp">
 			<Filter>src\Inputs</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxDeckLink\src\ofxDeckLinkOutput.h">
+			<Filter>addons\ofxDeckLink\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxDeckLink\src\ofxDeckLinkAPIConstants.h">
+			<Filter>addons\ofxDeckLink\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxDeckLink\src\ofxDeckLink.h">
+			<Filter>addons\ofxDeckLink\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxDeckLink\src\ofxDeckLinkInput.h">
+			<Filter>addons\ofxDeckLink\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include\DeckLinkAPIConfiguration.h">
+			<Filter>addons\ofxDeckLink\libs\DeckLinkAPI\include</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include\DeckLinkAPIDeckControl.h">
+			<Filter>addons\ofxDeckLink\libs\DeckLinkAPI\include</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include\DeckLinkAPIModes.h">
+			<Filter>addons\ofxDeckLink\libs\DeckLinkAPI\include</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include\DeckLinkAPIDiscovery.h">
+			<Filter>addons\ofxDeckLink\libs\DeckLinkAPI\include</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include\DeckLinkAPIStreaming.h">
+			<Filter>addons\ofxDeckLink\libs\DeckLinkAPI\include</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include\DeckLinkAPIVersion.h">
+			<Filter>addons\ofxDeckLink\libs\DeckLinkAPI\include</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include\DeckLinkAPITypes.h">
+			<Filter>addons\ofxDeckLink\libs\DeckLinkAPI\include</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include\DeckLinkAPI.h">
+			<Filter>addons\ofxDeckLink\libs\DeckLinkAPI\include</Filter>
 		</ClInclude>
 		<ClInclude Include="..\..\..\addons\ofxJSON\src\ofxJSON.h">
 			<Filter>addons\ofxJSON\src</Filter>

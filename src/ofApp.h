@@ -11,6 +11,7 @@
 #include "VideoPlayerInput.hpp"
 #include "StaticImageInput.hpp"
 #include "NdiInput.hpp"
+#include "DeckLinkInput.hpp"
 
 #if __APPLE__
 #include "SyphonInput.hpp"
@@ -18,6 +19,7 @@
 
 // Outputs
 #include "NdiOutput.hpp"
+#include "DeckLinkOutput.hpp"
 
 #if __APPLE__
 #include "SyphonOutput.hpp"
@@ -25,8 +27,6 @@
 
 // JSON addon
 #include "ofxJSONElement.h"
-
-
 
 class ofApp : public ofBaseApp{
 

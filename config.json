@@ -1,65 +1,74 @@
 {
-    "inputs":{
-        "staticImage":{
-            "filePath":"/Users/gremioludus/PanelCenter.png",
-            "isEnabled":true
+    "inputs": {
+        "staticImage": {
+            "filePath": "/Users/gremioludus/PanelCenter.png",
+            "isEnabled": true
         },
-        "videoPlayer":{
-            "filePath":"VideoSyncSource.mp4",
-            "isEnabled":true
+        "videoPlayer": {
+            "filePath": "VideoSyncSource.mp4",
+            "isEnabled": true
         },
-      "syphon":{
-          "applicationName":"ProPresenter",
-          "serverName":"Syphon - 1",
-          "isEnabled":false
-      },
-      "ndi":{
-          "feedName":"HOSTNAME (Test Patterns)",
-          "isEnabled":false
-      }
-    },
-    "outputs":{
-        "syphon":{
-            "name":"LED Mapper",
-            "isEnabled":true
+        "syphon": {
+            "applicationName": "ProPresenter",
+            "serverName": "Syphon - 1",
+            "isEnabled": false
         },
-        "ndi":{
-            "name":"LED Mapper",
-            "isEnabled":true
+        "ndi": {
+            "feedName": "HOSTNAME (Test Patterns)",
+            "isEnabled": false
+        },
+        "deckLink": {
+            "deviceId": 1,
+            "videoMode": "dont know if this works this is just a filler for now",
+            "isEnabled": false
         }
     },
-    "panels":[
-        {
-            "x":0,
-            "y":540
+    "outputs": {
+        "syphon": {
+            "name": "LED Mapper",
+            "isEnabled": true
+        },
+        "ndi": {
+            "name": "LED Mapper",
+            "isEnabled": true
+        },
+        "deckLink": {
+            "deviceId": 1,
+            "videoMode": "dont know if this works this is just a filler for now",
+            "isEnabled": false
+        }
+    },
+    "panels": [{
+            "x": 0,
+            "y": 540
         },
         {
-            "x":0,
-            "y":0
+            "x": 0,
+            "y": 0
         },
         {
-            "x":409.6,
-            "y":409.6
+            "x": 409.6,
+            "y": 409.6
         },
         {
-            "x":819.2,
-            "y":540
+            "x": 819.2,
+            "y": 540
         },
         {
-            "x":819.2,
-            "y":0
+            "x": 819.2,
+            "y": 0
         },
         {
-            "x":1229,
-            "y":409.6
+            "x": 1229,
+            "y": 409.6
         },
         {
-            "x":1638,
-            "y":540
+            "x": 1638,
+            "y": 540
         },
         {
-            "x":1638,
-            "y":0
+            "x": 1638,
+            "y": 0
         }
     ]
 }

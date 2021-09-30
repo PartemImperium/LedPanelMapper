@@ -25,16 +25,28 @@ void Config::setup(ofxJSONElement json) {
 	Inputs.Ndi.FeedName = ndiInput["feedName"].asString();
 	Inputs.Ndi.IsInputEnabled = ndiInput["isEnabled"].asBool();
 
+    ofxJSONElement deckLinkInput = inputs["deckLink"];
+    Inputs.DeckLink.DeviceId = deckLinkInput["deviceId"].asInt();
+    Inputs.DeckLink.VideoMode = deckLinkInput["videoMode"].asString();
+    Inputs.DeckLink.IsInputEnabled = deckLinkInput["isEnabled"].asBool();
+    
+    
 	// Outputs
 	ofxJSONElement outputs = json["outputs"];
 
 	ofxJSONElement syphonOutput = outputs["syphon"];
 	Outputs.Syphon.Name = syphonOutput["name"].asString();
 	Outputs.Syphon.IsOutputEnabled = syphonOutput["isEnabled"].asBool();
+    
 
 	ofxJSONElement ndiOutput = outputs["ndi"];
 	Outputs.Ndi.Name = syphonOutput["name"].asString();
 	Outputs.Ndi.IsOutputEnabled = syphonOutput["isEnabled"].asBool();
+    
+    ofxJSONElement deckLinkOutput = outputs["deckLink"];
+    Outputs.DeckLink.DeviceId = deckLinkOutput["deviceId"].asInt();
+    Outputs.DeckLink.VideoMode = deckLinkOutput["videoMode"].asString();
+    Outputs.DeckLink.IsOutputEnabled = deckLinkOutput["isEnabled"].asBool();
 
 	// Panels
 	ofxJSONElement panels = json["panels"];

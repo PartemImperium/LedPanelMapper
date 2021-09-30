@@ -1258,6 +1258,377 @@
 				<key>sourceTree</key>
 				<string>SOURCE_ROOT</string>
 			</dict>
+			<key>58414C1B03A4296118C189EB</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxDeckLinkOutput.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxDeckLink/src/ofxDeckLinkOutput.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>3652DE64DCE39055DCB7E9AB</key>
+			<dict>
+				<key>fileRef</key>
+				<string>189D9A20996A7123571EC46A</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>189D9A20996A7123571EC46A</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxDeckLinkOutput.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxDeckLink/src/ofxDeckLinkOutput.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>326FD069B23C0F8B8CF2F8D2</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxDeckLinkInput.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxDeckLink/src/ofxDeckLinkInput.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>92CFD28A8EE3E1EB03D79F02</key>
+			<dict>
+				<key>fileRef</key>
+				<string>1BA059110C665DC7D3C2636A</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>1BA059110C665DC7D3C2636A</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxDeckLinkInput.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxDeckLink/src/ofxDeckLinkInput.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>D7AC475E459EF0A3714AC73A</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxDeckLinkAPIConstants.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxDeckLink/src/ofxDeckLinkAPIConstants.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>70A54C5054010C1232DC7669</key>
+			<dict>
+				<key>fileRef</key>
+				<string>2484D1C4AB8AAD3081D684EF</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>2484D1C4AB8AAD3081D684EF</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxDeckLinkAPIConstants.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxDeckLink/src/ofxDeckLinkAPIConstants.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>22B0112805834FC8DB516721</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxDeckLink.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxDeckLink/src/ofxDeckLink.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>E04162475EE3D47EFBE1ACA2</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>431E58E5BAEAA0086F348F4B</string>
+					<string>22B0112805834FC8DB516721</string>
+					<string>2484D1C4AB8AAD3081D684EF</string>
+					<string>D7AC475E459EF0A3714AC73A</string>
+					<string>1BA059110C665DC7D3C2636A</string>
+					<string>326FD069B23C0F8B8CF2F8D2</string>
+					<string>189D9A20996A7123571EC46A</string>
+					<string>58414C1B03A4296118C189EB</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>src</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>274CA4130D1D6CC180B13214</key>
+			<dict>
+				<key>fileRef</key>
+				<string>431E58E5BAEAA0086F348F4B</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>431E58E5BAEAA0086F348F4B</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxDeckLink.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxDeckLink/src/ofxDeckLink.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>4093BCF60570F206ABF6C979</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>DeckLinkAPIVersion.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxDeckLink/libs/DeckLinkAPI/include/DeckLinkAPIVersion.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>D412A3EAF2295FBEE5FBF16B</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>DeckLinkAPITypes.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxDeckLink/libs/DeckLinkAPI/include/DeckLinkAPITypes.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>DCA87AB04E516A56A6D5FFC2</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>DeckLinkAPIStreaming.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxDeckLink/libs/DeckLinkAPI/include/DeckLinkAPIStreaming.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>A534535F5FEAB5C5CB7275F6</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>DeckLinkAPIModes.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxDeckLink/libs/DeckLinkAPI/include/DeckLinkAPIModes.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>C44D74886517801BCEEE3CBE</key>
+			<dict>
+				<key>fileRef</key>
+				<string>D972E96B0E399E9546402134</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>D972E96B0E399E9546402134</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>DeckLinkAPIDispatch.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxDeckLink/libs/DeckLinkAPI/include/DeckLinkAPIDispatch.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>47712C3FF61D1E3945AD5E1B</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>DeckLinkAPIDiscovery.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxDeckLink/libs/DeckLinkAPI/include/DeckLinkAPIDiscovery.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>F0EF88ADECB31F62AE4C1497</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>DeckLinkAPIDeckControl.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxDeckLink/libs/DeckLinkAPI/include/DeckLinkAPIDeckControl.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>ABB00039C2028BE75FF61C60</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>DeckLinkAPIConfiguration.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxDeckLink/libs/DeckLinkAPI/include/DeckLinkAPIConfiguration.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>0B0DA1081AEB63ED4B116A0B</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>B6B4ACD451F44E725FE05610</string>
+					<string>ABB00039C2028BE75FF61C60</string>
+					<string>F0EF88ADECB31F62AE4C1497</string>
+					<string>47712C3FF61D1E3945AD5E1B</string>
+					<string>D972E96B0E399E9546402134</string>
+					<string>A534535F5FEAB5C5CB7275F6</string>
+					<string>DCA87AB04E516A56A6D5FFC2</string>
+					<string>D412A3EAF2295FBEE5FBF16B</string>
+					<string>4093BCF60570F206ABF6C979</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>include</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>C2F0C013E05AD3C5E92B49D0</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>0B0DA1081AEB63ED4B116A0B</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>DeckLinkAPI</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>4377FB60802F756190BA19EE</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>C2F0C013E05AD3C5E92B49D0</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>libs</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>1080C156CF0CB5ACEC00504C</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>4377FB60802F756190BA19EE</string>
+					<string>E04162475EE3D47EFBE1ACA2</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>ofxDeckLink</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>B6B4ACD451F44E725FE05610</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>DeckLinkAPI.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxDeckLink/libs/DeckLinkAPI/include/DeckLinkAPI.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
 			<key>15C8E48F131B29314E78A823</key>
 			<dict>
 				<key>fileRef</key>
@@ -1339,6 +1710,28 @@
 				<key>sourceTree</key>
 				<string>SOURCE_ROOT</string>
 			</dict>
+			<key>0F7516394FA513D9512EA6D9</key>
+			<dict>
+				<key>fileRef</key>
+				<string>A05146D902C91392FCD0DABF</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>A05146D902C91392FCD0DABF</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>DeckLinkInput.cpp</string>
+				<key>path</key>
+				<string>src/Inputs/DeckLinkInput.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
 			<key>A0087FE518CD041C25838418</key>
 			<dict>
 				<key>explicitFileType</key>
@@ -1351,6 +1744,21 @@
 				<string>SyphonInput.hpp</string>
 				<key>path</key>
 				<string>src/Inputs/SyphonInput.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>9148FBE8576CE7B2E76F2F06</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>DeckLinkInput.hpp</string>
+				<key>path</key>
+				<string>src/Inputs/DeckLinkInput.hpp</string>
 				<key>sourceTree</key>
 				<string>SOURCE_ROOT</string>
 			</dict>
@@ -1398,7 +1806,9 @@
 					<string>14CE80F18417D5FD6B565F04</string>
 					<string>0E88B5CEE76288265E15A424</string>
 					<string>B3E84DDE68854F4C4F03FB77</string>
+					<string>9148FBE8576CE7B2E76F2F06</string>
 					<string>A0087FE518CD041C25838418</string>
+					<string>A05146D902C91392FCD0DABF</string>
 					<string>31262265F5ECBE5DC86A886E</string>
 					<string>E0A12A1B7694777F9060A443</string>
 					<string>73F50592E5A90FBB5B81EED0</string>
@@ -1441,6 +1851,28 @@
 				<key>sourceTree</key>
 				<string>SOURCE_ROOT</string>
 			</dict>
+			<key>1DAF0011C8315AEA50FD6CDE</key>
+			<dict>
+				<key>fileRef</key>
+				<string>002511F8429967BBEE33AB49</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>002511F8429967BBEE33AB49</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>DeckLinkOutput.cpp</string>
+				<key>path</key>
+				<string>src/Outputs/DeckLinkOutput.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
 			<key>327ABD27904CF1E98670613C</key>
 			<dict>
 				<key>explicitFileType</key>
@@ -1478,13 +1910,30 @@
 				<key>sourceTree</key>
 				<string>SOURCE_ROOT</string>
 			</dict>
+			<key>CA338310108D4E6989FD6BDA</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>DeckLinkOutput.hpp</string>
+				<key>path</key>
+				<string>src/Outputs/DeckLinkOutput.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
 			<key>52706B872242929A29864ED6</key>
 			<dict>
 				<key>children</key>
 				<array>
 					<string>92AC1A1661B9C5D3CC0379BC</string>
+					<string>CA338310108D4E6989FD6BDA</string>
 					<string>87F412D6C3F9F8C9865FE055</string>
 					<string>327ABD27904CF1E98670613C</string>
+					<string>002511F8429967BBEE33AB49</string>
 					<string>A29D21AE3E6D1ED23A6D5899</string>
 				</array>
 				<key>isa</key>
@@ -1561,6 +2010,21 @@
 				<key>sourceTree</key>
 				<string>SOURCE_ROOT</string>
 			</dict>
+			<key>A6B7842CA451C1825C7642A5</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>DeckLinkInputConfig.hpp</string>
+				<key>path</key>
+				<string>src/config/Inputs/DeckLinkInputConfig.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
 			<key>DBD74D50E8DE2255E18C587D</key>
 			<dict>
 				<key>explicitFileType</key>
@@ -1598,6 +2062,7 @@
 					<string>9327CDBC6CBC32427FDCA7BF</string>
 					<string>90052B709362000F79F55AE9</string>
 					<string>DBD74D50E8DE2255E18C587D</string>
+					<string>A6B7842CA451C1825C7642A5</string>
 					<string>DF1252AF7E67C2CC0BA1576A</string>
 				</array>
 				<key>isa</key>
@@ -1652,20 +2117,6 @@
 				<key>sourceTree</key>
 				<string>SOURCE_ROOT</string>
 			</dict>
-			<key>D5B1F2B9B73DA1EDFDE1C5C1</key>
-			<dict>
-				<key>children</key>
-				<array>
-					<string>02D1B769EC48BD08858F36D4</string>
-					<string>79E487CCA5AE1B9341EE5F7C</string>
-				</array>
-				<key>isa</key>
-				<string>PBXGroup</string>
-				<key>name</key>
-				<string>Outputs</string>
-				<key>sourceTree</key>
-				<string>&lt;group&gt;</string>
-			</dict>
 			<key>02D1B769EC48BD08858F36D4</key>
 			<dict>
 				<key>explicitFileType</key>
@@ -1678,6 +2129,36 @@
 				<string>NdiOutputConfig.hpp</string>
 				<key>path</key>
 				<string>src/config/Outputs/NdiOutputConfig.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>D5B1F2B9B73DA1EDFDE1C5C1</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>D1AB6C0DD6C50FE4188308F4</string>
+					<string>02D1B769EC48BD08858F36D4</string>
+					<string>79E487CCA5AE1B9341EE5F7C</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>Outputs</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>D1AB6C0DD6C50FE4188308F4</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>DeckLinkOutputConfig.hpp</string>
+				<key>path</key>
+				<string>src/config/Outputs/DeckLinkOutputConfig.hpp</string>
 				<key>sourceTree</key>
 				<string>SOURCE_ROOT</string>
 			</dict>
@@ -1942,6 +2423,10 @@ fi
 						<string>src/config</string>
 						<string>src/config/Inputs</string>
 						<string>src/config/Outputs</string>
+						<string>../../../addons/ofxDeckLink/libs</string>
+						<string>../../../addons/ofxDeckLink/libs/DeckLinkAPI</string>
+						<string>../../../addons/ofxDeckLink/libs/DeckLinkAPI/include</string>
+						<string>../../../addons/ofxDeckLink/src</string>
 						<string>../../../addons/ofxJSON/libs</string>
 						<string>../../../addons/ofxJSON/libs/jsoncpp</string>
 						<string>../../../addons/ofxJSON/libs/jsoncpp/include</string>
@@ -2007,6 +2492,10 @@ fi
 						<string>src/config</string>
 						<string>src/config/Inputs</string>
 						<string>src/config/Outputs</string>
+						<string>../../../addons/ofxDeckLink/libs</string>
+						<string>../../../addons/ofxDeckLink/libs/DeckLinkAPI</string>
+						<string>../../../addons/ofxDeckLink/libs/DeckLinkAPI/include</string>
+						<string>../../../addons/ofxDeckLink/src</string>
 						<string>../../../addons/ofxJSON/libs</string>
 						<string>../../../addons/ofxJSON/libs/jsoncpp</string>
 						<string>../../../addons/ofxJSON/libs/jsoncpp/include</string>
@@ -2063,6 +2552,7 @@ fi
 			<dict>
 				<key>children</key>
 				<array>
+					<string>1080C156CF0CB5ACEC00504C</string>
 					<string>2865DAEF86B1907A704CA70B</string>
 					<string>34159355A5E930002AC9132E</string>
 					<string>7F3C04577424427D348B1425</string>
@@ -4837,6 +5327,10 @@ fi
 						<string>src/config</string>
 						<string>src/config/Inputs</string>
 						<string>src/config/Outputs</string>
+						<string>../../../addons/ofxDeckLink/libs</string>
+						<string>../../../addons/ofxDeckLink/libs/DeckLinkAPI</string>
+						<string>../../../addons/ofxDeckLink/libs/DeckLinkAPI/include</string>
+						<string>../../../addons/ofxDeckLink/src</string>
 						<string>../../../addons/ofxJSON/libs</string>
 						<string>../../../addons/ofxJSON/libs/jsoncpp</string>
 						<string>../../../addons/ofxJSON/libs/jsoncpp/include</string>
@@ -4921,6 +5415,10 @@ fi
 						<string>src/config</string>
 						<string>src/config/Inputs</string>
 						<string>src/config/Outputs</string>
+						<string>../../../addons/ofxDeckLink/libs</string>
+						<string>../../../addons/ofxDeckLink/libs/DeckLinkAPI</string>
+						<string>../../../addons/ofxDeckLink/libs/DeckLinkAPI/include</string>
+						<string>../../../addons/ofxDeckLink/src</string>
 						<string>../../../addons/ofxJSON/libs</string>
 						<string>../../../addons/ofxJSON/libs/jsoncpp</string>
 						<string>../../../addons/ofxJSON/libs/jsoncpp/include</string>
@@ -4966,10 +5464,17 @@ fi
 					<string>FCDEC2573F495CF9DB328EAE</string>
 					<string>E6F2817F4894C4BC564A930E</string>
 					<string>78B7D0AE6072A8956DF7BF99</string>
+					<string>1DAF0011C8315AEA50FD6CDE</string>
 					<string>7FDE548ED91F10A12801FFA9</string>
+					<string>0F7516394FA513D9512EA6D9</string>
 					<string>E8942CFF44D0D488F4F2D2E3</string>
 					<string>11376276E3BE438B0D308F5F</string>
 					<string>15C8E48F131B29314E78A823</string>
+					<string>C44D74886517801BCEEE3CBE</string>
+					<string>274CA4130D1D6CC180B13214</string>
+					<string>70A54C5054010C1232DC7669</string>
+					<string>92CFD28A8EE3E1EB03D79F02</string>
+					<string>3652DE64DCE39055DCB7E9AB</string>
 					<string>FB84AAF8D1B7A95266DB5C09</string>
 					<string>BEDFEE7400C58EA4E412B757</string>
 					<string>C2EA7E93921B756C909E423C</string>
@@ -5094,6 +5599,10 @@ fi
 						<string>src/config</string>
 						<string>src/config/Inputs</string>
 						<string>src/config/Outputs</string>
+						<string>../../../addons/ofxDeckLink/libs</string>
+						<string>../../../addons/ofxDeckLink/libs/DeckLinkAPI</string>
+						<string>../../../addons/ofxDeckLink/libs/DeckLinkAPI/include</string>
+						<string>../../../addons/ofxDeckLink/src</string>
 						<string>../../../addons/ofxJSON/libs</string>
 						<string>../../../addons/ofxJSON/libs/jsoncpp</string>
 						<string>../../../addons/ofxJSON/libs/jsoncpp/include</string>
@@ -5173,6 +5682,10 @@ fi
 						<string>src/config</string>
 						<string>src/config/Inputs</string>
 						<string>src/config/Outputs</string>
+						<string>../../../addons/ofxDeckLink/libs</string>
+						<string>../../../addons/ofxDeckLink/libs/DeckLinkAPI</string>
+						<string>../../../addons/ofxDeckLink/libs/DeckLinkAPI/include</string>
+						<string>../../../addons/ofxDeckLink/src</string>
 						<string>../../../addons/ofxJSON/libs</string>
 						<string>../../../addons/ofxJSON/libs/jsoncpp</string>
 						<string>../../../addons/ofxJSON/libs/jsoncpp/include</string>

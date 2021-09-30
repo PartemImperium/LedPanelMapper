@@ -1,3 +1,4 @@
+ofxDeckLink
 ofxJSON
 ofxNDI
 ofxSyphon
