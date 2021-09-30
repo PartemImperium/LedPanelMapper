@@ -40,5 +40,6 @@ xcuserdata/
 # Visual Studio files
 obj/
 .vs/
+*.vcxproj.user
 
 .DS_STORE

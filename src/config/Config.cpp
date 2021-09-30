@@ -8,6 +8,10 @@ void Config::setup(ofxJSONElement json) {
 	// Inputs
 	ofxJSONElement inputs = json["inputs"];
 
+    ofxJSONElement staticImageInput = inputs["staticImage"];
+    Inputs.StaticImage.FilePath = staticImageInput["filePath"].asString();
+    Inputs.StaticImage.IsInputEnabled = staticImageInput["isEnabled"].asBool();
+    
 	ofxJSONElement videoPlayerInput = inputs["videoPlayer"];
 	Inputs.VideoPlayer.FilePath = videoPlayerInput["filePath"].asString();
 	Inputs.VideoPlayer.IsInputEnabled = videoPlayerInput["isEnabled"].asBool();

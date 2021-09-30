@@ -9,6 +9,7 @@
 // Inputs
 #include "BaseInput.hpp"
 #include "VideoPlayerInput.hpp"
+#include "StaticImageInput.hpp"
 #include "NdiInput.hpp"
 
 #if __APPLE__

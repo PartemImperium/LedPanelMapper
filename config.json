@@ -1,5 +1,9 @@
 {
     "inputs":{
+        "staticImage":{
+            "filePath":"/Users/gremioludus/PanelCenter.png",
+            "isEnabled":true
+        },
         "videoPlayer":{
             "filePath":"VideoSyncSource.mp4",
             "isEnabled":true

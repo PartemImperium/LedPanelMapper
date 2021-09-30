@@ -26,6 +26,9 @@ void ofApp::setupInput() {
 	if (c.Inputs.VideoPlayer.IsInputEnabled) {
 		input = new VideoPlayerInput();
 	}
+    else if (c.Inputs.StaticImage.IsInputEnabled) {
+        input = new StaticImageInput();
+    }
 #if __APPLE__
 	else if (c.Inputs.Syphon.IsInputEnabled) {
 		input = new SyphonInput();
