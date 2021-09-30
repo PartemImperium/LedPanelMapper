@@ -18,6 +18,22 @@
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
 	</ItemGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    	<LocalDebuggerWorkingDirectory>$(ProjectDir)/bin</LocalDebuggerWorkingDirectory>
+    	<DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  	</PropertyGroup>
+  	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    	<LocalDebuggerWorkingDirectory>$(ProjectDir)/bin</LocalDebuggerWorkingDirectory>
+    	<DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  	</PropertyGroup>
+  	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    	<LocalDebuggerWorkingDirectory>$(ProjectDir)/bin</LocalDebuggerWorkingDirectory>
+    	<DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  	</PropertyGroup>
+  	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    	<LocalDebuggerWorkingDirectory>$(ProjectDir)/bin</LocalDebuggerWorkingDirectory>
+    	<DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  	</PropertyGroup>
 	<PropertyGroup Condition="'$(WindowsTargetPlatformVersion)'==''">
 		<LatestTargetPlatformVersion>$([Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion('Windows', '10.0'))</LatestTargetPlatformVersion>
 		<WindowsTargetPlatformVersion Condition="'$(WindowsTargetPlatformVersion)' == ''">10.0</WindowsTargetPlatformVersion>
