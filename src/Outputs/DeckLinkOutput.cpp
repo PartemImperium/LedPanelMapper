@@ -2,8 +2,9 @@
 
 void DeckLinkOutput::setup(Config config) {
     c = config;
-    if (deckLinkOut.setup(2)) {
-        deckLinkOut.start(bmdModeHD1080p30);
+
+    if (deckLinkOut.setup(c.Outputs.DeckLink.DeviceId - 1)) {
+        deckLinkOut.start(c.Outputs.DeckLink.VideoMode);
     }
 }
 
@@ -16,5 +17,5 @@ void DeckLinkOutput::update() {
 }
 
 std::string DeckLinkOutput::OutputName() {
-    return "Black Magic DeckLink";
+    return "Black Magic DeckLink (" + std::to_string(c.Outputs.DeckLink.DeviceId) + ")";
 }

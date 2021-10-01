@@ -45,7 +45,7 @@ void Config::setup(ofxJSONElement json) {
     
     ofxJSONElement deckLinkOutput = outputs["deckLink"];
     Outputs.DeckLink.DeviceId = deckLinkOutput["deviceId"].asInt();
-    Outputs.DeckLink.VideoMode = deckLinkOutput["videoMode"].asString();
+    Outputs.DeckLink.VideoMode = deckLinkOutput["videoMode"].asInt();
     Outputs.DeckLink.IsOutputEnabled = deckLinkOutput["isEnabled"].asBool();
 
 	// Panels
