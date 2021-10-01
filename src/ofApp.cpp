@@ -8,7 +8,9 @@ void ofApp::setup() {
     ofSetFrameRate(60);
     
 	setupConfig();
-	setupInfoUi(c);
+
+    setupPanelCalculations();
+    setupInfoUi(c);
 
 	// Setup Inputs
 	inputFrameBuffer.allocate(1920, 1080);
@@ -24,6 +26,34 @@ void ofApp::setupConfig() {
 	config.open("config.json");
 	c.setup(config);
 }
+const float appY = 0;
+
+const float appW = 64;
+const float appH = 128;
+
+const float syphonW = 281.6;
+const float syphonH = 540;
+
+void ofApp::setupPanelCalculations() {
+    for (int i = 0; i < c.Panels.size(); i++) {
+        float appX = (i * appW) + 1;
+        float syphonX = c.Panels[i].X;
+        float syphonY = c.Panels[i].Y;
+        
+        PanelCalculations tempCalc;
+        tempCalc.destinationX =appX;
+        tempCalc.destinationY = appY;
+        tempCalc.destinationWidth = appW;
+        tempCalc.destinationHeight = appH;
+        
+        tempCalc.sourceX = syphonX;
+        tempCalc.sourceY = syphonY;
+        tempCalc.sourceWidth = syphonW;
+        tempCalc.sourceHeight = syphonH;
+        panels.push_back(tempCalc);
+    }
+}
+
 
 void ofApp::setupInput() {
 	if (c.Inputs.VideoPlayer.IsInputEnabled) {
@@ -81,14 +111,6 @@ void ofApp::update()
 	input->update();
 }
 
-const float appY = 0;
-
-const float appW = 64;
-const float appH = 128;
-
-const float syphonW = 281.6;
-const float syphonH = 540;
-
 void ofApp::draw() {
 	// Draw Input to Input Framebuffer.
 	inputFrameBuffer.begin();
@@ -98,7 +120,7 @@ void ofApp::draw() {
 	inputFrameBuffer.end();
 
 	// Draw Input Framebuffer into Output Framebuffer (with panels scalled and put into top left corner).
-	drawPanelsToOutputFrameBuffer();
+    drawPanelsToOutputFrameBuffer();
 
 	// Draw Output Framebuffer to all outputs (Multiple outputs can be turned on at the same time).
 	for (auto& o : outputs)
@@ -112,12 +134,9 @@ void ofApp::draw() {
 
 void ofApp::drawPanelsToOutputFrameBuffer() {
 	outputFrameBuffer.begin();
-	for (int i = 0; i < c.Panels.size(); i++) {
-		float appX = (i * appW) + 1;
-		float syphonX = c.Panels[i].X;
-		float syphonY = c.Panels[i].Y;
-
-		inputFrameBuffer.getTexture().drawSubsection(appX, appY, appW, appH, syphonX, syphonY, syphonW, syphonH);
+	for (int i = 0; i < panels.size(); i++) {
+		
+        panels[i].draw(inputFrameBuffer.getTexture());
 	}
 	outputFrameBuffer.end();
 }

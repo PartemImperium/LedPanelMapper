@@ -1965,6 +1965,58 @@
 				<key>sourceTree</key>
 				<string>SOURCE_ROOT</string>
 			</dict>
+			<key>D41BB626560CC33995C8FF72</key>
+			<dict>
+				<key>fileRef</key>
+				<string>4EED70F639C1F6CFDC228838</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>4EED70F639C1F6CFDC228838</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>PanelCalculations.cpp</string>
+				<key>path</key>
+				<string>src/PanelCalculations.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>474854D83CA2166BD933D49A</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>PanelSelections.hpp</string>
+				<key>path</key>
+				<string>src/PanelSelections.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>183212F5F054BD9EAF34DA37</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>PanelCalculations.hpp</string>
+				<key>path</key>
+				<string>src/PanelCalculations.hpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
 			<key>CD95AA7539B05153B4487D07</key>
 			<dict>
 				<key>explicitFileType</key>
@@ -5462,6 +5514,7 @@ fi
 					<string>E4B69E200A3A1BDC003C02F2</string>
 					<string>E4B69E210A3A1BDC003C02F2</string>
 					<string>FCDEC2573F495CF9DB328EAE</string>
+					<string>D41BB626560CC33995C8FF72</string>
 					<string>E6F2817F4894C4BC564A930E</string>
 					<string>78B7D0AE6072A8956DF7BF99</string>
 					<string>1DAF0011C8315AEA50FD6CDE</string>
@@ -5749,6 +5802,9 @@ fi
 					<string>F88CAFA6EF122FC9CEE287C6</string>
 					<string>231B861E4CC6D590026CC32F</string>
 					<string>CD95AA7539B05153B4487D07</string>
+					<string>183212F5F054BD9EAF34DA37</string>
+					<string>474854D83CA2166BD933D49A</string>
+					<string>4EED70F639C1F6CFDC228838</string>
 					<string>52706B872242929A29864ED6</string>
 					<string>1EFF174EFECD7737BFB9C01A</string>
 				</array>

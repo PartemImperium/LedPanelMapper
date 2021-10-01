@@ -199,6 +199,7 @@
 		<ClCompile Include="src\main.cpp" />
 		<ClCompile Include="src\ofApp.cpp" />
 		<ClCompile Include="src\config\Config.cpp" />
+		<ClCompile Include="src\PanelCalculations.cpp" />
 		<ClCompile Include="src\Outputs\SyphonOutput.cpp" />
 		<ClCompile Include="src\Outputs\NdiOutput.cpp" />
 		<ClCompile Include="src\Outputs\DeckLinkOutput.cpp" />
@@ -242,6 +243,7 @@
 		<ClInclude Include="src\config\Inputs\VideoPlayerInputConfig.hpp" />
 		<ClInclude Include="src\BaseOutput.hpp" />
 		<ClInclude Include="src\BaseInput.hpp" />
+		<ClInclude Include="src\PanelCalculations.hpp" />
 		<ClInclude Include="src\Outputs\DeckLinkOutput.hpp" />
 		<ClInclude Include="src\Outputs\SyphonOutput.hpp" />
 		<ClInclude Include="src\Outputs\NdiOutput.hpp" />

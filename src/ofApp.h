@@ -5,6 +5,7 @@
 
 // Project Code
 #include "Config.hpp"
+#include "PanelCalculations.hpp"
 
 // Inputs
 #include "BaseInput.hpp"
@@ -50,6 +51,9 @@ class ofApp : public ofBaseApp{
     private:
         Config c;
         void setupConfig();
+    
+        std::vector<PanelCalculations> panels;
+        void setupPanelCalculations();
     
         // Info UI
         ofRectangle infoUiInputRect;

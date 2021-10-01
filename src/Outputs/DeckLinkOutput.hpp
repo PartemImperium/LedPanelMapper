@@ -11,7 +11,7 @@ class DeckLinkOutput: public BaseOutput {
     
         virtual void setup(Config config);
         virtual void draw(ofFbo output);
-    
+        virtual void update();
         virtual std::string OutputName();
 
     private:

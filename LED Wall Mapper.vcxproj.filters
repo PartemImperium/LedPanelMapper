@@ -10,6 +10,9 @@
 		<ClCompile Include="src\config\Config.cpp">
 			<Filter>src\config</Filter>
 		</ClCompile>
+		<ClCompile Include="src\PanelCalculations.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
 		<ClCompile Include="src\Outputs\SyphonOutput.cpp">
 			<Filter>src\Outputs</Filter>
 		</ClCompile>
@@ -213,6 +216,9 @@
 			<Filter>src</Filter>
 		</ClInclude>
 		<ClInclude Include="src\BaseInput.hpp">
+			<Filter>src</Filter>
+		</ClInclude>
+		<ClInclude Include="src\PanelCalculations.hpp">
 			<Filter>src</Filter>
 		</ClInclude>
 		<ClInclude Include="src\Outputs\DeckLinkOutput.hpp">
