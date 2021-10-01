@@ -7,6 +7,7 @@ std::string VideoPlayerInput::InputName() {
 void VideoPlayerInput::setup(Config config) {
     c = config;
     videoPlayer.load(c.Inputs.VideoPlayer.FilePath);
+    videoPlayer.setVolume(0);
     videoPlayer.play();
 }
 

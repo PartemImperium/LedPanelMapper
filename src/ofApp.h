@@ -56,6 +56,7 @@ class ofApp : public ofBaseApp{
         void setupPanelCalculations();
     
         // Info UI
+        ofFbo infoUiInputFrameBuffer;
         ofRectangle infoUiInputRect;
         ofRectangle infoUiOutputRect;
         void setupInfoUi(Config config);

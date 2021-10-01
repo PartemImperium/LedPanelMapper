@@ -97,6 +97,8 @@ void ofApp::setupOutputs() {
 }
 
 void ofApp::setupInfoUi(Config config) {
+    infoUiInputFrameBuffer.allocate(1920, 1080);
+
 	ofRectangle tempRect(0, 0, 480, 270);
 
 	infoUiInputRect = ofRectangle(tempRect);
@@ -104,6 +106,8 @@ void ofApp::setupInfoUi(Config config) {
 
 	infoUiOutputRect = ofRectangle(tempRect);
 	infoUiOutputRect.setPosition(1300, 610);
+    
+    ofSetLineWidth(4);
 }
 
 void ofApp::update()
@@ -144,10 +148,20 @@ void ofApp::drawPanelsToOutputFrameBuffer() {
 void ofApp::drawInfoUi() {
 	ofNoFill();
 
+    infoUiInputFrameBuffer.begin();
+    
+    inputFrameBuffer.draw(0,0);
+    for (int i = 0; i < panels.size(); i++) {
+        ofDrawRectangle(panels[i].getSource());
+    }
+    
+    infoUiInputFrameBuffer.end();
+    
+    
 	std::string fps = "FPS: " + std::to_string(ofGetFrameRate());
 	ofDrawBitmapString(fps, 1300, 170);
 
-	inputFrameBuffer.draw(infoUiInputRect);
+    infoUiInputFrameBuffer.draw(infoUiInputRect);
 	ofDrawRectangle(infoUiInputRect);
 
 	ofDrawBitmapString("Input Framebuffer: " + input->InputName(), 1300, 185);
