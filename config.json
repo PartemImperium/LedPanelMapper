@@ -1,8 +1,8 @@
 {
     "inputs": {
         "staticImage": {
-            "filePath": "/Users/gremioludus/PanelCenter.png",
-            "isEnabled": true
+            "filePath": "image.png",
+            "isEnabled": false
         },
         "videoPlayer": {
             "filePath": "VideoSyncSource.mp4",
@@ -19,7 +19,7 @@
         },
         "deckLink": {
             "deviceId": 1,
-            "videoMode": "dont know if this works this is just a filler for now",
+            "videoMode": 1215313209,
             "isEnabled": false
         }
     },
@@ -34,41 +34,47 @@
         },
         "deckLink": {
             "deviceId": 1,
-            "videoMode": "dont know if this works this is just a filler for now",
+            "videoMode": 1215313209,
             "isEnabled": false
         }
     },
-    "panels": [{
-            "x": 0,
-            "y": 540
-        },
-        {
-            "x": 0,
-            "y": 0
-        },
-        {
-            "x": 409.6,
-            "y": 409.6
-        },
-        {
-            "x": 819.2,
-            "y": 540
-        },
-        {
-            "x": 819.2,
-            "y": 0
-        },
-        {
-            "x": 1229,
-            "y": 409.6
-        },
-        {
-            "x": 1638,
-            "y": 540
-        },
-        {
-            "x": 1638,
-            "y": 0
-        }
-    ]
+    "panelInfo": {
+        "panelWidth": 64,
+        "panelHeight": 128,
+        "panelsToFillWidth": 7,
+        "panelsToFillHeight": 2,
+        "panels": [{
+                "x": 0,
+                "y": 540
+            },
+            {
+                "x": 0,
+                "y": 0
+            },
+            {
+                "x": 409.6,
+                "y": 409.6
+            },
+            {
+                "x": 819.2,
+                "y": 540
+            },
+            {
+                "x": 819.2,
+                "y": 0
+            },
+            {
+                "x": 1229,
+                "y": 409.6
+            },
+            {
+                "x": 1638,
+                "y": 540
+            },
+            {
+                "x": 1638,
+                "y": 0
+            }
+        ]
+    }
 }

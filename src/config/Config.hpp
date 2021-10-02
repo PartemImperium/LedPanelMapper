@@ -2,7 +2,7 @@
 
 #include <string>
 #include "ofxJSONElement.h"
-#include "PanelConfig.hpp"
+#include "PanelGroupConfig.hpp"
 #include "InputsConfig.hpp"
 #include "OutputsConfig.hpp"
 
@@ -11,8 +11,9 @@ class Config {
         
         InputsConfig Inputs;
         OutputsConfig Outputs;
-        std::vector<PanelConfig> Panels;
-
+            
+        PanelGroupConfig PanelInfo;
+    
         void setup(ofxJSONElement json);
         Config();
 };

@@ -48,13 +48,22 @@ void Config::setup(ofxJSONElement json) {
     Outputs.DeckLink.VideoMode = deckLinkOutput["videoMode"].asInt();
     Outputs.DeckLink.IsOutputEnabled = deckLinkOutput["isEnabled"].asBool();
 
+    
+    
 	// Panels
-	ofxJSONElement panels = json["panels"];
+    ofxJSONElement panelGroup = json["panelInfo"];
+    PanelInfo.PanelWidth = panelGroup["panelWidth"].asInt();
+    PanelInfo.PanelHeight = panelGroup["panelHeight"].asInt();
+    
+    PanelInfo.PanelsToFillWidth = panelGroup["panelsToFillWidth"].asInt();
+    PanelInfo.PanelsToFillHeight = panelGroup["panelsToFillHeight"].asInt();
+    
+	ofxJSONElement panels = panelGroup["panels"];
 	for (int i = 0; i < panels.size(); i++) {
 		PanelConfig p;
 		p.X = panels[i]["x"].asFloat();
 		p.Y = panels[i]["y"].asFloat();
 
-		Panels.push_back(p);
+		PanelInfo.Panels.push_back(p);
 	}
 }

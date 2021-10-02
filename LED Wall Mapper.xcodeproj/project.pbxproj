@@ -65,6 +65,7 @@
 		03D3DB1AC54CF9DC356CF0A8 /* ofxNDISendStream.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxNDISendStream.cpp; path = ../../../addons/ofxNDI/src/ofxNDISendStream.cpp; sourceTree = SOURCE_ROOT; };
 		03EA4DA95B5E1B8409FC058E /* ofxSyphonClient.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ofxSyphonClient.mm; path = ../../../addons/ofxSyphon/src/ofxSyphonClient.mm; sourceTree = SOURCE_ROOT; };
 		0437D7587C303FC35DA849AB /* ofxNDIFrame.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxNDIFrame.h; path = ../../../addons/ofxNDI/src/ofxNDIFrame.h; sourceTree = SOURCE_ROOT; };
+		05F67A93270806FD0022DE92 /* PanelGroupConfig.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PanelGroupConfig.hpp; sourceTree = "<group>"; };
 		09417F3BCD7E6FB6CE3AD0C0 /* Processing.NDI.Send.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Processing.NDI.Send.h; path = ../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Send.h; sourceTree = SOURCE_ROOT; };
 		0B2CB21FCA3A6FE3D640E9F1 /* Processing.NDI.Recv.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Processing.NDI.Recv.h; path = ../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Recv.h; sourceTree = SOURCE_ROOT; };
 		0E88B5CEE76288265E15A424 /* NdiInput.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = NdiInput.cpp; path = src/Inputs/NdiInput.cpp; sourceTree = SOURCE_ROOT; };
@@ -1023,6 +1024,7 @@
 				D5B1F2B9B73DA1EDFDE1C5C1 /* Outputs */,
 				2ACE7D50AB229C0F3CEC3A2E /* PanelConfig.hpp */,
 				C50750288F5A605EFFC4F51C /* Inputs */,
+				05F67A93270806FD0022DE92 /* PanelGroupConfig.hpp */,
 			);
 			name = config;
 			sourceTree = "<group>";

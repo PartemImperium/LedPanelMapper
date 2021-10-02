@@ -26,28 +26,22 @@ void ofApp::setupConfig() {
 	config.open("config.json");
 	c.setup(config);
 }
-const float appY = 0;
 
-const float appW = 64;
-const float appH = 128;
 
 const float syphonW = 281.6;
 const float syphonH = 540;
 
 void ofApp::setupPanelCalculations() {
-    for (int i = 0; i < c.Panels.size(); i++) {
-        float appX = (i * appW) + 1;
-        float syphonX = c.Panels[i].X;
-        float syphonY = c.Panels[i].Y;
+    for (int i = 0; i < c.PanelInfo.Panels.size(); i++) {
         
         PanelCalculations tempCalc;
-        tempCalc.destinationX =appX;
-        tempCalc.destinationY = appY;
-        tempCalc.destinationWidth = appW;
-        tempCalc.destinationHeight = appH;
+        tempCalc.destinationX = (i * c.PanelInfo.PanelWidth) + 1;// TODO: Check if the 1 px add here is needed. I dont think it is.;
+        tempCalc.destinationY = 0;
+        tempCalc.destinationWidth = c.PanelInfo.PanelWidth;
+        tempCalc.destinationHeight = c.PanelInfo.PanelHeight;
         
-        tempCalc.sourceX = syphonX;
-        tempCalc.sourceY = syphonY;
+        tempCalc.sourceX = c.PanelInfo.Panels[i].X;
+        tempCalc.sourceY = c.PanelInfo.Panels[i].Y;
         tempCalc.sourceWidth = syphonW;
         tempCalc.sourceHeight = syphonH;
         panels.push_back(tempCalc);
