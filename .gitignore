@@ -43,3 +43,8 @@ obj/
 *.vcxproj.user
 
 .DS_STORE
+
+#VS Code files
+.vscode/browse.db
+.vscode/browse.db-shm
+.vscode/browse.db-wal
