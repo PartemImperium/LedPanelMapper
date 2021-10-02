@@ -27,14 +27,15 @@ void ofApp::setupConfig() {
 	c.setup(config);
 }
 
-
-const float syphonW = 281.6;
-const float syphonH = 540;
-
 void ofApp::setupPanelCalculations() {
+    int sourceWidth = 1920;
+    int sourceHeight = 1080;//TODO: Make this a config (and use the value for input frame buffer allocation.
+    
+    
     for (int i = 0; i < c.PanelInfo.Panels.size(); i++) {
         
         PanelCalculations tempCalc;
+		
         tempCalc.destinationX = (i * c.PanelInfo.PanelWidth) + 1;// TODO: Check if the 1 px add here is needed. I dont think it is.;
         tempCalc.destinationY = 0;
         tempCalc.destinationWidth = c.PanelInfo.PanelWidth;
@@ -42,8 +43,9 @@ void ofApp::setupPanelCalculations() {
         
         tempCalc.sourceX = c.PanelInfo.Panels[i].X;
         tempCalc.sourceY = c.PanelInfo.Panels[i].Y;
-        tempCalc.sourceWidth = syphonW;
-        tempCalc.sourceHeight = syphonH;
+        tempCalc.sourceWidth = sourceWidth / c.PanelInfo.PanelsToFillWidth;
+        tempCalc.sourceHeight = sourceHeight / c.PanelInfo.PanelsToFillHeight;
+        
         panels.push_back(tempCalc);
     }
 }
