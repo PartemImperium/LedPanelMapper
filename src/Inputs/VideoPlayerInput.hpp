@@ -8,6 +8,9 @@
 
 class VideoPlayerInput: public BaseInput {
     public:
+        VideoPlayerInput() {};
+        virtual ~VideoPlayerInput() {};
+    
         virtual void setup(Config config);
         virtual void draw();
         virtual void update();

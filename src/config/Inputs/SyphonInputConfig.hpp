@@ -8,6 +8,7 @@ class SyphonInputConfig {
         bool IsInputEnabled;
         std::string ApplicationName;
         std::string ServerName;
-
+        int DrawIndex;
+    
         void setup(ofxJSONElement json);
 };

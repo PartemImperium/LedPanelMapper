@@ -16,6 +16,9 @@
 
 class NdiInput: public BaseInput {
     public:
+        NdiInput() {};
+        virtual ~NdiInput() {};
+    
         virtual void setup(Config config);
         virtual void draw();
         virtual void update();

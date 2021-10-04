@@ -7,6 +7,9 @@
 
 class DeckLinkInput: public BaseInput {
     public:
+        DeckLinkInput() {};
+        virtual ~DeckLinkInput() {};
+    
         virtual void setup(Config config);
         virtual void draw();
         virtual void update();

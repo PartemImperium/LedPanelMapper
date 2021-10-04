@@ -7,6 +7,8 @@ std::string NdiInput::InputName() {
 void NdiInput::setup(Config config) {
     NDIlib_initialize();
     c = config;
+    DrawIndex = c.Inputs.Ndi.DrawIndex;
+
 
     ofxNDIFinder ndiFinder;
     auto sources = ndiFinder.listSources();

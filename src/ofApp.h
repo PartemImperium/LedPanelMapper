@@ -2,6 +2,7 @@
 // std
 #include <string>
 #include <vector>
+#include <algorithm>
 
 // Project Code
 #include "Config.hpp"
@@ -64,7 +65,8 @@ class ofApp : public ofBaseApp{
 
         // Inputs
         ofFbo inputFrameBuffer;
-        BaseInput* input;
+        std::vector<std::unique_ptr<BaseInput>> inputs;
+        string inputNames;
     
         void setupInput();
     

@@ -2,6 +2,8 @@
 
 void StaticImageInput::setup(Config config) {
     c = config;
+    DrawIndex = c.Inputs.StaticImage.DrawIndex;
+    
     image.load(c.Inputs.StaticImage.FilePath);
 }
 

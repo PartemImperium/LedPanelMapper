@@ -10,6 +10,9 @@
 
 class SyphonInput: public BaseInput {
     public:
+        SyphonInput() {};
+        virtual ~SyphonInput() {};
+    
         virtual void setup(Config config);
         virtual void draw();
         virtual void update();

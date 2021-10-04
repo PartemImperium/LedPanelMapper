@@ -7,6 +7,8 @@ std::string SyphonInput::InputName() {
 }
 void SyphonInput::setup(Config config) {
     c = config;
+    DrawIndex = c.Inputs.Syphon.DrawIndex;
+
     syphonClient.setup();
     syphonClient.set(c.Inputs.Syphon.ServerName,config.Inputs.Syphon.ApplicationName);
 }

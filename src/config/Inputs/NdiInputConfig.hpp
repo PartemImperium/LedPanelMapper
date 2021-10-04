@@ -7,6 +7,7 @@ class NdiInputConfig {
     public:
         bool IsInputEnabled;
         std::string FeedName;
+        int DrawIndex;
     
         void setup(ofxJSONElement json);
 };

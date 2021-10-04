@@ -8,6 +8,7 @@ class DeckLinkInputConfig {
         bool IsInputEnabled;
         int DeviceId;
         std::string VideoMode;
-
+        int DrawIndex;
+    
         void setup(ofxJSONElement json);
 };

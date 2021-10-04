@@ -7,6 +7,7 @@ class StaticImageInputConfig {
     public:
         bool IsInputEnabled;
         std::string FilePath;
+        int DrawIndex;
         
         void setup(ofxJSONElement json);
 };

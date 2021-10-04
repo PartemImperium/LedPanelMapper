@@ -8,6 +8,9 @@
 
 class StaticImageInput: public BaseInput {
     public:
+        StaticImageInput() {};
+        virtual ~StaticImageInput() {};
+    
         virtual void setup(Config config);
         virtual void draw();
         virtual void update();

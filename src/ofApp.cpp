@@ -52,25 +52,33 @@ void ofApp::setupPanelCalculations() {
 
 
 void ofApp::setupInput() {
-	if (c.Inputs.VideoPlayer.IsInputEnabled) {
-		input = new VideoPlayerInput();
-	}
-    else if (c.Inputs.StaticImage.IsInputEnabled) {
-        input = new StaticImageInput();
+    if (c.Inputs.StaticImage.IsInputEnabled) {
+        inputs.push_back(std::move(std::make_unique<StaticImageInput>()));
     }
+    if (c.Inputs.VideoPlayer.IsInputEnabled) {
+        inputs.push_back(std::move(std::make_unique< VideoPlayerInput>()));
+	}
 #if __APPLE__
-	else if (c.Inputs.Syphon.IsInputEnabled) {
-		input = new SyphonInput();
+	if (c.Inputs.Syphon.IsInputEnabled) {
+        inputs.push_back(std::move(std::make_unique<SyphonInput>()));
 	}
 #endif
-	else if (c.Inputs.Ndi.IsInputEnabled) {
-		input = new NdiInput();
+	if (c.Inputs.Ndi.IsInputEnabled) {
+        inputs.push_back(std::move(std::make_unique<NdiInput>()));
 	}
-    else if (c.Inputs.DeckLink.IsInputEnabled) {
-		input = new DeckLinkInput();
+    if (c.Inputs.DeckLink.IsInputEnabled) {
+        inputs.push_back(std::move(std::make_unique<DeckLinkInput>()));
 	}
 
-	input->setup(c);
+    for (auto& i : inputs) {
+        i->setup(c);
+    }
+    std::sort(inputs.begin(), inputs.end(),[] (const std::unique_ptr<BaseInput>& left, const std::unique_ptr<BaseInput>& right) {
+        return left->DrawIndex < right->DrawIndex;
+    });
+    for (auto& i : inputs) {// Do this here instead of by the setup so that they are in draw order.
+        inputNames += i->InputName() + " ";
+    }
 }
 
 void ofApp::setupOutputs() {
@@ -108,14 +116,18 @@ void ofApp::setupInfoUi(Config config) {
 
 void ofApp::update()
 {
-	input->update();
+    for (auto& i : inputs) {
+        i->update();
+    }
 }
 
 void ofApp::draw() {
 	// Draw Input to Input Framebuffer.
 	inputFrameBuffer.begin();
 
-	input->draw();
+    for (auto& i : inputs) {
+        i->draw();
+    }
 
 	inputFrameBuffer.end();
 
@@ -135,7 +147,6 @@ void ofApp::draw() {
 void ofApp::drawPanelsToOutputFrameBuffer() {
 	outputFrameBuffer.begin();
 	for (int i = 0; i < panels.size(); i++) {
-		
         panels[i].draw(inputFrameBuffer.getTexture());
 	}
 	outputFrameBuffer.end();
@@ -160,7 +171,7 @@ void ofApp::drawInfoUi() {
     infoUiInputFrameBuffer.draw(infoUiInputRect);
 	ofDrawRectangle(infoUiInputRect);
 
-	ofDrawBitmapString("Input Framebuffer: " + input->InputName(), 1300, 185);
+	ofDrawBitmapString("Input Framebuffer: " + inputNames, 1300, 185);
 
 	outputFrameBuffer.draw(infoUiOutputRect);
 	ofDrawRectangle(infoUiOutputRect);
