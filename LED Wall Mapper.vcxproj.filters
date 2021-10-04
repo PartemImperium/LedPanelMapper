@@ -7,8 +7,44 @@
 		<ClCompile Include="src\main.cpp">
 			<Filter>src</Filter>
 		</ClCompile>
-		<ClCompile Include="src\config\Config.cpp">
-			<Filter>src\config</Filter>
+		<ClCompile Include="src\Config\PanelConfig.cpp">
+			<Filter>src\Config</Filter>
+		</ClCompile>
+		<ClCompile Include="src\Config\Config.cpp">
+			<Filter>src\Config</Filter>
+		</ClCompile>
+		<ClCompile Include="src\Config\PanelGroupConfig.cpp">
+			<Filter>src\Config</Filter>
+		</ClCompile>
+		<ClCompile Include="src\Config\OutputsConfig.cpp">
+			<Filter>src\Config</Filter>
+		</ClCompile>
+		<ClCompile Include="src\Config\InputsConfig.cpp">
+			<Filter>src\Config</Filter>
+		</ClCompile>
+		<ClCompile Include="src\Config\Outputs\SyphonOutputConfig.cpp">
+			<Filter>src\Config\Outputs</Filter>
+		</ClCompile>
+		<ClCompile Include="src\Config\Outputs\NdiOutputConfig.cpp">
+			<Filter>src\Config\Outputs</Filter>
+		</ClCompile>
+		<ClCompile Include="src\Config\Outputs\DeckLinkOutputConfig.cpp">
+			<Filter>src\Config\Outputs</Filter>
+		</ClCompile>
+		<ClCompile Include="src\Config\Inputs\VideoPlayerInputConfig.cpp">
+			<Filter>src\Config\Inputs</Filter>
+		</ClCompile>
+		<ClCompile Include="src\Config\Inputs\NdiInputConfig.cpp">
+			<Filter>src\Config\Inputs</Filter>
+		</ClCompile>
+		<ClCompile Include="src\Config\Inputs\SyphonInputConfig.cpp">
+			<Filter>src\Config\Inputs</Filter>
+		</ClCompile>
+		<ClCompile Include="src\Config\Inputs\DeckLinkInputConfig.cpp">
+			<Filter>src\Config\Inputs</Filter>
+		</ClCompile>
+		<ClCompile Include="src\Config\Inputs\StaticImageInputConfig.cpp">
+			<Filter>src\Config\Inputs</Filter>
 		</ClCompile>
 		<ClCompile Include="src\PanelCalculations.cpp">
 			<Filter>src</Filter>
@@ -96,14 +132,14 @@
 		<Filter Include="src">
 			<UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
 		</Filter>
-		<Filter Include="src\config">
-			<UniqueIdentifier>{6605C095-DCC6-E901-6144-F29A}</UniqueIdentifier>
+		<Filter Include="src\Config">
+			<UniqueIdentifier>{96FEA6CF-0246-7260-E5B6-EBF8}</UniqueIdentifier>
 		</Filter>
-		<Filter Include="src\config\Outputs">
-			<UniqueIdentifier>{0B7F5FE0-AA91-66B3-25CB-6A2A}</UniqueIdentifier>
+		<Filter Include="src\Config\Outputs">
+			<UniqueIdentifier>{542CEAC4-6709-52D9-11F7-692F}</UniqueIdentifier>
 		</Filter>
-		<Filter Include="src\config\Inputs">
-			<UniqueIdentifier>{FE127F1B-12B4-E3BC-ED83-EF18}</UniqueIdentifier>
+		<Filter Include="src\Config\Inputs">
+			<UniqueIdentifier>{AF219163-95A6-C511-8FF1-D392}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="src\Outputs">
 			<UniqueIdentifier>{FA039FB3-E8F9-45B4-D3AA-E1B8}</UniqueIdentifier>
@@ -179,38 +215,38 @@
 		<ClInclude Include="src\OutputsConfig.hpp">
 			<Filter>src</Filter>
 		</ClInclude>
-		<ClInclude Include="src\config\InputsConfig.hpp">
-			<Filter>src\config</Filter>
+		<ClInclude Include="src\Config\InputsConfig.hpp">
+			<Filter>src\Config</Filter>
 		</ClInclude>
-		<ClInclude Include="src\config\Config.hpp">
-			<Filter>src\config</Filter>
+		<ClInclude Include="src\Config\Config.hpp">
+			<Filter>src\Config</Filter>
 		</ClInclude>
-		<ClInclude Include="src\config\Outputs\DeckLinkOutputConfig.hpp">
-			<Filter>src\config\Outputs</Filter>
+		<ClInclude Include="src\Config\Outputs\DeckLinkOutputConfig.hpp">
+			<Filter>src\Config\Outputs</Filter>
 		</ClInclude>
-		<ClInclude Include="src\config\Outputs\NdiOutputConfig.hpp">
-			<Filter>src\config\Outputs</Filter>
+		<ClInclude Include="src\Config\Outputs\NdiOutputConfig.hpp">
+			<Filter>src\Config\Outputs</Filter>
 		</ClInclude>
-		<ClInclude Include="src\config\Outputs\SyphonOutputConfig.hpp">
-			<Filter>src\config\Outputs</Filter>
+		<ClInclude Include="src\Config\Outputs\SyphonOutputConfig.hpp">
+			<Filter>src\Config\Outputs</Filter>
 		</ClInclude>
-		<ClInclude Include="src\config\PanelConfig.hpp">
-			<Filter>src\config</Filter>
+		<ClInclude Include="src\Config\PanelConfig.hpp">
+			<Filter>src\Config</Filter>
 		</ClInclude>
-		<ClInclude Include="src\config\Inputs\StaticImageInputConfig.hpp">
-			<Filter>src\config\Inputs</Filter>
+		<ClInclude Include="src\Config\Inputs\StaticImageInputConfig.hpp">
+			<Filter>src\Config\Inputs</Filter>
 		</ClInclude>
-		<ClInclude Include="src\config\Inputs\NdiInputConfig.hpp">
-			<Filter>src\config\Inputs</Filter>
+		<ClInclude Include="src\Config\Inputs\NdiInputConfig.hpp">
+			<Filter>src\Config\Inputs</Filter>
 		</ClInclude>
-		<ClInclude Include="src\config\Inputs\SyphonInputConfig.hpp">
-			<Filter>src\config\Inputs</Filter>
+		<ClInclude Include="src\Config\Inputs\SyphonInputConfig.hpp">
+			<Filter>src\Config\Inputs</Filter>
 		</ClInclude>
-		<ClInclude Include="src\config\Inputs\DeckLinkInputConfig.hpp">
-			<Filter>src\config\Inputs</Filter>
+		<ClInclude Include="src\Config\Inputs\DeckLinkInputConfig.hpp">
+			<Filter>src\Config\Inputs</Filter>
 		</ClInclude>
-		<ClInclude Include="src\config\Inputs\VideoPlayerInputConfig.hpp">
-			<Filter>src\config\Inputs</Filter>
+		<ClInclude Include="src\Config\Inputs\VideoPlayerInputConfig.hpp">
+			<Filter>src\Config\Inputs</Filter>
 		</ClInclude>
 		<ClInclude Include="src\BaseOutput.hpp">
 			<Filter>src</Filter>
@@ -219,6 +255,9 @@
 			<Filter>src</Filter>
 		</ClInclude>
 		<ClInclude Include="src\PanelCalculations.hpp">
+			<Filter>src</Filter>
+		</ClInclude>
+		<ClInclude Include="src\PanelGroupConfig.hpp">
 			<Filter>src</Filter>
 		</ClInclude>
 		<ClInclude Include="src\Outputs\DeckLinkOutput.hpp">

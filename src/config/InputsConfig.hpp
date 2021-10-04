@@ -6,6 +6,8 @@
 #include "NdiInputConfig.hpp"
 #include "DeckLinkInputConfig.hpp"
 
+#include "ofxJSONElement.h"
+
 class InputsConfig {
     public:
         StaticImageInputConfig StaticImage;
@@ -13,4 +15,6 @@ class InputsConfig {
         SyphonInputConfig Syphon;
         NdiInputConfig Ndi;
         DeckLinkInputConfig DeckLink;
+
+        void setup(ofxJSONElement json);
 };
