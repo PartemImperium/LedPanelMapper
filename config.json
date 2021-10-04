@@ -2,25 +2,30 @@
     "inputs": {
         "staticImage": {
             "filePath": "image.png",
-            "isEnabled": false
+            "isEnabled": false,
+            "drawIndex":2
         },
         "videoPlayer": {
             "filePath": "VideoSyncSource.mp4",
-            "isEnabled": true
+            "isEnabled": true,
+            "drawIndex":1
         },
         "syphon": {
             "applicationName": "ProPresenter",
             "serverName": "Syphon - 1",
-            "isEnabled": false
+            "isEnabled": false,
+            "drawIndex":0
         },
         "ndi": {
             "feedName": "HOSTNAME (Test Patterns)",
-            "isEnabled": false
+            "isEnabled": false,
+            "drawIndex":0
         },
         "deckLink": {
             "deviceId": 1,
             "videoMode": 1215313209,
-            "isEnabled": false
+            "isEnabled": false,
+            "drawIndex":0
         }
     },
     "outputs": {
