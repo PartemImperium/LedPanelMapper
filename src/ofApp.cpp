@@ -36,7 +36,7 @@ void ofApp::setupPanelCalculations() {
         
         PanelCalculations tempCalc;
 		
-        tempCalc.destinationX = (i * c.PanelInfo.PanelWidth) + 1;// TODO: Check if the 1 px add here is needed. I dont think it is.;
+        tempCalc.destinationX = (i * c.PanelInfo.PanelWidth);
         tempCalc.destinationY = 0;
         tempCalc.destinationWidth = c.PanelInfo.PanelWidth;
         tempCalc.destinationHeight = c.PanelInfo.PanelHeight;
