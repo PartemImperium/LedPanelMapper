@@ -53,6 +53,8 @@ class ofApp : public ofBaseApp{
         Config c;
         void setupConfig();
     
+        float calculatedPanelWidth;
+        float calculatedPanelHeight;
         std::vector<PanelCalculations> panels;
         void setupPanelCalculations();
     

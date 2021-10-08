@@ -33,9 +33,11 @@ void ofApp::setupPanelCalculations() {
     
     
     for (int i = 0; i < c.PanelInfo.Panels.size(); i++) {
-        
         PanelCalculations tempCalc;
-		
+        
+        calculatedPanelWidth = sourceWidth / c.PanelInfo.PanelsToFillWidth;
+        calculatedPanelHeight = sourceHeight / c.PanelInfo.PanelsToFillHeight;
+        
         tempCalc.destinationX = (i * c.PanelInfo.PanelWidth);
         tempCalc.destinationY = 0;
         tempCalc.destinationWidth = c.PanelInfo.PanelWidth;
@@ -43,8 +45,8 @@ void ofApp::setupPanelCalculations() {
         
         tempCalc.sourceX = c.PanelInfo.Panels[i].X;
         tempCalc.sourceY = c.PanelInfo.Panels[i].Y;
-        tempCalc.sourceWidth = sourceWidth / c.PanelInfo.PanelsToFillWidth;
-        tempCalc.sourceHeight = sourceHeight / c.PanelInfo.PanelsToFillHeight;
+        tempCalc.sourceWidth = calculatedPanelWidth;
+        tempCalc.sourceHeight = calculatedPanelHeight;
         
         panels.push_back(tempCalc);
     }
@@ -176,7 +178,12 @@ void ofApp::drawInfoUi() {
 	outputFrameBuffer.draw(infoUiOutputRect);
 	ofDrawRectangle(infoUiOutputRect);
 	ofDrawBitmapString("Output Framebuffer: " + outputNames, 1300, 595);
-
+    
+    ofDrawBitmapString("Canculated Panel Info:",1300,20);
+    
+    ofDrawBitmapString("Panel Source Width: " + std::to_string(calculatedPanelWidth),1300,50);
+    ofDrawBitmapString("Panel Source Height: " + std::to_string(calculatedPanelHeight),1300,65);
+    
 	ofFill();
 }
 
