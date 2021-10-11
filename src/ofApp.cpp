@@ -31,7 +31,7 @@ void ofApp::setupPanelCalculations() {
     int sourceWidth = 1920;
     int sourceHeight = 1080;//TODO: Make this a config (and use the value for input frame buffer allocation.
     
-    
+    std::vector<PanelCalculations> tempPanels;
     for (int i = 0; i < c.PanelInfo.Panels.size(); i++) {
         PanelCalculations tempCalc;
         
@@ -48,8 +48,9 @@ void ofApp::setupPanelCalculations() {
         tempCalc.sourceWidth = calculatedPanelWidth;
         tempCalc.sourceHeight = calculatedPanelHeight;
         
-        panels.push_back(tempCalc);
+        tempPanels.push_back(tempCalc);
     }
+    panels = tempPanels;
 }
 
 
@@ -114,6 +115,18 @@ void ofApp::setupInfoUi(Config config) {
 	infoUiOutputRect.setPosition(1300, 610);
     
     ofSetLineWidth(4);
+
+    ofEvent<void> saveEvent;
+    saveEvent.add(this,  &ofApp::save, 1);
+    gui.savePressedE = saveEvent;
+
+
+    gui.setup(c, "remove_me");
+    // I dont want it to make a settings.xml file as I want control of the config and its schema however for some reason I dont understand giving it "remove_me" as a file name prevents it from saving the setting file.... I was gonna use the exit event but this works too ¯\_(ツ)_/¯
+}
+
+void ofApp::save() {
+    c.save();
 }
 
 void ofApp::update()
@@ -184,10 +197,15 @@ void ofApp::drawInfoUi() {
     ofDrawBitmapString("Panel Source Width: " + std::to_string(calculatedPanelWidth),1300,50);
     ofDrawBitmapString("Panel Source Height: " + std::to_string(calculatedPanelHeight),1300,65);
     
+    gui.draw();
+
 	ofFill();
 }
 
-void ofApp::keyPressed(int key) { }
+void ofApp::keyPressed(int key)
+{
+    setupPanelCalculations();// TODO: Move this to a button on a gui...
+}
 
 void ofApp::keyReleased(int key) { }
 
@@ -208,3 +226,5 @@ void ofApp::windowResized(int w, int h) { }
 void ofApp::gotMessage(ofMessage msg) { }
 
 void ofApp::dragEvent(ofDragInfo dragInfo) { }
+
+void ofApp::exit() { }

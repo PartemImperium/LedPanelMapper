@@ -5,15 +5,19 @@
 
 #include "ofxJSONElement.h"
 
-class PanelGroupConfig {
+#include "ofParameter.h"
+
+class PanelGroupConfig : public ofParameterGroup {
     public:
-        int PanelWidth;
-        int PanelHeight;
+        ofParameter<int> PanelWidth;
+        ofParameter<int> PanelHeight;
     
-        int PanelsToFillWidth;
-        int PanelsToFillHeight;
+        ofParameter<int> PanelsToFillWidth;
+        ofParameter<int> PanelsToFillHeight;
+    
     
         std::vector<PanelConfig> Panels;
 
         void setup(ofxJSONElement json);
+        ofxJSONElement getJson();
 };

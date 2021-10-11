@@ -27,10 +27,11 @@
 #include "SyphonOutput.hpp"
 #endif
 
-// JSON addon
+// Open Frameworks addons
 #include "ofxJSONElement.h"
+#include "ofxGui.h"
 
-class ofApp : public ofBaseApp{
+class ofApp : public ofBaseApp {
 
     public:
         void setup();
@@ -48,6 +49,7 @@ class ofApp : public ofBaseApp{
         void windowResized(int w, int h);
         void dragEvent(ofDragInfo dragInfo);
         void gotMessage(ofMessage msg);
+        void exit();
         
     private:
         Config c;
@@ -62,8 +64,13 @@ class ofApp : public ofBaseApp{
         ofFbo infoUiInputFrameBuffer;
         ofRectangle infoUiInputRect;
         ofRectangle infoUiOutputRect;
+        ofxPanel gui;
         void setupInfoUi(Config config);
         void drawInfoUi();
+    
+        void save();
+    
+    void test();
 
         // Inputs
         ofFbo inputFrameBuffer;

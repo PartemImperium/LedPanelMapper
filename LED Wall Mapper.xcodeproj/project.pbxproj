@@ -12,6 +12,7 @@
 		11376276E3BE438B0D308F5F /* VideoPlayerInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0A12A1B7694777F9060A443 /* VideoPlayerInput.cpp */; };
 		11DF9AB1B4EAA63E3B190CA0 /* ofxSyphonServerDirectory.mm in Sources */ = {isa = PBXBuildFile; fileRef = E723BEF4C55D236E24639608 /* ofxSyphonServerDirectory.mm */; };
 		15C8E48F131B29314E78A823 /* StaticImageInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4D807568E1BCF23F26831 /* StaticImageInput.cpp */; };
+		1CD33E884D9E3358252E82A1 /* ofxToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 907C5B5E104864A2D3A25745 /* ofxToggle.cpp */; };
 		1DAF0011C8315AEA50FD6CDE /* DeckLinkOutput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 002511F8429967BBEE33AB49 /* DeckLinkOutput.cpp */; };
 		1F558B76FB3412843DDAA031 /* ofxSyphonClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = 03EA4DA95B5E1B8409FC058E /* ofxSyphonClient.mm */; };
 		222937AE58FD5FB49FAABDE8 /* ofxNDISender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88DF45D0623D6E64CBA08FBC /* ofxNDISender.cpp */; };
@@ -20,16 +21,22 @@
 		3652DE64DCE39055DCB7E9AB /* ofxDeckLinkOutput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 189D9A20996A7123571EC46A /* ofxDeckLinkOutput.cpp */; };
 		4646B7152CDEF740798028B5 /* ofxNDIVideoCaster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D65EA842C8ADB60A7294E736 /* ofxNDIVideoCaster.cpp */; };
 		477DB52FB10D942F4179136A /* NdiInputConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 467B42BAC73089E679459331 /* NdiInputConfig.cpp */; };
+		483908258D00B98B4BE69F07 /* ofxLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78D67A00EB899FAC09430597 /* ofxLabel.cpp */; };
 		4B03289C24842F5B76F8698D /* ofxNDIRecvStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C9FC1AFDD5E1276BF1A1BCD /* ofxNDIRecvStream.cpp */; };
 		4C66FE31C7F09081CCEC2EC8 /* NdiOutputConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C67E036D49B90AC1547F18DC /* NdiOutputConfig.cpp */; };
 		4D508D34156E7076531D9084 /* Syphon.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D58DCB2C0AEFDE6171E29540 /* Syphon.framework */; };
 		4FCDE8CC68BB5930035BAACE /* StaticImageInputConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2AEAD3D17415634A4D8EB8D3 /* StaticImageInputConfig.cpp */; };
 		5B47C16F8BBCFEC3C7854C07 /* VideoPlayerInputConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 657872E5A1F938313C5FC89E /* VideoPlayerInputConfig.cpp */; };
+		5CBB2AB3A60F65431D7B555D /* ofxButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C88333E71C9457E441C33474 /* ofxButton.cpp */; };
 		68A19D836E5BA0ED60A3DE5B /* ofxNDISendStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03D3DB1AC54CF9DC356CF0A8 /* ofxNDISendStream.cpp */; };
 		70A54C5054010C1232DC7669 /* ofxDeckLinkAPIConstants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2484D1C4AB8AAD3081D684EF /* ofxDeckLinkAPIConstants.cpp */; };
 		78B7D0AE6072A8956DF7BF99 /* NdiOutput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 87F412D6C3F9F8C9865FE055 /* NdiOutput.cpp */; };
 		7B8CE88493D9DFA07923F8A0 /* DeckLinkInputConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9255AF0F3742A902709FD6D6 /* DeckLinkInputConfig.cpp */; };
 		7FDE548ED91F10A12801FFA9 /* NdiInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E88B5CEE76288265E15A424 /* NdiInput.cpp */; };
+		837220E80EB56CD44AD27F2A /* ofxSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15F2C6477A769C03A56D1401 /* ofxSlider.cpp */; };
+		852E0891794923EE7583C621 /* ofxInputField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 44B351490B620D04E1E7C52D /* ofxInputField.cpp */; };
+		853E0BA2F448076739446874 /* ofxColorPicker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 181D363B6DD54D1FA6309C43 /* ofxColorPicker.cpp */; };
+		856AA354D08AB4B323081444 /* ofxBaseGui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9604B925D32EE39065747725 /* ofxBaseGui.cpp */; };
 		8D60C222CBD3F869382832E9 /* ofxSyphonServer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 32D6F27DC6308427F9A278C1 /* ofxSyphonServer.mm */; };
 		8FB9E996B2B8AA3D2866EECE /* ofxNDIReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 420F0DAA6BCD102088EF54AF /* ofxNDIReceiver.cpp */; };
 		92CFD28A8EE3E1EB03D79F02 /* ofxDeckLinkInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1BA059110C665DC7D3C2636A /* ofxDeckLinkInput.cpp */; };
@@ -37,7 +44,9 @@
 		9E711A648739952859F3FAEB /* ofxNDIRouter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29BE9027821B2B75B9DA898A /* ofxNDIRouter.cpp */; };
 		A4D57BD85DD21E36D85F6BC5 /* DeckLinkOutputConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6092D4040AB7178EBE693C7 /* DeckLinkOutputConfig.cpp */; };
 		A633A8023F4E5302DD8AE0A5 /* SyphonInputConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3D50549F1F3DE9882A7D344 /* SyphonInputConfig.cpp */; };
+		B266578FC55D23BFEBC042E7 /* ofxGuiGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ECF8674C7975F1063C5E30CA /* ofxGuiGroup.cpp */; };
 		B56B46C120594C931A2EBD10 /* Config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 88488C21F54795BB137FC142 /* Config.cpp */; };
+		B56FE57CC35806596D38118C /* ofxSliderGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 802251BAF1B35B1D67B32FD0 /* ofxSliderGroup.cpp */; };
 		B5C54CE1F4411C49DAE50EFC /* OutputsConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 318896F890848858CF40ED2C /* OutputsConfig.cpp */; };
 		BEDFEE7400C58EA4E412B757 /* ofxJSONElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2B099E6BD1199664C48B177 /* ofxJSONElement.cpp */; };
 		C2EA7E93921B756C909E423C /* ofxNDIFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42DD640FE31004A88DD84401 /* ofxNDIFinder.cpp */; };
@@ -51,6 +60,7 @@
 		E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
 		E6F2817F4894C4BC564A930E /* SyphonOutput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92AC1A1661B9C5D3CC0379BC /* SyphonOutput.cpp */; };
 		E8942CFF44D0D488F4F2D2E3 /* SyphonInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31262265F5ECBE5DC86A886E /* SyphonInput.cpp */; };
+		F285EB3169F1566CA3D93C20 /* ofxPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E112B3AEBEA2C091BF2B40AE /* ofxPanel.cpp */; };
 		F3B5991B811FA9FB584F5912 /* PanelGroupConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E22884DC38C64E23B061AAA /* PanelGroupConfig.cpp */; };
 		F6C9185C477C7AB4B7F7AC49 /* ofxNDIFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0D93FFBF7EFD8611A72805D /* ofxNDIFrame.cpp */; };
 		F7299359A3F71835269422B1 /* ofxNDIVideoGrabber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21BCD9006AA223C7D4D7C539 /* ofxNDIVideoGrabber.cpp */; };
@@ -77,6 +87,7 @@
 		03EA4DA95B5E1B8409FC058E /* ofxSyphonClient.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ofxSyphonClient.mm; path = ../../../addons/ofxSyphon/src/ofxSyphonClient.mm; sourceTree = SOURCE_ROOT; };
 		0437D7587C303FC35DA849AB /* ofxNDIFrame.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxNDIFrame.h; path = ../../../addons/ofxNDI/src/ofxNDIFrame.h; sourceTree = SOURCE_ROOT; };
 		09417F3BCD7E6FB6CE3AD0C0 /* Processing.NDI.Send.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Processing.NDI.Send.h; path = ../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Send.h; sourceTree = SOURCE_ROOT; };
+		0A1DAC09F322AE313A40706D /* ofxToggle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxToggle.h; path = ../../../addons/ofxGui/src/ofxToggle.h; sourceTree = SOURCE_ROOT; };
 		0B2CB21FCA3A6FE3D640E9F1 /* Processing.NDI.Recv.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Processing.NDI.Recv.h; path = ../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Recv.h; sourceTree = SOURCE_ROOT; };
 		0E88B5CEE76288265E15A424 /* NdiInput.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = NdiInput.cpp; path = src/Inputs/NdiInput.cpp; sourceTree = SOURCE_ROOT; };
 		0FB83AC7747296DD35C1C295 /* ofxSyphon.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxSyphon.h; path = ../../../addons/ofxSyphon/src/ofxSyphon.h; sourceTree = SOURCE_ROOT; };
@@ -84,10 +95,14 @@
 		147B3A653BB259E496FF0B3F /* PanelConfig.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = PanelConfig.hpp; path = src/Config/PanelConfig.hpp; sourceTree = SOURCE_ROOT; };
 		14CE80F18417D5FD6B565F04 /* VideoPlayerInput.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = VideoPlayerInput.hpp; path = src/Inputs/VideoPlayerInput.hpp; sourceTree = SOURCE_ROOT; };
 		15718EF0626345FC9172263A /* Processing.NDI.Lib.cplusplus.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Processing.NDI.Lib.cplusplus.h; path = ../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Lib.cplusplus.h; sourceTree = SOURCE_ROOT; };
+		15F2C6477A769C03A56D1401 /* ofxSlider.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxSlider.cpp; path = ../../../addons/ofxGui/src/ofxSlider.cpp; sourceTree = SOURCE_ROOT; };
 		1645F56257269CD0356320BD /* ofxJSON.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxJSON.h; path = ../../../addons/ofxJSON/src/ofxJSON.h; sourceTree = SOURCE_ROOT; };
+		17E65988300FBD9AAA2CD0CA /* ofxGui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxGui.h; path = ../../../addons/ofxGui/src/ofxGui.h; sourceTree = SOURCE_ROOT; };
+		181D363B6DD54D1FA6309C43 /* ofxColorPicker.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxColorPicker.cpp; path = ../../../addons/ofxGui/src/ofxColorPicker.cpp; sourceTree = SOURCE_ROOT; };
 		183212F5F054BD9EAF34DA37 /* PanelCalculations.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = PanelCalculations.hpp; path = src/PanelCalculations.hpp; sourceTree = SOURCE_ROOT; };
 		189D9A20996A7123571EC46A /* ofxDeckLinkOutput.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxDeckLinkOutput.cpp; path = ../../../addons/ofxDeckLink/src/ofxDeckLinkOutput.cpp; sourceTree = SOURCE_ROOT; };
 		1BA059110C665DC7D3C2636A /* ofxDeckLinkInput.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxDeckLinkInput.cpp; path = ../../../addons/ofxDeckLink/src/ofxDeckLinkInput.cpp; sourceTree = SOURCE_ROOT; };
+		1C0DA2561397A7DE0246858B /* ofxGuiGroup.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxGuiGroup.h; path = ../../../addons/ofxGui/src/ofxGuiGroup.h; sourceTree = SOURCE_ROOT; };
 		1DA559320B74EE1A6CC10ABC /* SyphonInputConfig.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = SyphonInputConfig.hpp; path = src/Config/Inputs/SyphonInputConfig.hpp; sourceTree = SOURCE_ROOT; };
 		21BCD9006AA223C7D4D7C539 /* ofxNDIVideoGrabber.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxNDIVideoGrabber.cpp; path = ../../../addons/ofxNDI/src/utils/ofxNDIVideoGrabber.cpp; sourceTree = SOURCE_ROOT; };
 		21BDE665988474F1B1F4D302 /* jsoncpp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = jsoncpp.cpp; path = ../../../addons/ofxJSON/libs/jsoncpp/src/jsoncpp.cpp; sourceTree = SOURCE_ROOT; };
@@ -95,6 +110,7 @@
 		231B861E4CC6D590026CC32F /* BaseOutput.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = BaseOutput.hpp; path = src/BaseOutput.hpp; sourceTree = SOURCE_ROOT; };
 		2484D1C4AB8AAD3081D684EF /* ofxDeckLinkAPIConstants.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxDeckLinkAPIConstants.cpp; path = ../../../addons/ofxDeckLink/src/ofxDeckLinkAPIConstants.cpp; sourceTree = SOURCE_ROOT; };
 		26A541233BC6F736E758F718 /* ofxJSONElement.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxJSONElement.h; path = ../../../addons/ofxJSON/src/ofxJSONElement.h; sourceTree = SOURCE_ROOT; };
+		2834D88A62CD23F3DE2C47D1 /* ofxButton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxButton.h; path = ../../../addons/ofxGui/src/ofxButton.h; sourceTree = SOURCE_ROOT; };
 		29BE9027821B2B75B9DA898A /* ofxNDIRouter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxNDIRouter.cpp; path = ../../../addons/ofxNDI/src/ofxNDIRouter.cpp; sourceTree = SOURCE_ROOT; };
 		2AEAD3D17415634A4D8EB8D3 /* StaticImageInputConfig.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = StaticImageInputConfig.cpp; path = src/Config/Inputs/StaticImageInputConfig.cpp; sourceTree = SOURCE_ROOT; };
 		2C7CF000B7B4F782C187C353 /* json.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = json.h; path = ../../../addons/ofxJSON/libs/jsoncpp/include/json/json.h; sourceTree = SOURCE_ROOT; };
@@ -115,9 +131,11 @@
 		420F0DAA6BCD102088EF54AF /* ofxNDIReceiver.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxNDIReceiver.cpp; path = ../../../addons/ofxNDI/src/ofxNDIReceiver.cpp; sourceTree = SOURCE_ROOT; };
 		42DD640FE31004A88DD84401 /* ofxNDIFinder.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxNDIFinder.cpp; path = ../../../addons/ofxNDI/src/ofxNDIFinder.cpp; sourceTree = SOURCE_ROOT; };
 		431E58E5BAEAA0086F348F4B /* ofxDeckLink.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxDeckLink.cpp; path = ../../../addons/ofxDeckLink/src/ofxDeckLink.cpp; sourceTree = SOURCE_ROOT; };
+		44B351490B620D04E1E7C52D /* ofxInputField.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxInputField.cpp; path = ../../../addons/ofxGui/src/ofxInputField.cpp; sourceTree = SOURCE_ROOT; };
 		467B42BAC73089E679459331 /* NdiInputConfig.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = NdiInputConfig.cpp; path = src/Config/Inputs/NdiInputConfig.cpp; sourceTree = SOURCE_ROOT; };
 		46BBCC26D60B589958BF0D03 /* ofxSyphonServer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxSyphonServer.h; path = ../../../addons/ofxSyphon/src/ofxSyphonServer.h; sourceTree = SOURCE_ROOT; };
 		47712C3FF61D1E3945AD5E1B /* DeckLinkAPIDiscovery.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DeckLinkAPIDiscovery.h; path = ../../../addons/ofxDeckLink/libs/DeckLinkAPI/include/DeckLinkAPIDiscovery.h; sourceTree = SOURCE_ROOT; };
+		489B196944B06ADC2A071076 /* ofxColorPicker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxColorPicker.h; path = ../../../addons/ofxGui/src/ofxColorPicker.h; sourceTree = SOURCE_ROOT; };
 		49528271204AEE418E924D83 /* ofxNDIVideoCaster.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxNDIVideoCaster.h; path = ../../../addons/ofxNDI/src/utils/ofxNDIVideoCaster.h; sourceTree = SOURCE_ROOT; };
 		4B2B6D2203619DD01589FF5F /* ofxNDISendStream.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxNDISendStream.h; path = ../../../addons/ofxNDI/src/ofxNDISendStream.h; sourceTree = SOURCE_ROOT; };
 		4DAF2ACFAB27974CB609264F /* StaticImageInputConfig.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = StaticImageInputConfig.hpp; path = src/Config/Inputs/StaticImageInputConfig.hpp; sourceTree = SOURCE_ROOT; };
@@ -125,6 +143,7 @@
 		5004301C0A0BDFAD714943B4 /* Processing.NDI.Find.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Processing.NDI.Find.h; path = ../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Find.h; sourceTree = SOURCE_ROOT; };
 		51CD743FBAF57355E0DB5E1F /* SyphonOutputConfig.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = SyphonOutputConfig.cpp; path = src/Config/Outputs/SyphonOutputConfig.cpp; sourceTree = SOURCE_ROOT; };
 		51F468DEBF39EAF946388613 /* PanelGroupConfig.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = PanelGroupConfig.hpp; path = src/PanelGroupConfig.hpp; sourceTree = SOURCE_ROOT; };
+		52AFA1F08C420992CAAAE648 /* ofxSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxSlider.h; path = ../../../addons/ofxGui/src/ofxSlider.h; sourceTree = SOURCE_ROOT; };
 		58414C1B03A4296118C189EB /* ofxDeckLinkOutput.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxDeckLinkOutput.h; path = ../../../addons/ofxDeckLink/src/ofxDeckLinkOutput.h; sourceTree = SOURCE_ROOT; };
 		6078CF89546AA620818793B9 /* Processing.NDI.utilities.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Processing.NDI.utilities.h; path = ../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.utilities.h; sourceTree = SOURCE_ROOT; };
 		61313493CDB52744E22A604D /* json-forwards.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = "json-forwards.h"; path = "../../../addons/ofxJSON/libs/jsoncpp/include/json/json-forwards.h"; sourceTree = SOURCE_ROOT; };
@@ -136,18 +155,24 @@
 		71FFD50EA75BCC76F0C58D12 /* SyphonNameboundClient.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = SyphonNameboundClient.h; path = ../../../addons/ofxSyphon/libs/Syphon/src/SyphonNameboundClient.h; sourceTree = SOURCE_ROOT; };
 		73F50592E5A90FBB5B81EED0 /* NdiInput.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = NdiInput.hpp; path = src/Inputs/NdiInput.hpp; sourceTree = SOURCE_ROOT; };
 		756376F2CD9B663552247D28 /* ofxNDISender.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxNDISender.h; path = ../../../addons/ofxNDI/src/ofxNDISender.h; sourceTree = SOURCE_ROOT; };
+		78D67A00EB899FAC09430597 /* ofxLabel.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxLabel.cpp; path = ../../../addons/ofxGui/src/ofxLabel.cpp; sourceTree = SOURCE_ROOT; };
 		7E1550837C350E76309A37EB /* Processing.NDI.structs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Processing.NDI.structs.h; path = ../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.structs.h; sourceTree = SOURCE_ROOT; };
 		7E9E091C420174FA0FE42A8C /* ofxNDIVideoGrabber.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxNDIVideoGrabber.h; path = ../../../addons/ofxNDI/src/utils/ofxNDIVideoGrabber.h; sourceTree = SOURCE_ROOT; };
+		802251BAF1B35B1D67B32FD0 /* ofxSliderGroup.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxSliderGroup.cpp; path = ../../../addons/ofxGui/src/ofxSliderGroup.cpp; sourceTree = SOURCE_ROOT; };
 		86DD4428E2EA986771DFC83A /* ofxNDIRecorder.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxNDIRecorder.h; path = ../../../addons/ofxNDI/src/ofxNDIRecorder.h; sourceTree = SOURCE_ROOT; };
 		872A11621F63D1C564650D1F /* PanelConfig.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = PanelConfig.cpp; path = src/Config/PanelConfig.cpp; sourceTree = SOURCE_ROOT; };
 		879903AB83A468A6710DE45D /* DoubleBuffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DoubleBuffer.h; path = ../../../addons/ofxNDI/libs/utils/DoubleBuffer.h; sourceTree = SOURCE_ROOT; };
+		87F26B4B24CBD428AD9EEBAA /* ofxBaseGui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxBaseGui.h; path = ../../../addons/ofxGui/src/ofxBaseGui.h; sourceTree = SOURCE_ROOT; };
 		87F412D6C3F9F8C9865FE055 /* NdiOutput.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = NdiOutput.cpp; path = src/Outputs/NdiOutput.cpp; sourceTree = SOURCE_ROOT; };
 		88488C21F54795BB137FC142 /* Config.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Config.cpp; path = src/Config/Config.cpp; sourceTree = SOURCE_ROOT; };
 		88DF45D0623D6E64CBA08FBC /* ofxNDISender.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxNDISender.cpp; path = ../../../addons/ofxNDI/src/ofxNDISender.cpp; sourceTree = SOURCE_ROOT; };
+		89449E3044D456F7DE7BEA14 /* ofxPanel.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxPanel.h; path = ../../../addons/ofxGui/src/ofxPanel.h; sourceTree = SOURCE_ROOT; };
 		8B209C818662F2A6760D46B5 /* Processing.NDI.Routing.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Processing.NDI.Routing.h; path = ../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Routing.h; sourceTree = SOURCE_ROOT; };
+		907C5B5E104864A2D3A25745 /* ofxToggle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxToggle.cpp; path = ../../../addons/ofxGui/src/ofxToggle.cpp; sourceTree = SOURCE_ROOT; };
 		9148FBE8576CE7B2E76F2F06 /* DeckLinkInput.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DeckLinkInput.hpp; path = src/Inputs/DeckLinkInput.hpp; sourceTree = SOURCE_ROOT; };
 		9255AF0F3742A902709FD6D6 /* DeckLinkInputConfig.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DeckLinkInputConfig.cpp; path = src/Config/Inputs/DeckLinkInputConfig.cpp; sourceTree = SOURCE_ROOT; };
 		92AC1A1661B9C5D3CC0379BC /* SyphonOutput.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = SyphonOutput.cpp; path = src/Outputs/SyphonOutput.cpp; sourceTree = SOURCE_ROOT; };
+		9604B925D32EE39065747725 /* ofxBaseGui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxBaseGui.cpp; path = ../../../addons/ofxGui/src/ofxBaseGui.cpp; sourceTree = SOURCE_ROOT; };
 		9BD6B5C846906145E7854FF1 /* InputsConfig.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = InputsConfig.hpp; path = src/Config/InputsConfig.hpp; sourceTree = SOURCE_ROOT; };
 		A0087FE518CD041C25838418 /* SyphonInput.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = SyphonInput.hpp; path = src/Inputs/SyphonInput.hpp; sourceTree = SOURCE_ROOT; };
 		A05146D902C91392FCD0DABF /* DeckLinkInput.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DeckLinkInput.cpp; path = src/Inputs/DeckLinkInput.cpp; sourceTree = SOURCE_ROOT; };
@@ -156,6 +181,7 @@
 		A534535F5FEAB5C5CB7275F6 /* DeckLinkAPIModes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DeckLinkAPIModes.h; path = ../../../addons/ofxDeckLink/libs/DeckLinkAPI/include/DeckLinkAPIModes.h; sourceTree = SOURCE_ROOT; };
 		A70E5EEB46F8E59FC8AC6B4C /* Processing.NDI.Lib.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Processing.NDI.Lib.h; path = ../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Lib.h; sourceTree = SOURCE_ROOT; };
 		ABB00039C2028BE75FF61C60 /* DeckLinkAPIConfiguration.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DeckLinkAPIConfiguration.h; path = ../../../addons/ofxDeckLink/libs/DeckLinkAPI/include/DeckLinkAPIConfiguration.h; sourceTree = SOURCE_ROOT; };
+		AE68B54581BE4A1DAE853180 /* ofxInputField.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxInputField.h; path = ../../../addons/ofxGui/src/ofxInputField.h; sourceTree = SOURCE_ROOT; };
 		B0D93FFBF7EFD8611A72805D /* ofxNDIFrame.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxNDIFrame.cpp; path = ../../../addons/ofxNDI/src/ofxNDIFrame.cpp; sourceTree = SOURCE_ROOT; };
 		B1524914DF6B61B5CE0C28E6 /* Processing.NDI.deprecated.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Processing.NDI.deprecated.h; path = ../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.deprecated.h; sourceTree = SOURCE_ROOT; };
 		B26ED1BC67390461C1E8ADFD /* InputsConfig.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = InputsConfig.cpp; path = src/Config/InputsConfig.cpp; sourceTree = SOURCE_ROOT; };
@@ -164,9 +190,13 @@
 		B631F2EE88CB3C5F91292D2F /* NdiOutputConfig.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = NdiOutputConfig.hpp; path = src/Config/Outputs/NdiOutputConfig.hpp; sourceTree = SOURCE_ROOT; };
 		B63C84C46F26658D312F6F38 /* VideoPlayerInputConfig.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = VideoPlayerInputConfig.hpp; path = src/Config/Inputs/VideoPlayerInputConfig.hpp; sourceTree = SOURCE_ROOT; };
 		B6B4ACD451F44E725FE05610 /* DeckLinkAPI.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DeckLinkAPI.h; path = ../../../addons/ofxDeckLink/libs/DeckLinkAPI/include/DeckLinkAPI.h; sourceTree = SOURCE_ROOT; };
+		B87C60311EC1FE841C1ECD89 /* ofxLabel.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxLabel.h; path = ../../../addons/ofxGui/src/ofxLabel.h; sourceTree = SOURCE_ROOT; };
+		BA274EC7A169D538BD43A5D8 /* ofxGuiUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxGuiUtils.h; path = ../../../addons/ofxGui/src/ofxGuiUtils.h; sourceTree = SOURCE_ROOT; };
 		BBC5733023A10F0996C14DE2 /* ofxNDIPTZ.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxNDIPTZ.h; path = ../../../addons/ofxNDI/src/ofxNDIPTZ.h; sourceTree = SOURCE_ROOT; };
 		C67E036D49B90AC1547F18DC /* NdiOutputConfig.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = NdiOutputConfig.cpp; path = src/Config/Outputs/NdiOutputConfig.cpp; sourceTree = SOURCE_ROOT; };
+		C70D8946940288799E82131E /* ofxSliderGroup.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxSliderGroup.h; path = ../../../addons/ofxGui/src/ofxSliderGroup.h; sourceTree = SOURCE_ROOT; };
 		C80AD5E204660C2D7AF596A4 /* ofxNDI.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxNDI.h; path = ../../../addons/ofxNDI/src/ofxNDI.h; sourceTree = SOURCE_ROOT; };
+		C88333E71C9457E441C33474 /* ofxButton.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxButton.cpp; path = ../../../addons/ofxGui/src/ofxButton.cpp; sourceTree = SOURCE_ROOT; };
 		CA338310108D4E6989FD6BDA /* DeckLinkOutput.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DeckLinkOutput.hpp; path = src/Outputs/DeckLinkOutput.hpp; sourceTree = SOURCE_ROOT; };
 		CD95AA7539B05153B4487D07 /* BaseInput.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = BaseInput.hpp; path = src/BaseInput.hpp; sourceTree = SOURCE_ROOT; };
 		CE8879C8F883AD4D2EEDAFE7 /* ofxNDIFinder.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxNDIFinder.h; path = ../../../addons/ofxNDI/src/ofxNDIFinder.h; sourceTree = SOURCE_ROOT; };
@@ -179,6 +209,7 @@
 		DCA87AB04E516A56A6D5FFC2 /* DeckLinkAPIStreaming.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DeckLinkAPIStreaming.h; path = ../../../addons/ofxDeckLink/libs/DeckLinkAPI/include/DeckLinkAPIStreaming.h; sourceTree = SOURCE_ROOT; };
 		DE8C164CA58098F5F1BE5F6A /* NdiInputConfig.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = NdiInputConfig.hpp; path = src/Config/Inputs/NdiInputConfig.hpp; sourceTree = SOURCE_ROOT; };
 		E0A12A1B7694777F9060A443 /* VideoPlayerInput.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = VideoPlayerInput.cpp; path = src/Inputs/VideoPlayerInput.cpp; sourceTree = SOURCE_ROOT; };
+		E112B3AEBEA2C091BF2B40AE /* ofxPanel.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxPanel.cpp; path = ../../../addons/ofxGui/src/ofxPanel.cpp; sourceTree = SOURCE_ROOT; };
 		E3405C5AE387BDDC2AD19473 /* SyphonNameboundClient.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = SyphonNameboundClient.m; path = ../../../addons/ofxSyphon/libs/Syphon/src/SyphonNameboundClient.m; sourceTree = SOURCE_ROOT; };
 		E3A1475E86C3E04764C5300A /* SyphonOutputConfig.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = SyphonOutputConfig.hpp; path = src/Config/Outputs/SyphonOutputConfig.hpp; sourceTree = SOURCE_ROOT; };
 		E42962AC2163EDD300A6A9E2 /* ofCamera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ofCamera.cpp; path = ../../../libs/openFrameworks/3d/ofCamera.cpp; sourceTree = SOURCE_ROOT; };
@@ -364,6 +395,7 @@
 		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
 		E596545695A66869065D428A /* Processing.NDI.FrameSync.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Processing.NDI.FrameSync.h; path = ../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.FrameSync.h; sourceTree = SOURCE_ROOT; };
 		E723BEF4C55D236E24639608 /* ofxSyphonServerDirectory.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ofxSyphonServerDirectory.mm; path = ../../../addons/ofxSyphon/src/ofxSyphonServerDirectory.mm; sourceTree = SOURCE_ROOT; };
+		ECF8674C7975F1063C5E30CA /* ofxGuiGroup.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxGuiGroup.cpp; path = ../../../addons/ofxGui/src/ofxGuiGroup.cpp; sourceTree = SOURCE_ROOT; };
 		F0EF88ADECB31F62AE4C1497 /* DeckLinkAPIDeckControl.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = DeckLinkAPIDeckControl.h; path = ../../../addons/ofxDeckLink/libs/DeckLinkAPI/include/DeckLinkAPIDeckControl.h; sourceTree = SOURCE_ROOT; };
 		F2B099E6BD1199664C48B177 /* ofxJSONElement.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxJSONElement.cpp; path = ../../../addons/ofxJSON/src/ofxJSONElement.cpp; sourceTree = SOURCE_ROOT; };
 		F6092D4040AB7178EBE693C7 /* DeckLinkOutputConfig.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DeckLinkOutputConfig.cpp; path = src/Config/Outputs/DeckLinkOutputConfig.cpp; sourceTree = SOURCE_ROOT; };
@@ -515,6 +547,14 @@
 			name = libs;
 			sourceTree = "<group>";
 		};
+		480A780D8D0308AE4A368801 /* ofxGui */ = {
+			isa = PBXGroup;
+			children = (
+				A763ED608B35AE3310251DEE /* src */,
+			);
+			name = ofxGui;
+			sourceTree = "<group>";
+		};
 		49A9E39C52C2DF4DDA1E185F /* src */ = {
 			isa = PBXGroup;
 			children = (
@@ -646,6 +686,35 @@
 			name = Config;
 			sourceTree = "<group>";
 		};
+		A763ED608B35AE3310251DEE /* src */ = {
+			isa = PBXGroup;
+			children = (
+				9604B925D32EE39065747725 /* ofxBaseGui.cpp */,
+				87F26B4B24CBD428AD9EEBAA /* ofxBaseGui.h */,
+				C88333E71C9457E441C33474 /* ofxButton.cpp */,
+				2834D88A62CD23F3DE2C47D1 /* ofxButton.h */,
+				181D363B6DD54D1FA6309C43 /* ofxColorPicker.cpp */,
+				489B196944B06ADC2A071076 /* ofxColorPicker.h */,
+				17E65988300FBD9AAA2CD0CA /* ofxGui.h */,
+				ECF8674C7975F1063C5E30CA /* ofxGuiGroup.cpp */,
+				1C0DA2561397A7DE0246858B /* ofxGuiGroup.h */,
+				BA274EC7A169D538BD43A5D8 /* ofxGuiUtils.h */,
+				44B351490B620D04E1E7C52D /* ofxInputField.cpp */,
+				AE68B54581BE4A1DAE853180 /* ofxInputField.h */,
+				78D67A00EB899FAC09430597 /* ofxLabel.cpp */,
+				B87C60311EC1FE841C1ECD89 /* ofxLabel.h */,
+				E112B3AEBEA2C091BF2B40AE /* ofxPanel.cpp */,
+				89449E3044D456F7DE7BEA14 /* ofxPanel.h */,
+				15F2C6477A769C03A56D1401 /* ofxSlider.cpp */,
+				52AFA1F08C420992CAAAE648 /* ofxSlider.h */,
+				802251BAF1B35B1D67B32FD0 /* ofxSliderGroup.cpp */,
+				C70D8946940288799E82131E /* ofxSliderGroup.h */,
+				907C5B5E104864A2D3A25745 /* ofxToggle.cpp */,
+				0A1DAC09F322AE313A40706D /* ofxToggle.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
 		AB039F8D669FDEF1B43F2BFC /* utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -669,6 +738,7 @@
 			isa = PBXGroup;
 			children = (
 				1080C156CF0CB5ACEC00504C /* ofxDeckLink */,
+				480A780D8D0308AE4A368801 /* ofxGui */,
 				2865DAEF86B1907A704CA70B /* ofxJSON */,
 				34159355A5E930002AC9132E /* ofxNDI */,
 				7F3C04577424427D348B1425 /* ofxSyphon */,
@@ -1192,6 +1262,16 @@
 				70A54C5054010C1232DC7669 /* ofxDeckLinkAPIConstants.cpp in Sources */,
 				92CFD28A8EE3E1EB03D79F02 /* ofxDeckLinkInput.cpp in Sources */,
 				3652DE64DCE39055DCB7E9AB /* ofxDeckLinkOutput.cpp in Sources */,
+				856AA354D08AB4B323081444 /* ofxBaseGui.cpp in Sources */,
+				5CBB2AB3A60F65431D7B555D /* ofxButton.cpp in Sources */,
+				853E0BA2F448076739446874 /* ofxColorPicker.cpp in Sources */,
+				B266578FC55D23BFEBC042E7 /* ofxGuiGroup.cpp in Sources */,
+				852E0891794923EE7583C621 /* ofxInputField.cpp in Sources */,
+				483908258D00B98B4BE69F07 /* ofxLabel.cpp in Sources */,
+				F285EB3169F1566CA3D93C20 /* ofxPanel.cpp in Sources */,
+				837220E80EB56CD44AD27F2A /* ofxSlider.cpp in Sources */,
+				B56FE57CC35806596D38118C /* ofxSliderGroup.cpp in Sources */,
+				1CD33E884D9E3358252E82A1 /* ofxToggle.cpp in Sources */,
 				FB84AAF8D1B7A95266DB5C09 /* jsoncpp.cpp in Sources */,
 				BEDFEE7400C58EA4E412B757 /* ofxJSONElement.cpp in Sources */,
 				C2EA7E93921B756C909E423C /* ofxNDIFinder.cpp in Sources */,
@@ -1249,6 +1329,7 @@
 					../../../addons/ofxDeckLink/libs/DeckLinkAPI,
 					../../../addons/ofxDeckLink/libs/DeckLinkAPI/include,
 					../../../addons/ofxDeckLink/src,
+					../../../addons/ofxGui/src,
 					../../../addons/ofxJSON/libs,
 					../../../addons/ofxJSON/libs/jsoncpp,
 					../../../addons/ofxJSON/libs/jsoncpp/include,
@@ -1302,6 +1383,7 @@
 					../../../addons/ofxDeckLink/libs/DeckLinkAPI,
 					../../../addons/ofxDeckLink/libs/DeckLinkAPI/include,
 					../../../addons/ofxDeckLink/src,
+					../../../addons/ofxGui/src,
 					../../../addons/ofxJSON/libs,
 					../../../addons/ofxJSON/libs/jsoncpp,
 					../../../addons/ofxJSON/libs/jsoncpp/include,
@@ -1372,6 +1454,7 @@
 					../../../addons/ofxDeckLink/libs/DeckLinkAPI,
 					../../../addons/ofxDeckLink/libs/DeckLinkAPI/include,
 					../../../addons/ofxDeckLink/src,
+					../../../addons/ofxGui/src,
 					../../../addons/ofxJSON/libs,
 					../../../addons/ofxJSON/libs/jsoncpp,
 					../../../addons/ofxJSON/libs/jsoncpp/include,
@@ -1433,6 +1516,7 @@
 					../../../addons/ofxDeckLink/libs/DeckLinkAPI,
 					../../../addons/ofxDeckLink/libs/DeckLinkAPI/include,
 					../../../addons/ofxDeckLink/src,
+					../../../addons/ofxGui/src,
 					../../../addons/ofxJSON/libs,
 					../../../addons/ofxJSON/libs/jsoncpp,
 					../../../addons/ofxJSON/libs/jsoncpp/include,
@@ -1486,6 +1570,7 @@
 					../../../addons/ofxDeckLink/libs/DeckLinkAPI,
 					../../../addons/ofxDeckLink/libs/DeckLinkAPI/include,
 					../../../addons/ofxDeckLink/src,
+					../../../addons/ofxGui/src,
 					../../../addons/ofxJSON/libs,
 					../../../addons/ofxJSON/libs/jsoncpp,
 					../../../addons/ofxJSON/libs/jsoncpp/include,
@@ -1548,6 +1633,7 @@
 					../../../addons/ofxDeckLink/libs/DeckLinkAPI,
 					../../../addons/ofxDeckLink/libs/DeckLinkAPI/include,
 					../../../addons/ofxDeckLink/src,
+					../../../addons/ofxGui/src,
 					../../../addons/ofxJSON/libs,
 					../../../addons/ofxJSON/libs/jsoncpp,
 					../../../addons/ofxJSON/libs/jsoncpp/include,

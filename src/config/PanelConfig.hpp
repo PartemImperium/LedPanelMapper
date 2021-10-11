@@ -1,11 +1,13 @@
 #pragma once
 
 #include "ofxJSONElement.h"
+#include "ofParameter.h"
 
-class PanelConfig {
+class PanelConfig : public ofParameterGroup {
     public:
-        float Y;
-        float X;
+        ofParameter<int> Y;
+        ofParameter<int> X;
 
-        void setup(ofxJSONElement json);
+        void setup(ofxJSONElement json, int panelNumber);
+        ofxJSONElement getJson();
 };
