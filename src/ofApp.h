@@ -70,8 +70,6 @@ class ofApp : public ofBaseApp {
     
         void save();
     
-    void test();
-
         // Inputs
         ofFbo inputFrameBuffer;
         std::vector<std::unique_ptr<BaseInput>> inputs;
