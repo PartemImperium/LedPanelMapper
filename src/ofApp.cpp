@@ -9,8 +9,8 @@ void ofApp::setup() {
     
 	setupConfig();
 
-    setupPanelCalculations();
     setupInfoUi(c);
+    setupPanelCalculations();
 
 	// Setup Inputs
 	inputFrameBuffer.allocate(1920, 1080);
@@ -51,6 +51,18 @@ void ofApp::setupPanelCalculations() {
         tempPanels.push_back(tempCalc);
     }
     panels = tempPanels;
+
+    ofNoFill();
+    infoUiInputFrameBuffer.begin();
+
+    ofClear(0, 0, 0);
+    for (int i = 0; i < panels.size(); i++) {
+        ofDrawRectangle(panels[i].getSource());
+    }
+    
+    infoUiInputFrameBuffer.end();
+    ofFill();
+
 }
 
 
@@ -123,8 +135,18 @@ void ofApp::setupInfoUi(Config config) {
     ofEvent<void> reloadEvent;
     reloadEvent.add(this, &ofApp::setupPanelCalculations,200);
     gui.loadPressedE = reloadEvent;
-
-    gui.setup(c, "remove_me");
+    
+    ofParameterGroup fullGroup;
+    
+    fullGroup.add(c);
+    
+    ofParameter<void> savePanelLayoutButton;
+    savePanelLayoutButton.addListener(this, &ofApp::savePanelLayoutImage);
+    savePanelLayoutButton.set("Save Panel Layout Image");
+    gui.add(savePanelLayoutButton);
+    fullGroup.add(savePanelLayoutButton);
+    
+    gui.setup(fullGroup, "remove_me");
     // I dont want it to make a settings.xml file as I want control of the config and its schema however for some reason I dont understand giving it "remove_me" as a file name prevents it from saving the setting file.... I was gonna use the exit event but this works too ¯\_(ツ)_/¯
 }
 
@@ -167,22 +189,14 @@ void ofApp::drawPanelsToOutputFrameBuffer() {
 }
 
 void ofApp::drawInfoUi() {
-	ofNoFill();
+    ofNoFill();
 
-    infoUiInputFrameBuffer.begin();
-    
-    inputFrameBuffer.draw(0,0);
-    for (int i = 0; i < panels.size(); i++) {
-        ofDrawRectangle(panels[i].getSource());
-    }
-    
-    infoUiInputFrameBuffer.end();
-    
-    
 	std::string fps = "FPS: " + std::to_string(ofGetFrameRate());
 	ofDrawBitmapString(fps, 1300, 170);
 
+    inputFrameBuffer.draw(infoUiInputRect);
     infoUiInputFrameBuffer.draw(infoUiInputRect);
+    
 	ofDrawRectangle(infoUiInputRect);
 
 	ofDrawBitmapString("Input Framebuffer: " + inputNames, 1300, 185);
@@ -198,10 +212,17 @@ void ofApp::drawInfoUi() {
     
     gui.draw();
 
-	ofFill();
+    ofFill();
 }
 
-void ofApp::keyPressed(int key) { }
+void ofApp::savePanelLayoutImage() {
+    ofPixels pix;
+    pix.allocate(1920, 1080, OF_IMAGE_QUALITY_BEST);
+    infoUiInputFrameBuffer.readToPixels(pix);
+    ofSaveImage(pix, ofFilePath::join(c.PanelLayoutImagePath.get(), "panel-layout.png"));
+}
+
+void ofApp::keyPressed(int key) { } 
 
 void ofApp::keyReleased(int key) { }
 

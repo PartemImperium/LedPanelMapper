@@ -67,6 +67,7 @@ class ofApp : public ofBaseApp {
         ofxPanel gui;
         void setupInfoUi(Config config);
         void drawInfoUi();
+        void savePanelLayoutImage();
         
         // Inputs
         ofFbo inputFrameBuffer;
