@@ -5,12 +5,11 @@
 std::string SyphonInput::InputName() {
     return "Syphon Client";
 }
-void SyphonInput::setup(Config config) {
-    c = config;
-    DrawIndex = c.Inputs.Syphon.DrawIndex;
+void SyphonInput::setup(Config *config) {
+    DrawIndex = config->Inputs.Syphon.DrawIndex;
 
     syphonClient.setup();
-    syphonClient.set(c.Inputs.Syphon.ServerName,config.Inputs.Syphon.ApplicationName);
+    syphonClient.set(config->Inputs.Syphon.ServerName,config->Inputs.Syphon.ApplicationName);
 }
 
 void SyphonInput::draw() {

@@ -1,4 +1,5 @@
 #pragma once
+
 // std
 #include <string>
 #include <vector>
@@ -7,17 +8,7 @@
 // Project Code
 #include "Config.hpp"
 #include "PanelCalculations.hpp"
-
-// Inputs
-#include "BaseInput.hpp"
-#include "VideoPlayerInput.hpp"
-#include "StaticImageInput.hpp"
-#include "NdiInput.hpp"
-#include "DeckLinkInput.hpp"
-
-#if __APPLE__
-#include "SyphonInput.hpp"
-#endif
+#include "AggregateInput.hpp"
 
 // Outputs
 #include "NdiOutput.hpp"
@@ -69,12 +60,7 @@ class ofApp : public ofBaseApp {
         void drawInfoUi();
         void savePanelLayoutImage();
         
-        // Inputs
-        ofFbo inputFrameBuffer;
-        std::vector<std::unique_ptr<BaseInput>> inputs;
-        string inputNames;
-    
-        void setupInput();
+        AggregateInput input;
     
         // Outputs
         ofFbo outputFrameBuffer;

@@ -13,13 +13,12 @@ class SyphonInput: public BaseInput {
         SyphonInput() {};
         virtual ~SyphonInput() {};
     
-        virtual void setup(Config config);
+        virtual void setup(Config *config);
         virtual void draw();
         virtual void update();
         virtual std::string InputName();
 
     private:
-        Config c;
         ofxSyphonClient syphonClient;
 };
 

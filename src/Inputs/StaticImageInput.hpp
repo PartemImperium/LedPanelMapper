@@ -11,12 +11,11 @@ class StaticImageInput: public BaseInput {
         StaticImageInput() {};
         virtual ~StaticImageInput() {};
     
-        virtual void setup(Config config);
+        virtual void setup(Config *config);
         virtual void draw();
         virtual void update();
         virtual std::string InputName();
 
     private:
-        Config c;
         ofImage image;
 };

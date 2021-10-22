@@ -4,11 +4,10 @@ std::string VideoPlayerInput::InputName() {
     return "Video Player";
 }
 
-void VideoPlayerInput::setup(Config config) {
-    c = config;
-    DrawIndex = c.Inputs.VideoPlayer.DrawIndex;
+void VideoPlayerInput::setup(Config *config) {
+    DrawIndex = config->Inputs.VideoPlayer.DrawIndex;
 
-    videoPlayer.load(c.Inputs.VideoPlayer.FilePath);
+    videoPlayer.load(config->Inputs.VideoPlayer.FilePath);
     videoPlayer.setVolume(0);
     videoPlayer.play();
 }

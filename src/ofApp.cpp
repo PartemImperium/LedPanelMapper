@@ -12,11 +12,9 @@ void ofApp::setup() {
     setupInfoUi(c);
     setupPanelCalculations();
 
-	// Setup Inputs
-	inputFrameBuffer.allocate(1920, 1080);
-	setupInput();
+    input.setup(&c);
 
-	// Setup Outputs
+    // Setup Outputs
 	outputFrameBuffer.allocate(1920, 1080);
 	setupOutputs();
 }
@@ -63,37 +61,6 @@ void ofApp::setupPanelCalculations() {
     infoUiInputFrameBuffer.end();
     ofFill();
 
-}
-
-
-void ofApp::setupInput() {
-    if (c.Inputs.StaticImage.IsInputEnabled) {
-        inputs.push_back(std::move(std::make_unique<StaticImageInput>()));
-    }
-    if (c.Inputs.VideoPlayer.IsInputEnabled) {
-        inputs.push_back(std::move(std::make_unique< VideoPlayerInput>()));
-	}
-#if __APPLE__
-	if (c.Inputs.Syphon.IsInputEnabled) {
-        inputs.push_back(std::move(std::make_unique<SyphonInput>()));
-	}
-#endif
-	if (c.Inputs.Ndi.IsInputEnabled) {
-        inputs.push_back(std::move(std::make_unique<NdiInput>()));
-	}
-    if (c.Inputs.DeckLink.IsInputEnabled) {
-        inputs.push_back(std::move(std::make_unique<DeckLinkInput>()));
-	}
-
-    for (auto& i : inputs) {
-        i->setup(c);
-    }
-    std::sort(inputs.begin(), inputs.end(),[] (const std::unique_ptr<BaseInput>& left, const std::unique_ptr<BaseInput>& right) {
-        return left->DrawIndex < right->DrawIndex;
-    });
-    for (auto& i : inputs) {// Do this here instead of by the setup so that they are in draw order.
-        inputNames += i->InputName() + " ";
-    }
 }
 
 void ofApp::setupOutputs() {
@@ -152,21 +119,12 @@ void ofApp::setupInfoUi(Config config) {
 
 void ofApp::update()
 {
-    for (auto& i : inputs) {
-        i->update();
-    }
+    input.update();
 }
 
 void ofApp::draw() {
-	// Draw Input to Input Framebuffer.
-	inputFrameBuffer.begin();
-
-    for (auto& i : inputs) {
-        i->draw();
-    }
-
-	inputFrameBuffer.end();
-
+    input.draw();
+    
 	// Draw Input Framebuffer into Output Framebuffer (with panels scalled and put into top left corner).
     drawPanelsToOutputFrameBuffer();
 
@@ -183,7 +141,7 @@ void ofApp::draw() {
 void ofApp::drawPanelsToOutputFrameBuffer() {
 	outputFrameBuffer.begin();
 	for (int i = 0; i < panels.size(); i++) {
-        panels[i].draw(inputFrameBuffer.getTexture());
+        panels[i].draw(input.frameBuffer.getTexture());
 	}
 	outputFrameBuffer.end();
 }
@@ -194,12 +152,12 @@ void ofApp::drawInfoUi() {
 	std::string fps = "FPS: " + std::to_string(ofGetFrameRate());
 	ofDrawBitmapString(fps, 1300, 170);
 
-    inputFrameBuffer.draw(infoUiInputRect);
+    input.frameBuffer.draw(infoUiInputRect);
     infoUiInputFrameBuffer.draw(infoUiInputRect);
     
 	ofDrawRectangle(infoUiInputRect);
 
-	ofDrawBitmapString("Input Framebuffer: " + inputNames, 1300, 185);
+	ofDrawBitmapString("Input Framebuffer: " + input.getInputNames(), 1300, 185);
 
 	outputFrameBuffer.draw(infoUiOutputRect);
 	ofDrawRectangle(infoUiOutputRect);

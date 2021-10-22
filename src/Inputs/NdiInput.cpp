@@ -4,10 +4,9 @@ std::string NdiInput::InputName() {
     return "NDI Receiver";
 }
 
-void NdiInput::setup(Config config) {
+void NdiInput::setup(Config *config) {
     NDIlib_initialize();
-    c = config;
-    DrawIndex = c.Inputs.Ndi.DrawIndex;
+    DrawIndex = config->Inputs.Ndi.DrawIndex;
 
 
     ofxNDIFinder ndiFinder;
@@ -15,7 +14,7 @@ void NdiInput::setup(Config config) {
     
     for (int i = 0; i < sources.size(); i++) {
         auto s = sources[i];
-        if (s.p_ndi_name == config.Inputs.Ndi.FeedName){
+        if (s.p_ndi_name == config->Inputs.Ndi.FeedName){
             ndiReceiver.changeConnection(s);
             ndiReceiver.setup();
             ndiVideoFrameSync.setup(ndiReceiver);

@@ -1,10 +1,9 @@
 #include "DeckLinkInput.hpp"
 
-void DeckLinkInput::setup(Config config) {
-    c = config;
-    DrawIndex = c.Inputs.DeckLink.DrawIndex;
+void DeckLinkInput::setup(Config *config) {
+    DrawIndex = config->Inputs.DeckLink.DrawIndex;
 
-    if (deckLinkInput.setup(1)) {
+    if (deckLinkInput.setup(1)) {//TODO: Make this use config
         deckLinkInput.start(bmdModeHD1080p30);
     }
 }
