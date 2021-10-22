@@ -113,6 +113,8 @@ void ofApp::setupInfoUi(Config config) {
     gui.add(savePanelLayoutButton);
     fullGroup.add(savePanelLayoutButton);
     
+    gui.setDefaultWidth(400);
+    
     gui.setup(fullGroup, "remove_me");
     // I dont want it to make a settings.xml file as I want control of the config and its schema however for some reason I dont understand giving it "remove_me" as a file name prevents it from saving the setting file.... I was gonna use the exit event but this works too ¯\_(ツ)_/¯
 }
