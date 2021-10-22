@@ -67,9 +67,7 @@ class ofApp : public ofBaseApp {
         ofxPanel gui;
         void setupInfoUi(Config config);
         void drawInfoUi();
-    
-        void save();
-    
+        
         // Inputs
         ofFbo inputFrameBuffer;
         std::vector<std::unique_ptr<BaseInput>> inputs;

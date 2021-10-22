@@ -117,16 +117,12 @@ void ofApp::setupInfoUi(Config config) {
     ofSetLineWidth(4);
 
     ofEvent<void> saveEvent;
-    saveEvent.add(this,  &ofApp::save, 1);
+    saveEvent.add(&c,  &Config::save, 1);
     gui.savePressedE = saveEvent;
 
 
     gui.setup(c, "remove_me");
     // I dont want it to make a settings.xml file as I want control of the config and its schema however for some reason I dont understand giving it "remove_me" as a file name prevents it from saving the setting file.... I was gonna use the exit event but this works too ¯\_(ツ)_/¯
-}
-
-void ofApp::save() {
-    c.save();
 }
 
 void ofApp::update()
