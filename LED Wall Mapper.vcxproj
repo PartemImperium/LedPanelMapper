@@ -18,7 +18,7 @@
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
 	</ItemGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+		<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     	<LocalDebuggerWorkingDirectory>$(ProjectDir)/bin</LocalDebuggerWorkingDirectory>
     	<DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   	</PropertyGroup>
@@ -116,7 +116,7 @@
 			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
 			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
 			<WarningLevel>Level3</WarningLevel>
-			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\Config;src\Config\Inputs;src\Config\Outputs;src\Inputs;src\Outputs;..\..\..\addons\ofxDeckLink\libs;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include;..\..\..\addons\ofxDeckLink\src;..\..\..\addons\ofxJSON\libs;..\..\..\addons\ofxJSON\libs\jsoncpp;..\..\..\addons\ofxJSON\libs\jsoncpp\include;..\..\..\addons\ofxJSON\libs\jsoncpp\include\json;..\..\..\addons\ofxJSON\libs\jsoncpp\src;..\..\..\addons\ofxJSON\src;..\..\..\addons\ofxNDI\libs\NDI\include;..\..\..\addons\ofxNDI\libs\utils;..\..\..\addons\ofxNDI\src;..\..\..\addons\ofxNDI\src\utils;..\..\..\addons\ofxSyphon\libs;..\..\..\addons\ofxSyphon\libs\Syphon;..\..\..\addons\ofxSyphon\libs\Syphon\lib;..\..\..\addons\ofxSyphon\libs\Syphon\src;..\..\..\addons\ofxSyphon\src</AdditionalIncludeDirectories>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\Config;src\Config\Inputs;src\Config\Outputs;src\Inputs;src\Outputs;..\..\..\addons\ofxDeckLink\libs;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include;..\..\..\addons\ofxDeckLink\src;..\..\..\addons\ofxGui\src;..\..\..\addons\ofxJSON\libs;..\..\..\addons\ofxJSON\libs\jsoncpp;..\..\..\addons\ofxJSON\libs\jsoncpp\include;..\..\..\addons\ofxJSON\libs\jsoncpp\include\json;..\..\..\addons\ofxJSON\libs\jsoncpp\src;..\..\..\addons\ofxJSON\src;..\..\..\addons\ofxNDI\libs\NDI\include;..\..\..\addons\ofxNDI\libs\utils;..\..\..\addons\ofxNDI\src;..\..\..\addons\ofxNDI\src\utils;..\..\..\addons\ofxSyphon\libs;..\..\..\addons\ofxSyphon\libs\Syphon;..\..\..\addons\ofxSyphon\libs\Syphon\lib;..\..\..\addons\ofxSyphon\libs\Syphon\src;..\..\..\addons\ofxSyphon\src</AdditionalIncludeDirectories>
 			<CompileAs>CompileAsCpp</CompileAs>
 			<ObjectFileName>$(IntDir)</ObjectFileName>
 		</ClCompile>
@@ -136,7 +136,7 @@
 			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
 			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
 			<WarningLevel>Level3</WarningLevel>
-			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\Config;src\Config\Inputs;src\Config\Outputs;src\Inputs;src\Outputs;..\..\..\addons\ofxDeckLink\libs;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include;..\..\..\addons\ofxDeckLink\src;..\..\..\addons\ofxJSON\libs;..\..\..\addons\ofxJSON\libs\jsoncpp;..\..\..\addons\ofxJSON\libs\jsoncpp\include;..\..\..\addons\ofxJSON\libs\jsoncpp\include\json;..\..\..\addons\ofxJSON\libs\jsoncpp\src;..\..\..\addons\ofxJSON\src;..\..\..\addons\ofxNDI\libs\NDI\include;..\..\..\addons\ofxNDI\libs\utils;..\..\..\addons\ofxNDI\src;..\..\..\addons\ofxNDI\src\utils;..\..\..\addons\ofxSyphon\libs;..\..\..\addons\ofxSyphon\libs\Syphon;..\..\..\addons\ofxSyphon\libs\Syphon\lib;..\..\..\addons\ofxSyphon\libs\Syphon\src;..\..\..\addons\ofxSyphon\src</AdditionalIncludeDirectories>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\Config;src\Config\Inputs;src\Config\Outputs;src\Inputs;src\Outputs;..\..\..\addons\ofxDeckLink\libs;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include;..\..\..\addons\ofxDeckLink\src;..\..\..\addons\ofxGui\src;..\..\..\addons\ofxJSON\libs;..\..\..\addons\ofxJSON\libs\jsoncpp;..\..\..\addons\ofxJSON\libs\jsoncpp\include;..\..\..\addons\ofxJSON\libs\jsoncpp\include\json;..\..\..\addons\ofxJSON\libs\jsoncpp\src;..\..\..\addons\ofxJSON\src;..\..\..\addons\ofxNDI\libs\NDI\include;..\..\..\addons\ofxNDI\libs\utils;..\..\..\addons\ofxNDI\src;..\..\..\addons\ofxNDI\src\utils;..\..\..\addons\ofxSyphon\libs;..\..\..\addons\ofxSyphon\libs\Syphon;..\..\..\addons\ofxSyphon\libs\Syphon\lib;..\..\..\addons\ofxSyphon\libs\Syphon\src;..\..\..\addons\ofxSyphon\src</AdditionalIncludeDirectories>
 			<CompileAs>CompileAsCpp</CompileAs>
 			<MultiProcessorCompilation>true</MultiProcessorCompilation>
 			<ObjectFileName>$(IntDir)</ObjectFileName>
@@ -156,7 +156,7 @@
 			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
 			<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
 			<WarningLevel>Level3</WarningLevel>
-			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\Config;src\Config\Inputs;src\Config\Outputs;src\Inputs;src\Outputs;..\..\..\addons\ofxDeckLink\libs;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include;..\..\..\addons\ofxDeckLink\src;..\..\..\addons\ofxJSON\libs;..\..\..\addons\ofxJSON\libs\jsoncpp;..\..\..\addons\ofxJSON\libs\jsoncpp\include;..\..\..\addons\ofxJSON\libs\jsoncpp\include\json;..\..\..\addons\ofxJSON\libs\jsoncpp\src;..\..\..\addons\ofxJSON\src;..\..\..\addons\ofxNDI\libs\NDI\include;..\..\..\addons\ofxNDI\libs\utils;..\..\..\addons\ofxNDI\src;..\..\..\addons\ofxNDI\src\utils;..\..\..\addons\ofxSyphon\libs;..\..\..\addons\ofxSyphon\libs\Syphon;..\..\..\addons\ofxSyphon\libs\Syphon\lib;..\..\..\addons\ofxSyphon\libs\Syphon\src;..\..\..\addons\ofxSyphon\src</AdditionalIncludeDirectories>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\Config;src\Config\Inputs;src\Config\Outputs;src\Inputs;src\Outputs;..\..\..\addons\ofxDeckLink\libs;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include;..\..\..\addons\ofxDeckLink\src;..\..\..\addons\ofxGui\src;..\..\..\addons\ofxJSON\libs;..\..\..\addons\ofxJSON\libs\jsoncpp;..\..\..\addons\ofxJSON\libs\jsoncpp\include;..\..\..\addons\ofxJSON\libs\jsoncpp\include\json;..\..\..\addons\ofxJSON\libs\jsoncpp\src;..\..\..\addons\ofxJSON\src;..\..\..\addons\ofxNDI\libs\NDI\include;..\..\..\addons\ofxNDI\libs\utils;..\..\..\addons\ofxNDI\src;..\..\..\addons\ofxNDI\src\utils;..\..\..\addons\ofxSyphon\libs;..\..\..\addons\ofxSyphon\libs\Syphon;..\..\..\addons\ofxSyphon\libs\Syphon\lib;..\..\..\addons\ofxSyphon\libs\Syphon\src;..\..\..\addons\ofxSyphon\src</AdditionalIncludeDirectories>
 			<CompileAs>CompileAsCpp</CompileAs>
 			<MultiProcessorCompilation>true</MultiProcessorCompilation>
 			<ObjectFileName>$(IntDir)</ObjectFileName>
@@ -179,7 +179,7 @@
 			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
 			<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
 			<WarningLevel>Level3</WarningLevel>
-			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\Config;src\Config\Inputs;src\Config\Outputs;src\Inputs;src\Outputs;..\..\..\addons\ofxDeckLink\libs;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include;..\..\..\addons\ofxDeckLink\src;..\..\..\addons\ofxJSON\libs;..\..\..\addons\ofxJSON\libs\jsoncpp;..\..\..\addons\ofxJSON\libs\jsoncpp\include;..\..\..\addons\ofxJSON\libs\jsoncpp\include\json;..\..\..\addons\ofxJSON\libs\jsoncpp\src;..\..\..\addons\ofxJSON\src;..\..\..\addons\ofxNDI\libs\NDI\include;..\..\..\addons\ofxNDI\libs\utils;..\..\..\addons\ofxNDI\src;..\..\..\addons\ofxNDI\src\utils;..\..\..\addons\ofxSyphon\libs;..\..\..\addons\ofxSyphon\libs\Syphon;..\..\..\addons\ofxSyphon\libs\Syphon\lib;..\..\..\addons\ofxSyphon\libs\Syphon\src;..\..\..\addons\ofxSyphon\src</AdditionalIncludeDirectories>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\Config;src\Config\Inputs;src\Config\Outputs;src\Inputs;src\Outputs;..\..\..\addons\ofxDeckLink\libs;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include;..\..\..\addons\ofxDeckLink\src;..\..\..\addons\ofxGui\src;..\..\..\addons\ofxJSON\libs;..\..\..\addons\ofxJSON\libs\jsoncpp;..\..\..\addons\ofxJSON\libs\jsoncpp\include;..\..\..\addons\ofxJSON\libs\jsoncpp\include\json;..\..\..\addons\ofxJSON\libs\jsoncpp\src;..\..\..\addons\ofxJSON\src;..\..\..\addons\ofxNDI\libs\NDI\include;..\..\..\addons\ofxNDI\libs\utils;..\..\..\addons\ofxNDI\src;..\..\..\addons\ofxNDI\src\utils;..\..\..\addons\ofxSyphon\libs;..\..\..\addons\ofxSyphon\libs\Syphon;..\..\..\addons\ofxSyphon\libs\Syphon\lib;..\..\..\addons\ofxSyphon\libs\Syphon\src;..\..\..\addons\ofxSyphon\src</AdditionalIncludeDirectories>
 			<CompileAs>CompileAsCpp</CompileAs>
 			<ObjectFileName>$(IntDir)</ObjectFileName>
 		</ClCompile>
@@ -251,9 +251,10 @@
 	</ItemGroup>
 	<ItemGroup>
 		<ClInclude Include="src\ofApp.h" />
-		<ClInclude Include="src\OutputsConfig.hpp" />
+		<ClInclude Include="src\Config\OutputsConfig.hpp" />
 		<ClInclude Include="src\Config\InputsConfig.hpp" />
 		<ClInclude Include="src\Config\Config.hpp" />
+		<ClInclude Include="src\Config\PanelGroupConfig.hpp" />
 		<ClInclude Include="src\Config\Outputs\DeckLinkOutputConfig.hpp" />
 		<ClInclude Include="src\Config\Outputs\NdiOutputConfig.hpp" />
 		<ClInclude Include="src\Config\Outputs\SyphonOutputConfig.hpp" />
@@ -263,16 +264,15 @@
 		<ClInclude Include="src\Config\Inputs\SyphonInputConfig.hpp" />
 		<ClInclude Include="src\Config\Inputs\DeckLinkInputConfig.hpp" />
 		<ClInclude Include="src\Config\Inputs\VideoPlayerInputConfig.hpp" />
-		<ClInclude Include="src\BaseOutput.hpp" />
-		<ClInclude Include="src\BaseInput.hpp" />
 		<ClInclude Include="src\PanelCalculations.hpp" />
-		<ClInclude Include="src\PanelGroupConfig.hpp" />
 		<ClInclude Include="src\Outputs\DeckLinkOutput.hpp" />
+		<ClInclude Include="src\Outputs\BaseOutput.hpp" />
 		<ClInclude Include="src\Outputs\SyphonOutput.hpp" />
 		<ClInclude Include="src\Outputs\NdiOutput.hpp" />
 		<ClInclude Include="src\Inputs\VideoPlayerInput.hpp" />
 		<ClInclude Include="src\Inputs\StaticImageInput.hpp" />
 		<ClInclude Include="src\Inputs\DeckLinkInput.hpp" />
+		<ClInclude Include="src\Inputs\BaseInput.hpp" />
 		<ClInclude Include="src\Inputs\SyphonInput.hpp" />
 		<ClInclude Include="src\Inputs\NdiInput.hpp" />
 		<ClInclude Include="..\..\..\addons\ofxDeckLink\src\ofxDeckLinkOutput.h" />

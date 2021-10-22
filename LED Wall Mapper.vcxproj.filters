@@ -248,13 +248,16 @@
 		<ClInclude Include="src\ofApp.h">
 			<Filter>src</Filter>
 		</ClInclude>
-		<ClInclude Include="src\OutputsConfig.hpp">
-			<Filter>src</Filter>
+		<ClInclude Include="src\Config\OutputsConfig.hpp">
+			<Filter>src\Config</Filter>
 		</ClInclude>
 		<ClInclude Include="src\Config\InputsConfig.hpp">
 			<Filter>src\Config</Filter>
 		</ClInclude>
 		<ClInclude Include="src\Config\Config.hpp">
+			<Filter>src\Config</Filter>
+		</ClInclude>
+		<ClInclude Include="src\Config\PanelGroupConfig.hpp">
 			<Filter>src\Config</Filter>
 		</ClInclude>
 		<ClInclude Include="src\Config\Outputs\DeckLinkOutputConfig.hpp">
@@ -284,19 +287,13 @@
 		<ClInclude Include="src\Config\Inputs\VideoPlayerInputConfig.hpp">
 			<Filter>src\Config\Inputs</Filter>
 		</ClInclude>
-		<ClInclude Include="src\BaseOutput.hpp">
-			<Filter>src</Filter>
-		</ClInclude>
-		<ClInclude Include="src\BaseInput.hpp">
-			<Filter>src</Filter>
-		</ClInclude>
 		<ClInclude Include="src\PanelCalculations.hpp">
 			<Filter>src</Filter>
 		</ClInclude>
-		<ClInclude Include="src\PanelGroupConfig.hpp">
-			<Filter>src</Filter>
-		</ClInclude>
 		<ClInclude Include="src\Outputs\DeckLinkOutput.hpp">
+			<Filter>src\Outputs</Filter>
+		</ClInclude>
+		<ClInclude Include="src\Outputs\BaseOutput.hpp">
 			<Filter>src\Outputs</Filter>
 		</ClInclude>
 		<ClInclude Include="src\Outputs\SyphonOutput.hpp">
@@ -312,6 +309,9 @@
 			<Filter>src\Inputs</Filter>
 		</ClInclude>
 		<ClInclude Include="src\Inputs\DeckLinkInput.hpp">
+			<Filter>src\Inputs</Filter>
+		</ClInclude>
+		<ClInclude Include="src\Inputs\BaseInput.hpp">
 			<Filter>src\Inputs</Filter>
 		</ClInclude>
 		<ClInclude Include="src\Inputs\SyphonInput.hpp">
