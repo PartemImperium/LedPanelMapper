@@ -46,6 +46,9 @@
 		<ClCompile Include="src\Config\Inputs\StaticImageInputConfig.cpp">
 			<Filter>src\Config\Inputs</Filter>
 		</ClCompile>
+		<ClCompile Include="src\Shared\DeckLink\SharedDeckLinkHelpers.cpp">
+			<Filter>src\Shared\DeckLink</Filter>
+		</ClCompile>
 		<ClCompile Include="src\Shared\PanelCalculations.cpp">
 			<Filter>src\Shared</Filter>
 		</ClCompile>
@@ -163,6 +166,18 @@
 		<ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDISendStream.cpp">
 			<Filter>addons\ofxNDI\src</Filter>
 		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxSyphon\src\ofxSyphonServer.mm">
+			<Filter>addons\ofxSyphon\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxSyphon\src\ofxSyphonClient.mm">
+			<Filter>addons\ofxSyphon\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxSyphon\src\ofxSyphonServerDirectory.mm">
+			<Filter>addons\ofxSyphon\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxSyphon\libs\Syphon\src\SyphonNameboundClient.m">
+			<Filter>addons\ofxSyphon\libs\Syphon\src</Filter>
+		</ClCompile>
 	</ItemGroup>
 	<ItemGroup>
 		<Filter Include="src">
@@ -179,6 +194,9 @@
 		</Filter>
 		<Filter Include="src\Shared">
 			<UniqueIdentifier>{17357C84-A4BA-8833-E761-1E55}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="src\Shared\DeckLink">
+			<UniqueIdentifier>{3D134170-91DB-CACD-7AE2-0308}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="src\Outputs">
 			<UniqueIdentifier>{FA039FB3-E8F9-45B4-D3AA-E1B8}</UniqueIdentifier>
@@ -252,6 +270,21 @@
 		<Filter Include="addons\ofxNDI\libs\NDI\include">
 			<UniqueIdentifier>{B9E7D45F-AC3D-9349-FCD4-7EA6}</UniqueIdentifier>
 		</Filter>
+		<Filter Include="addons\ofxSyphon">
+			<UniqueIdentifier>{702862E9-2C7F-D5E7-AC3D-4A04}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxSyphon\src">
+			<UniqueIdentifier>{8737A6AD-A31E-0FAD-2327-9136}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxSyphon\libs">
+			<UniqueIdentifier>{31622136-B02D-FF2E-3DFD-430D}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxSyphon\libs\Syphon">
+			<UniqueIdentifier>{1E89AEE5-AE15-7664-C53A-EBED}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxSyphon\libs\Syphon\src">
+			<UniqueIdentifier>{44224CCE-2F78-7C11-2F9C-26A6}</UniqueIdentifier>
+		</Filter>
 	</ItemGroup>
 	<ItemGroup>
 		<ClInclude Include="src\ofApp.h">
@@ -295,6 +328,9 @@
 		</ClInclude>
 		<ClInclude Include="src\Config\Inputs\VideoPlayerInputConfig.hpp">
 			<Filter>src\Config\Inputs</Filter>
+		</ClInclude>
+		<ClInclude Include="src\Shared\DeckLink\SharedDeckLinkHelpers.hpp">
+			<Filter>src\Shared\DeckLink</Filter>
 		</ClInclude>
 		<ClInclude Include="src\Shared\PanelCalculations.hpp">
 			<Filter>src\Shared</Filter>
@@ -497,15 +533,23 @@
 		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.Lib.h">
 			<Filter>addons\ofxNDI\libs\NDI\include</Filter>
 		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxSyphon\src\ofxSyphon.h">
+			<Filter>addons\ofxSyphon\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxSyphon\src\ofxSyphonServer.h">
+			<Filter>addons\ofxSyphon\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxSyphon\src\ofxSyphonClient.h">
+			<Filter>addons\ofxSyphon\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxSyphon\src\ofxSyphonServerDirectory.h">
+			<Filter>addons\ofxSyphon\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxSyphon\libs\Syphon\src\SyphonNameboundClient.h">
+			<Filter>addons\ofxSyphon\libs\Syphon\src</Filter>
+		</ClInclude>
 	</ItemGroup>
 	<ItemGroup>
 		<ResourceCompile Include="icon.rc" />
 	</ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\addons\ofxNDI\windows-copy-to-bin\Processing.NDI.Lib.x64.dll" />
-    <None Include="..\..\..\addons\ofxNDI\windows-copy-to-bin\Processing.NDI.Lib.x86.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <CopyFileToFolders Include="config.json" />
-  </ItemGroup>
 </Project>
