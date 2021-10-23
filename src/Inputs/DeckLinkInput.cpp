@@ -3,8 +3,8 @@
 void DeckLinkInput::setup(Config *config) {
     DrawIndex = config->Inputs.DeckLink.DrawIndex;
 
-    if (deckLinkInput.setup(1)) {//TODO: Make this use config
-        deckLinkInput.start(bmdModeHD1080p30);
+    if (deckLinkInput.setup(config->Inputs.DeckLink.DeviceId - 1)) {
+        deckLinkInput.start(config->Inputs.DeckLink.VideoMode);
     }
 }
 

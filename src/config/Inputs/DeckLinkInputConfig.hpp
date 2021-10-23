@@ -1,13 +1,12 @@
 #pragma once
 
-#include <string>
 #include "ofxJSONElement.h"
 
 class DeckLinkInputConfig {
     public:
         bool IsInputEnabled;
         int DeviceId;
-        std::string VideoMode;
+        unsigned int VideoMode;
         int DrawIndex;
     
         void setup(ofxJSONElement json);
