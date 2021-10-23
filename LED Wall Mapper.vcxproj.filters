@@ -46,13 +46,16 @@
 		<ClCompile Include="src\Config\Inputs\StaticImageInputConfig.cpp">
 			<Filter>src\Config\Inputs</Filter>
 		</ClCompile>
-		<ClCompile Include="src\PanelCalculations.cpp">
-			<Filter>src</Filter>
+		<ClCompile Include="src\Shared\PanelCalculations.cpp">
+			<Filter>src\Shared</Filter>
 		</ClCompile>
 		<ClCompile Include="src\Outputs\SyphonOutput.cpp">
 			<Filter>src\Outputs</Filter>
 		</ClCompile>
 		<ClCompile Include="src\Outputs\NdiOutput.cpp">
+			<Filter>src\Outputs</Filter>
+		</ClCompile>
+		<ClCompile Include="src\Outputs\AggregateOutput.cpp">
 			<Filter>src\Outputs</Filter>
 		</ClCompile>
 		<ClCompile Include="src\Outputs\DeckLinkOutput.cpp">
@@ -71,6 +74,9 @@
 			<Filter>src\Inputs</Filter>
 		</ClCompile>
 		<ClCompile Include="src\Inputs\StaticImageInput.cpp">
+			<Filter>src\Inputs</Filter>
+		</ClCompile>
+		<ClCompile Include="src\Inputs\AggregateInput.cpp">
 			<Filter>src\Inputs</Filter>
 		</ClCompile>
 		<ClCompile Include="..\..\..\addons\ofxDeckLink\src\ofxDeckLinkOutput.cpp">
@@ -170,6 +176,9 @@
 		</Filter>
 		<Filter Include="src\Config\Inputs">
 			<UniqueIdentifier>{AF219163-95A6-C511-8FF1-D392}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="src\Shared">
+			<UniqueIdentifier>{17357C84-A4BA-8833-E761-1E55}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="src\Outputs">
 			<UniqueIdentifier>{FA039FB3-E8F9-45B4-D3AA-E1B8}</UniqueIdentifier>
@@ -287,13 +296,16 @@
 		<ClInclude Include="src\Config\Inputs\VideoPlayerInputConfig.hpp">
 			<Filter>src\Config\Inputs</Filter>
 		</ClInclude>
-		<ClInclude Include="src\PanelCalculations.hpp">
-			<Filter>src</Filter>
+		<ClInclude Include="src\Shared\PanelCalculations.hpp">
+			<Filter>src\Shared</Filter>
 		</ClInclude>
 		<ClInclude Include="src\Outputs\DeckLinkOutput.hpp">
 			<Filter>src\Outputs</Filter>
 		</ClInclude>
 		<ClInclude Include="src\Outputs\BaseOutput.hpp">
+			<Filter>src\Outputs</Filter>
+		</ClInclude>
+		<ClInclude Include="src\Outputs\AggregateOutput.hpp">
 			<Filter>src\Outputs</Filter>
 		</ClInclude>
 		<ClInclude Include="src\Outputs\SyphonOutput.hpp">
@@ -306,6 +318,9 @@
 			<Filter>src\Inputs</Filter>
 		</ClInclude>
 		<ClInclude Include="src\Inputs\StaticImageInput.hpp">
+			<Filter>src\Inputs</Filter>
+		</ClInclude>
+		<ClInclude Include="src\Inputs\AggregateInput.hpp">
 			<Filter>src\Inputs</Filter>
 		</ClInclude>
 		<ClInclude Include="src\Inputs\DeckLinkInput.hpp">
