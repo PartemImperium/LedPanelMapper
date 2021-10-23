@@ -1,7 +1,7 @@
 #include "AggregateOutput.hpp"
 
 void AggregateOutput::setup(Config *config) {
-    frameBuffer.allocate(1920, 1080);
+    frameBuffer.allocate(config->Outputs.outputWidth, config->Outputs.outputHeight);
 
     if (config->Outputs.Ndi.IsOutputEnabled) {
         outputs.push_back(std::move(std::make_unique<NdiOutput>()));

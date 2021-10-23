@@ -11,6 +11,9 @@ class OutputsConfig {
         SyphonOutputConfig Syphon;
         NdiOutputConfig Ndi;
         DeckLinkOutputConfig DeckLink;
+    
+        int outputWidth;
+        int outputHeight;
 
         void setup(ofxJSONElement json);
 };
