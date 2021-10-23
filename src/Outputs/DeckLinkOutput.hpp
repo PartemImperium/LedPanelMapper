@@ -4,6 +4,8 @@
 
 #include "ofxDeckLink.h"
 
+#include "SharedDeckLinkHelpers.hpp"
+
 class DeckLinkOutput: public BaseOutput {
     public:
         DeckLinkOutput() {};

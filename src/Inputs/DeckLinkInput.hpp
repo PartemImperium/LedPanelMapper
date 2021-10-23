@@ -5,6 +5,8 @@
 #include "Config.hpp"
 #include "BaseInput.hpp"
 
+#include "SharedDeckLinkHelpers.hpp"
+
 class DeckLinkInput: public BaseInput {
     public:
         DeckLinkInput() {};
