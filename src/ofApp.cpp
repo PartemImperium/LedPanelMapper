@@ -24,15 +24,13 @@ void ofApp::setupConfig() {
 }
 
 void ofApp::setupPanelCalculations() {
-    int sourceWidth = 1920;
-    int sourceHeight = 1080;//TODO: Make this a config (and use the value for input frame buffer allocation.
     
     std::vector<PanelCalculations> tempPanels;
     for (int i = 0; i < c.PanelInfo.Panels.size(); i++) {
         PanelCalculations tempCalc;
         
-        calculatedPanelWidth = sourceWidth / c.PanelInfo.PanelsToFillWidth;
-        calculatedPanelHeight = sourceHeight / c.PanelInfo.PanelsToFillHeight;
+        calculatedPanelWidth = c.Inputs.inputWidth / c.PanelInfo.PanelsToFillWidth;
+        calculatedPanelHeight = c.Inputs.inputHeight / c.PanelInfo.PanelsToFillHeight;
         
         tempCalc.destinationX = (i * c.PanelInfo.PanelWidth);
         tempCalc.destinationY = 0;
