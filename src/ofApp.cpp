@@ -14,9 +14,7 @@ void ofApp::setup() {
 
     input.setup(&c);
 
-    // Setup Outputs
-	outputFrameBuffer.allocate(1920, 1080);
-	setupOutputs();
+    output.setup(&c);
 }
 
 void ofApp::setupConfig() {
@@ -63,24 +61,6 @@ void ofApp::setupPanelCalculations() {
 
 }
 
-void ofApp::setupOutputs() {
-	if (c.Outputs.Ndi.IsOutputEnabled) {
-		outputs.push_back(std::move(std::make_unique<NdiOutput>()));
-	}
-#if __APPLE__
-	if (c.Outputs.Syphon.IsOutputEnabled) {
-		outputs.push_back(std::move(std::make_unique<SyphonOutput>()));
-	}
-#endif
-    if (c.Outputs.DeckLink.IsOutputEnabled) {
-        outputs.push_back(std::move(std::make_unique<DeckLinkOutput>()));
-    }
-
-	for (auto& o : outputs) {
-		o->setup(c);
-		outputNames += o->OutputName() + " ";
-	}
-}
 
 void ofApp::setupInfoUi(Config config) {
     infoUiInputFrameBuffer.allocate(1920, 1080);
@@ -130,22 +110,19 @@ void ofApp::draw() {
 	// Draw Input Framebuffer into Output Framebuffer (with panels scalled and put into top left corner).
     drawPanelsToOutputFrameBuffer();
 
-	// Draw Output Framebuffer to all outputs (Multiple outputs can be turned on at the same time).
-	for (auto& o : outputs)
-	{
-		o->draw(outputFrameBuffer);
-	}
+    output.draw();
+
 
 	//Draw Info UI to main window.
 	drawInfoUi();
 }
 
 void ofApp::drawPanelsToOutputFrameBuffer() {
-	outputFrameBuffer.begin();
+	output.frameBuffer.begin();
 	for (int i = 0; i < panels.size(); i++) {
         panels[i].draw(input.frameBuffer.getTexture());
 	}
-	outputFrameBuffer.end();
+	output.frameBuffer.end();
 }
 
 void ofApp::drawInfoUi() {
@@ -161,9 +138,9 @@ void ofApp::drawInfoUi() {
 
 	ofDrawBitmapString("Input Framebuffer: " + input.getInputNames(), 1300, 185);
 
-	outputFrameBuffer.draw(infoUiOutputRect);
+	output.frameBuffer.draw(infoUiOutputRect);
 	ofDrawRectangle(infoUiOutputRect);
-	ofDrawBitmapString("Output Framebuffer: " + outputNames, 1300, 595);
+	ofDrawBitmapString("Output Framebuffer: " + output.getOutputNames(), 1300, 595);
     
     ofDrawBitmapString("Canculated Panel Info:",1300,20);
     

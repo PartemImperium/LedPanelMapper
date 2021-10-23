@@ -9,14 +9,7 @@
 #include "Config.hpp"
 #include "PanelCalculations.hpp"
 #include "AggregateInput.hpp"
-
-// Outputs
-#include "NdiOutput.hpp"
-#include "DeckLinkOutput.hpp"
-
-#if __APPLE__
-#include "SyphonOutput.hpp"
-#endif
+#include "AggregateOutput.hpp"
 
 // Open Frameworks addons
 #include "ofxJSONElement.h"
@@ -62,13 +55,8 @@ class ofApp : public ofBaseApp {
         
         AggregateInput input;
     
-        // Outputs
-        ofFbo outputFrameBuffer;
-        std::vector<std::unique_ptr<BaseOutput>> outputs;
-        string outputNames;
-            
-        void setupOutputs();
-    
+        AggregateOutput output;
+        
         // Panel scaling and selection.
         void drawPanelsToOutputFrameBuffer();
 };

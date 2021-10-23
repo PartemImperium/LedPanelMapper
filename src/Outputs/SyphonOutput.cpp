@@ -6,9 +6,8 @@ std::string SyphonOutput::OutputName() {
     return "Syphon Server";
 }
 
-void SyphonOutput::setup(Config config) {
-    c = config;
-    syphonServer.setName(c.Outputs.Syphon.Name);
+void SyphonOutput::setup(Config *config) {
+    syphonServer.setName(config->Outputs.Syphon.Name);
     tempTexture.allocate(1920, 1080,GL_RGBA);
 }
 

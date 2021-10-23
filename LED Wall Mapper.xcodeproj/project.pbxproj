@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		02D333F435E5C02740DB8CED /* InputsConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B26ED1BC67390461C1E8ADFD /* InputsConfig.cpp */; };
 		050319E327234EF400507CA3 /* AggregateInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 050319E127234EF400507CA3 /* AggregateInput.cpp */; };
+		050319E62723A28200507CA3 /* AggregateOutput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 050319E42723A28200507CA3 /* AggregateOutput.cpp */; };
 		0F7516394FA513D9512EA6D9 /* DeckLinkInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A05146D902C91392FCD0DABF /* DeckLinkInput.cpp */; };
 		11376276E3BE438B0D308F5F /* VideoPlayerInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0A12A1B7694777F9060A443 /* VideoPlayerInput.cpp */; };
 		11DF9AB1B4EAA63E3B190CA0 /* ofxSyphonServerDirectory.mm in Sources */ = {isa = PBXBuildFile; fileRef = E723BEF4C55D236E24639608 /* ofxSyphonServerDirectory.mm */; };
@@ -89,6 +90,8 @@
 		0437D7587C303FC35DA849AB /* ofxNDIFrame.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxNDIFrame.h; path = ../../../addons/ofxNDI/src/ofxNDIFrame.h; sourceTree = SOURCE_ROOT; };
 		050319E127234EF400507CA3 /* AggregateInput.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AggregateInput.cpp; path = Inputs/AggregateInput.cpp; sourceTree = "<group>"; };
 		050319E227234EF400507CA3 /* AggregateInput.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = AggregateInput.hpp; path = Inputs/AggregateInput.hpp; sourceTree = "<group>"; };
+		050319E42723A28200507CA3 /* AggregateOutput.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AggregateOutput.cpp; path = Outputs/AggregateOutput.cpp; sourceTree = "<group>"; };
+		050319E52723A28200507CA3 /* AggregateOutput.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = AggregateOutput.hpp; path = Outputs/AggregateOutput.hpp; sourceTree = "<group>"; };
 		09417F3BCD7E6FB6CE3AD0C0 /* Processing.NDI.Send.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Processing.NDI.Send.h; path = ../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Send.h; sourceTree = SOURCE_ROOT; };
 		0A1DAC09F322AE313A40706D /* ofxToggle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxToggle.h; path = ../../../addons/ofxGui/src/ofxToggle.h; sourceTree = SOURCE_ROOT; };
 		0B2CB21FCA3A6FE3D640E9F1 /* Processing.NDI.Recv.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Processing.NDI.Recv.h; path = ../../../addons/ofxNDI/libs/NDI/include/Processing.NDI.Recv.h; sourceTree = SOURCE_ROOT; };
@@ -621,6 +624,8 @@
 				327ABD27904CF1E98670613C /* SyphonOutput.hpp */,
 				002511F8429967BBEE33AB49 /* DeckLinkOutput.cpp */,
 				A29D21AE3E6D1ED23A6D5899 /* NdiOutput.hpp */,
+				050319E42723A28200507CA3 /* AggregateOutput.cpp */,
+				050319E52723A28200507CA3 /* AggregateOutput.hpp */,
 			);
 			name = Outputs;
 			sourceTree = "<group>";
@@ -1258,6 +1263,7 @@
 				78B7D0AE6072A8956DF7BF99 /* NdiOutput.cpp in Sources */,
 				1DAF0011C8315AEA50FD6CDE /* DeckLinkOutput.cpp in Sources */,
 				7FDE548ED91F10A12801FFA9 /* NdiInput.cpp in Sources */,
+				050319E62723A28200507CA3 /* AggregateOutput.cpp in Sources */,
 				0F7516394FA513D9512EA6D9 /* DeckLinkInput.cpp in Sources */,
 				E8942CFF44D0D488F4F2D2E3 /* SyphonInput.cpp in Sources */,
 				11376276E3BE438B0D308F5F /* VideoPlayerInput.cpp in Sources */,

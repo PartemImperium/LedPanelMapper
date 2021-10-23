@@ -13,13 +13,12 @@ class SyphonOutput: public BaseOutput {
         SyphonOutput() {};
         virtual ~SyphonOutput() {};
     
-        virtual void setup(Config config);
+        virtual void setup(Config *config);
         virtual void draw(ofFbo output);
     
         virtual std::string OutputName();
 
     private:
-        Config c;
         ofxSyphonServer syphonServer;
         ofTexture tempTexture;
 };

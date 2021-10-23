@@ -11,10 +11,7 @@ class BaseOutput {
         BaseOutput() {};
         virtual ~BaseOutput() {};
     
-        virtual void setup(Config config) = 0;
+        virtual void setup(Config *config) = 0;
         virtual void draw(ofFbo output) = 0;
         virtual std::string OutputName() = 0;
-
-    private:
-        Config c;
 };

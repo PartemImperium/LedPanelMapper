@@ -4,10 +4,10 @@ std::string NdiOutput::OutputName() {
     return  "NDI Sender";
 }
 
-void NdiOutput::setup(Config config) {
+void NdiOutput::setup(Config *config) {
     NDIlib_initialize();
-    c = config;
-    if(ndiSender.setup(c.Outputs.Ndi.Name)) {
+
+    if(ndiSender.setup(config->Outputs.Ndi.Name)) {
         ndiSendVideo.setup(ndiSender);
         ndiSendVideo.setAsync(true);
     }

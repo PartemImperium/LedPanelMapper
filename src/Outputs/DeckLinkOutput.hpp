@@ -9,12 +9,12 @@ class DeckLinkOutput: public BaseOutput {
         DeckLinkOutput() {};
         virtual ~DeckLinkOutput() {};
     
-        virtual void setup(Config config);
+        virtual void setup(Config *config);
         virtual void draw(ofFbo output);
         virtual void update();
         virtual std::string OutputName();
 
     private:
-        Config c;
         ofxDeckLinkAPI::Output deckLinkOut;
+        std::string name;
 };
