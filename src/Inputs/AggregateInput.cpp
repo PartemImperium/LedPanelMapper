@@ -1,7 +1,7 @@
 #include "AggregateInput.hpp"
 
 void AggregateInput::setup(Config *config) {
-    frameBuffer.allocate(1920, 1080);
+    frameBuffer.allocate(config->Inputs.inputWidth, config->Inputs.inputHeight);
     
     if (config->Inputs.StaticImage.IsInputEnabled) {
         inputs.push_back(std::move(std::make_unique<StaticImageInput>()));

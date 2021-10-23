@@ -15,6 +15,9 @@ class InputsConfig {
         SyphonInputConfig Syphon;
         NdiInputConfig Ndi;
         DeckLinkInputConfig DeckLink;
+    
+        int inputWidth;
+        int inputHeight;
 
         void setup(ofxJSONElement json);
 };

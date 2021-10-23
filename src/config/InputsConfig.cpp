@@ -6,4 +6,7 @@ void InputsConfig::setup(ofxJSONElement json) {
 	Syphon.setup(json["syphon"]);
 	Ndi.setup(json["ndi"]);
     DeckLink.setup(json["deckLink"]);
+    
+    inputWidth = json["inputWidth"].asInt();
+    inputHeight = json["inputHeight"].asInt();
 }
