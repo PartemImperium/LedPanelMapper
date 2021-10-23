@@ -1,10 +1,11 @@
 #include "DeckLinkOutput.hpp"
 
 void DeckLinkOutput::setup(Config *config) {
-    if (deckLinkOut.setup(config->Outputs.DeckLink.DeviceId - 1)) {
+    int deviceId = config->Outputs.DeckLink.DeviceId - 1;
+    if (deckLinkOut.setup(deviceId)) {
         deckLinkOut.start(config->Outputs.DeckLink.VideoMode);
     }
-    name = "Black Magic DeckLink (" + std::to_string(config->Outputs.DeckLink.DeviceId) + ")";
+    name = "Black Magic DeckLink (" + std::to_string(deviceId) + ")";
 }
 
 void DeckLinkOutput::draw(ofFbo output) {

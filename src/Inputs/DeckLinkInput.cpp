@@ -3,9 +3,11 @@
 void DeckLinkInput::setup(Config *config) {
     DrawIndex = config->Inputs.DeckLink.DrawIndex;
 
-    if (deckLinkInput.setup(config->Inputs.DeckLink.DeviceId - 1)) {
+    int deviceId = config->Inputs.DeckLink.DeviceId - 1;
+    if (deckLinkInput.setup(deviceId)) {
         deckLinkInput.start(config->Inputs.DeckLink.VideoMode);
     }
+    name = "Black Magic DeckLink (" + std::to_string(deviceId) + ")";
 }
 
 void DeckLinkInput::draw() {
@@ -17,5 +19,5 @@ void DeckLinkInput::update() {
 }
 
 std::string DeckLinkInput::InputName() {
-    return "Deck Link Input";
+    return name;
 }

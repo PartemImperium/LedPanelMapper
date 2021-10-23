@@ -17,4 +17,5 @@ class DeckLinkInput: public BaseInput {
 
     private:
         ofxDeckLinkAPI::Input deckLinkInput;
+        std::string name;
 };
