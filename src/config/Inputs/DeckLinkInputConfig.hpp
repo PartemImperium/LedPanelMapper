@@ -6,7 +6,7 @@ class DeckLinkInputConfig {
     public:
         bool IsInputEnabled;
         int DeviceId;
-        unsigned int VideoMode;
+        std::string VideoMode;
         int DrawIndex;
     
         void setup(ofxJSONElement json);
