@@ -47,7 +47,7 @@ void ofApp::setupInfoUi() {
     fullGroup.add(c);
     
     ofParameter<void> savePanelLayoutButton;
-    savePanelLayoutButton.addListener(this, &ofApp::savePanelLayoutImage);
+    savePanelLayoutButton.addListener(&panelCalculator, &PanelCalculator::savePanelLayoutImage);
     savePanelLayoutButton.set("Save Panel Layout Image");
     gui.add(savePanelLayoutButton);
     fullGroup.add(savePanelLayoutButton);
@@ -91,7 +91,7 @@ void ofApp::drawInfoUi() {
 	ofDrawBitmapString(fps, 1300, 170);
 
     input.frameBuffer.draw(infoUiInputRect);
-    panelCalculator.framebuffer.draw(infoUiInputRect);
+    panelCalculator.draw(infoUiInputRect);
     
 	ofDrawRectangle(infoUiInputRect);
 
@@ -109,13 +109,6 @@ void ofApp::drawInfoUi() {
     gui.draw();
 
     ofFill();
-}
-
-void ofApp::savePanelLayoutImage() {
-    ofPixels pix;
-    pix.allocate(1920, 1080, OF_IMAGE_QUALITY_BEST);
-    panelCalculator.framebuffer.readToPixels(pix);
-    ofSaveImage(pix, ofFilePath::join(c.PanelLayoutImagePath.get(), "panel-layout.png"));
 }
 
 void ofApp::keyPressed(int key) { } 

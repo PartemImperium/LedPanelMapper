@@ -8,12 +8,16 @@ class PanelCalculator {
         void setup(Config* config);
     
         void calculate();
+        void savePanelLayoutImage();
+    
+        void draw(ofRectangle rect);
     
         std::vector<PanelCalculation> panels;
-        ofFbo framebuffer;
+        
         
         float panelWidth;
         float panelHeight;
     private:
         Config* c;
+        ofFbo framebuffer;
 };

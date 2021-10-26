@@ -41,3 +41,15 @@ void PanelCalculator::calculate() {
     framebuffer.end();
     ofFill();
 }
+
+void PanelCalculator::savePanelLayoutImage() {
+    ofPixels pix;
+    pix.allocate(c->Inputs.inputWidth, c->Inputs.inputHeight, OF_IMAGE_QUALITY_BEST);
+    framebuffer.readToPixels(pix);
+    ofSaveImage(pix, ofFilePath::join(c->PanelLayoutImagePath.get(), "panel-layout.png"));
+}
+
+void PanelCalculator::draw(ofRectangle rect) {
+    framebuffer.draw(rect);
+}
+

@@ -47,7 +47,6 @@ class ofApp : public ofBaseApp {
         ofxPanel gui;
         void setupInfoUi();
         void drawInfoUi();
-        void savePanelLayoutImage();
         
         AggregateInput input;
     
