@@ -9,8 +9,8 @@ void ofApp::setup() {
     
 	setupConfig();
 
-    setupInfoUi(c);
-    setupPanelCalculations();
+    setupInfoUi();
+    panelCalculator.setup(&c);
 
     input.setup(&c);
 
@@ -23,46 +23,7 @@ void ofApp::setupConfig() {
 	c.setup(config);
 }
 
-void ofApp::setupPanelCalculations() {
-    
-    std::vector<PanelCalculations> tempPanels;
-    for (int i = 0; i < c.PanelInfo.Panels.size(); i++) {
-        PanelCalculations tempCalc;
-        
-        calculatedPanelWidth = c.Inputs.inputWidth / c.PanelInfo.PanelsToFillWidth;
-        calculatedPanelHeight = c.Inputs.inputHeight / c.PanelInfo.PanelsToFillHeight;
-        
-        tempCalc.destinationX = (i * c.PanelInfo.PanelWidth);
-        tempCalc.destinationY = 0;
-        tempCalc.destinationWidth = c.PanelInfo.PanelWidth;
-        tempCalc.destinationHeight = c.PanelInfo.PanelHeight;
-        
-        tempCalc.sourceX = c.PanelInfo.Panels[i].X;
-        tempCalc.sourceY = c.PanelInfo.Panels[i].Y;
-        tempCalc.sourceWidth = calculatedPanelWidth;
-        tempCalc.sourceHeight = calculatedPanelHeight;
-        
-        tempPanels.push_back(tempCalc);
-    }
-    panels = tempPanels;
-
-    ofNoFill();
-    infoUiInputFrameBuffer.begin();
-
-    ofClear(0, 0, 0);
-    for (int i = 0; i < panels.size(); i++) {
-        ofDrawRectangle(panels[i].getSource());
-    }
-    
-    infoUiInputFrameBuffer.end();
-    ofFill();
-
-}
-
-
-void ofApp::setupInfoUi(Config config) {
-    infoUiInputFrameBuffer.allocate(1920, 1080);
-
+void ofApp::setupInfoUi() {
 	ofRectangle tempRect(0, 0, 480, 270);
 
 	infoUiInputRect = ofRectangle(tempRect);
@@ -78,7 +39,7 @@ void ofApp::setupInfoUi(Config config) {
     gui.savePressedE = saveEvent;
     
     ofEvent<void> reloadEvent;
-    reloadEvent.add(this, &ofApp::setupPanelCalculations,200);
+    reloadEvent.add(&panelCalculator, &PanelCalculator::calculate,200);
     gui.loadPressedE = reloadEvent;
     
     ofParameterGroup fullGroup;
@@ -117,8 +78,8 @@ void ofApp::draw() {
 
 void ofApp::drawPanelsToOutputFrameBuffer() {
 	output.frameBuffer.begin();
-	for (int i = 0; i < panels.size(); i++) {
-        panels[i].draw(input.frameBuffer.getTexture());
+	for (int i = 0; i < panelCalculator.panels.size(); i++) {
+        panelCalculator.panels[i].draw(input.frameBuffer.getTexture());
 	}
 	output.frameBuffer.end();
 }
@@ -130,7 +91,7 @@ void ofApp::drawInfoUi() {
 	ofDrawBitmapString(fps, 1300, 170);
 
     input.frameBuffer.draw(infoUiInputRect);
-    infoUiInputFrameBuffer.draw(infoUiInputRect);
+    panelCalculator.framebuffer.draw(infoUiInputRect);
     
 	ofDrawRectangle(infoUiInputRect);
 
@@ -142,8 +103,8 @@ void ofApp::drawInfoUi() {
     
     ofDrawBitmapString("Canculated Panel Info:",1300,20);
     
-    ofDrawBitmapString("Panel Source Width: " + std::to_string(calculatedPanelWidth),1300,50);
-    ofDrawBitmapString("Panel Source Height: " + std::to_string(calculatedPanelHeight),1300,65);
+    ofDrawBitmapString("Panel Source Width: " + std::to_string(panelCalculator.panelWidth),1300,50);
+    ofDrawBitmapString("Panel Source Height: " + std::to_string(panelCalculator.panelHeight),1300,65);
     
     gui.draw();
 
@@ -153,7 +114,7 @@ void ofApp::drawInfoUi() {
 void ofApp::savePanelLayoutImage() {
     ofPixels pix;
     pix.allocate(1920, 1080, OF_IMAGE_QUALITY_BEST);
-    infoUiInputFrameBuffer.readToPixels(pix);
+    panelCalculator.framebuffer.readToPixels(pix);
     ofSaveImage(pix, ofFilePath::join(c.PanelLayoutImagePath.get(), "panel-layout.png"));
 }
 

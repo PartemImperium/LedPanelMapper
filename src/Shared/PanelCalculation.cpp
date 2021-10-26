@@ -1,14 +1,14 @@
-#include "PanelCalculations.hpp"
+#include "PanelCalculation.hpp"
 
-ofRectangle PanelCalculations::getDestination() {
+ofRectangle PanelCalculation::getDestination() {
     return ofRectangle(destinationX, destinationY, destinationWidth, destinationHeight);
 }
 
-ofRectangle PanelCalculations::getSource() {
+ofRectangle PanelCalculation::getSource() {
     return ofRectangle(sourceX, sourceY, sourceWidth, sourceHeight);
 }
 
 
-void PanelCalculations::draw(ofTexture& texture) {
+void PanelCalculation::draw(ofTexture& texture) {
     texture.drawSubsection(getDestination(), getSource());
 }

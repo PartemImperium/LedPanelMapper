@@ -3,7 +3,7 @@
 // Open Frameworks
 #include "ofMain.h"
 
-class PanelCalculations {
+class PanelCalculation {
     public:
         float destinationX;
         float destinationY;

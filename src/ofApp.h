@@ -7,9 +7,9 @@
 
 // Project Code
 #include "Config.hpp"
-#include "PanelCalculations.hpp"
 #include "AggregateInput.hpp"
 #include "AggregateOutput.hpp"
+#include "PanelCalculator.hpp"
 
 // Open Frameworks addons
 #include "ofxJSONElement.h"
@@ -39,17 +39,13 @@ class ofApp : public ofBaseApp {
         Config c;
         void setupConfig();
     
-        float calculatedPanelWidth;
-        float calculatedPanelHeight;
-        std::vector<PanelCalculations> panels;
-        void setupPanelCalculations();
+        PanelCalculator panelCalculator;
     
         // Info UI
-        ofFbo infoUiInputFrameBuffer;
         ofRectangle infoUiInputRect;
         ofRectangle infoUiOutputRect;
         ofxPanel gui;
-        void setupInfoUi(Config config);
+        void setupInfoUi();
         void drawInfoUi();
         void savePanelLayoutImage();
         
