@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup Label="ProjectConfigurations">
 		<ProjectConfiguration Include="Debug|Win32">
@@ -18,9 +18,25 @@
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
 	</ItemGroup>
+		<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    	<LocalDebuggerWorkingDirectory>$(ProjectDir)/bin</LocalDebuggerWorkingDirectory>
+    	<DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  	</PropertyGroup>
+  	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    	<LocalDebuggerWorkingDirectory>$(ProjectDir)/bin</LocalDebuggerWorkingDirectory>
+    	<DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  	</PropertyGroup>
+  	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    	<LocalDebuggerWorkingDirectory>$(ProjectDir)/bin</LocalDebuggerWorkingDirectory>
+    	<DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  	</PropertyGroup>
+  	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    	<LocalDebuggerWorkingDirectory>$(ProjectDir)/bin</LocalDebuggerWorkingDirectory>
+    	<DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  	</PropertyGroup>
 	<PropertyGroup Condition="'$(WindowsTargetPlatformVersion)'==''">
 		<LatestTargetPlatformVersion>$([Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion('Windows', '10.0'))</LatestTargetPlatformVersion>
-		<WindowsTargetPlatformVersion Condition="'$(WindowsTargetPlatformVersion)' == ''">$(LatestTargetPlatformVersion)</WindowsTargetPlatformVersion>
+		<WindowsTargetPlatformVersion Condition="'$(WindowsTargetPlatformVersion)' == ''">10.0</WindowsTargetPlatformVersion>
 		<TargetPlatformVersion>$(WindowsTargetPlatformVersion)</TargetPlatformVersion>
 	</PropertyGroup>
 	<PropertyGroup Label="Globals">
@@ -32,24 +48,24 @@
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
 		<ConfigurationType>Application</ConfigurationType>
 		<CharacterSet>Unicode</CharacterSet>
-		<PlatformToolset>v141</PlatformToolset>
+		<PlatformToolset>v142</PlatformToolset>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
 		<ConfigurationType>Application</ConfigurationType>
 		<CharacterSet>Unicode</CharacterSet>
-		<PlatformToolset>v141</PlatformToolset>
+		<PlatformToolset>v142</PlatformToolset>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
 		<ConfigurationType>Application</ConfigurationType>
 		<CharacterSet>Unicode</CharacterSet>
 		<WholeProgramOptimization>true</WholeProgramOptimization>
-		<PlatformToolset>v141</PlatformToolset>
+		<PlatformToolset>v142</PlatformToolset>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
 		<ConfigurationType>Application</ConfigurationType>
 		<CharacterSet>Unicode</CharacterSet>
 		<WholeProgramOptimization>true</WholeProgramOptimization>
-		<PlatformToolset>v141</PlatformToolset>
+		<PlatformToolset>v142</PlatformToolset>
 	</PropertyGroup>
 	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
@@ -255,10 +271,6 @@
 		<ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDIRecorder.cpp" />
 		<ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDIRouter.cpp" />
 		<ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDISendStream.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxSyphon\src\ofxSyphonServer.mm" />
-		<ClCompile Include="..\..\..\addons\ofxSyphon\src\ofxSyphonClient.mm" />
-		<ClCompile Include="..\..\..\addons\ofxSyphon\src\ofxSyphonServerDirectory.mm" />
-		<ClCompile Include="..\..\..\addons\ofxSyphon\libs\Syphon\src\SyphonNameboundClient.m" />
 	</ItemGroup>
 	<ItemGroup>
 		<ClInclude Include="src\ofApp.h" />
@@ -366,11 +378,6 @@
 		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.DynamicLoad.h" />
 		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.Recv.h" />
 		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.Lib.h" />
-		<ClInclude Include="..\..\..\addons\ofxSyphon\src\ofxSyphon.h" />
-		<ClInclude Include="..\..\..\addons\ofxSyphon\src\ofxSyphonServer.h" />
-		<ClInclude Include="..\..\..\addons\ofxSyphon\src\ofxSyphonClient.h" />
-		<ClInclude Include="..\..\..\addons\ofxSyphon\src\ofxSyphonServerDirectory.h" />
-		<ClInclude Include="..\..\..\addons\ofxSyphon\libs\Syphon\src\SyphonNameboundClient.h" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">
@@ -384,6 +391,13 @@
 			<AdditionalIncludeDirectories>$(OF_ROOT)\libs\openFrameworksCompiled\project\vs</AdditionalIncludeDirectories>
 		</ResourceCompile>
 	</ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\addons\ofxNDI\windows-copy-to-bin\Processing.NDI.Lib.x64.dll" />
+    <None Include="..\..\..\addons\ofxNDI\windows-copy-to-bin\Processing.NDI.Lib.x86.dll" />
+    <CopyFileToFolders Include="config.json">
+      <FileType>Document</FileType>
+    </CopyFileToFolders>
+  </ItemGroup>
 	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 	<ProjectExtensions>
 		<VisualStudio>
