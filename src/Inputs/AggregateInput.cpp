@@ -27,8 +27,9 @@ void AggregateInput::setup(Config *config) {
     std::sort(inputs.begin(), inputs.end(),[] (const std::unique_ptr<BaseInput>& left, const std::unique_ptr<BaseInput>& right) {
         return left->DrawIndex < right->DrawIndex;
     });
+    names.setName("Input Framebuffer(s)");
     for (auto& i : inputs) {// Do this here instead of by the setup so that they are in draw order.
-        inputNames += i->InputName() + " ";
+        names += i->InputName() + " ";
     }
 }
 
@@ -47,8 +48,4 @@ void AggregateInput::update() {
     for (auto& i : inputs) {
         i->update();
     }
-}
-
-std::string AggregateInput::getInputNames() {
-    return inputNames;
 }

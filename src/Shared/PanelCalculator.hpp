@@ -15,8 +15,8 @@ class PanelCalculator {
         std::vector<PanelCalculation> panels;
         
         
-        float panelWidth;
-        float panelHeight;
+        ofParameter<float> panelWidth;
+        ofParameter<float> panelHeight;
     private:
         Config* c;
         ofFbo framebuffer;

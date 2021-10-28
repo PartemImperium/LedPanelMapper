@@ -21,8 +21,7 @@ public:
     
     ofFbo frameBuffer;
 
-    std::string getOutputNames();
+    ofParameter<std::string> names;
 private:
     std::vector<std::unique_ptr<BaseOutput>> outputs;
-    std::string outputNames;
 };

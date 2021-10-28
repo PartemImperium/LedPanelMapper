@@ -24,38 +24,49 @@ void ofApp::setupConfig() {
 }
 
 void ofApp::setupInfoUi() {
-	ofRectangle tempRect(0, 0, 480, 270);
+	ofRectangle tempRect(0, 0, 720, 405);
 
 	infoUiInputRect = ofRectangle(tempRect);
-	infoUiInputRect.setPosition(1300, 200);
+	infoUiInputRect.setPosition(1150, 25);
 
 	infoUiOutputRect = ofRectangle(tempRect);
-	infoUiOutputRect.setPosition(1300, 610);
+	infoUiOutputRect.setPosition(1150, 650);
     
     ofSetLineWidth(4);
 
-    ofEvent<void> saveEvent;
-    saveEvent.add(&c,  &Config::save, 200);
-    gui.savePressedE = saveEvent;
+    auto mainContainer = gui.addContainer(c);
     
-    ofEvent<void> reloadEvent;
-    reloadEvent.add(&panelCalculator, &PanelCalculator::calculate,200);
-    gui.loadPressedE = reloadEvent;
-    
-    ofParameterGroup fullGroup;
-    
-    fullGroup.add(c);
+    ofxGuiButton savePanelLayoutButtonG;
+    savePanelLayoutButtonG.addListener(&panelCalculator, &PanelCalculator::savePanelLayoutImage);
+    savePanelLayoutButtonG.setName("Save Panel Layout Image");
     
     ofParameter<void> savePanelLayoutButton;
     savePanelLayoutButton.addListener(&panelCalculator, &PanelCalculator::savePanelLayoutImage);
     savePanelLayoutButton.set("Save Panel Layout Image");
-    gui.add(savePanelLayoutButton);
-    fullGroup.add(savePanelLayoutButton);
     
-    gui.setDefaultWidth(400);
+    ofParameter<void> reloadEvent;
+    reloadEvent.addListener(&panelCalculator, &PanelCalculator::calculate);
+    reloadEvent.set("Refreash Calculations");
     
-    gui.setup(fullGroup, "remove_me");
-    // I dont want it to make a settings.xml file as I want control of the config and its schema however for some reason I dont understand giving it "remove_me" as a file name prevents it from saving the setting file.... I was gonna use the exit event but this works too ¯\_(ツ)_/¯
+    ofParameter<void> saveEvent;
+    saveEvent.addListener(&c,  &Config::save);
+    saveEvent.set("Save Config");
+    
+
+    mainContainer->add(savePanelLayoutButton, ofJson({{"type", "fullsize"}, {"text-align", "center"}}));
+    mainContainer->add(reloadEvent, ofJson({{"type", "fullsize"}, {"text-align", "center"}}));
+    mainContainer->add(saveEvent, ofJson({{"type", "fullsize"}, {"text-align", "center"}}));
+
+    auto panel = gui.addGroup("Info", ofJson({{"width", 720}}));
+    panel->setPosition(1150, 450);
+        
+    panel->add<ofxGuiFloatLabel>(panelCalculator.panelWidth);
+    panel->add<ofxGuiFloatLabel>(panelCalculator.panelHeight);
+
+    panel->addFpsPlotter();
+    
+    panel->add<ofxGuiLabel>(input.names);
+    panel->add<ofxGuiLabel>(output.names);
 }
 
 void ofApp::update()
@@ -87,26 +98,13 @@ void ofApp::drawPanelsToOutputFrameBuffer() {
 void ofApp::drawInfoUi() {
     ofNoFill();
 
-	std::string fps = "FPS: " + std::to_string(ofGetFrameRate());
-	ofDrawBitmapString(fps, 1300, 170);
-
     input.frameBuffer.draw(infoUiInputRect);
     panelCalculator.draw(infoUiInputRect);
     
 	ofDrawRectangle(infoUiInputRect);
 
-	ofDrawBitmapString("Input Framebuffer: " + input.getInputNames(), 1300, 185);
-
 	output.frameBuffer.draw(infoUiOutputRect);
 	ofDrawRectangle(infoUiOutputRect);
-	ofDrawBitmapString("Output Framebuffer: " + output.getOutputNames(), 1300, 595);
-    
-    ofDrawBitmapString("Canculated Panel Info:",1300,20);
-    
-    ofDrawBitmapString("Panel Source Width: " + std::to_string(panelCalculator.panelWidth),1300,50);
-    ofDrawBitmapString("Panel Source Height: " + std::to_string(panelCalculator.panelHeight),1300,65);
-    
-    gui.draw();
 
     ofFill();
 }

@@ -13,7 +13,7 @@
 
 // Open Frameworks addons
 #include "ofxJSONElement.h"
-#include "ofxGui.h"
+#include "ofxGuiExtended.h"
 
 class ofApp : public ofBaseApp {
 
@@ -44,7 +44,7 @@ class ofApp : public ofBaseApp {
         // Info UI
         ofRectangle infoUiInputRect;
         ofRectangle infoUiOutputRect;
-        ofxPanel gui;
+        ofxGui gui;
         void setupInfoUi();
         void drawInfoUi();
         

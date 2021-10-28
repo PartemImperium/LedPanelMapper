@@ -5,6 +5,9 @@ void PanelCalculator::setup(Config* config) {
     
     framebuffer.allocate(c->Inputs.inputWidth, c->Inputs.inputHeight);
     
+    panelWidth.setName("Calculated Panel Width");
+    panelHeight.setName("Calculated Panel Height");
+    
     calculate();
 }
 

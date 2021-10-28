@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<ItemGroup Label="ProjectConfigurations">
 		<ProjectConfiguration Include="Debug|Win32">
@@ -18,25 +18,9 @@
 			<Platform>x64</Platform>
 		</ProjectConfiguration>
 	</ItemGroup>
-		<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    	<LocalDebuggerWorkingDirectory>$(ProjectDir)/bin</LocalDebuggerWorkingDirectory>
-    	<DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-  	</PropertyGroup>
-  	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    	<LocalDebuggerWorkingDirectory>$(ProjectDir)/bin</LocalDebuggerWorkingDirectory>
-    	<DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-  	</PropertyGroup>
-  	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    	<LocalDebuggerWorkingDirectory>$(ProjectDir)/bin</LocalDebuggerWorkingDirectory>
-    	<DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-  	</PropertyGroup>
-  	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    	<LocalDebuggerWorkingDirectory>$(ProjectDir)/bin</LocalDebuggerWorkingDirectory>
-    	<DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-  	</PropertyGroup>
 	<PropertyGroup Condition="'$(WindowsTargetPlatformVersion)'==''">
 		<LatestTargetPlatformVersion>$([Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion('Windows', '10.0'))</LatestTargetPlatformVersion>
-		<WindowsTargetPlatformVersion Condition="'$(WindowsTargetPlatformVersion)' == ''">10.0</WindowsTargetPlatformVersion>
+		<WindowsTargetPlatformVersion Condition="'$(WindowsTargetPlatformVersion)' == ''">$(LatestTargetPlatformVersion)</WindowsTargetPlatformVersion>
 		<TargetPlatformVersion>$(WindowsTargetPlatformVersion)</TargetPlatformVersion>
 	</PropertyGroup>
 	<PropertyGroup Label="Globals">
@@ -48,24 +32,24 @@
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
 		<ConfigurationType>Application</ConfigurationType>
 		<CharacterSet>Unicode</CharacterSet>
-		<PlatformToolset>v142</PlatformToolset>
+		<PlatformToolset>v141</PlatformToolset>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
 		<ConfigurationType>Application</ConfigurationType>
 		<CharacterSet>Unicode</CharacterSet>
-		<PlatformToolset>v142</PlatformToolset>
+		<PlatformToolset>v141</PlatformToolset>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
 		<ConfigurationType>Application</ConfigurationType>
 		<CharacterSet>Unicode</CharacterSet>
 		<WholeProgramOptimization>true</WholeProgramOptimization>
-		<PlatformToolset>v142</PlatformToolset>
+		<PlatformToolset>v141</PlatformToolset>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
 		<ConfigurationType>Application</ConfigurationType>
 		<CharacterSet>Unicode</CharacterSet>
 		<WholeProgramOptimization>true</WholeProgramOptimization>
-		<PlatformToolset>v142</PlatformToolset>
+		<PlatformToolset>v141</PlatformToolset>
 	</PropertyGroup>
 	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
 	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
@@ -116,7 +100,7 @@
 			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
 			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
 			<WarningLevel>Level3</WarningLevel>
-			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\Config;src\Config\Inputs;src\Config\Outputs;src\Inputs;src\Outputs;src\Shared;src\Shared\DeckLink;..\..\..\addons\ofxDeckLink\libs;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include;..\..\..\addons\ofxDeckLink\src;..\..\..\addons\ofxGui\src;..\..\..\addons\ofxJSON\libs;..\..\..\addons\ofxJSON\libs\jsoncpp;..\..\..\addons\ofxJSON\libs\jsoncpp\include;..\..\..\addons\ofxJSON\libs\jsoncpp\include\json;..\..\..\addons\ofxJSON\libs\jsoncpp\src;..\..\..\addons\ofxJSON\src;..\..\..\addons\ofxNDI\libs\NDI\include;..\..\..\addons\ofxNDI\libs\utils;..\..\..\addons\ofxNDI\src;..\..\..\addons\ofxNDI\src\utils;..\..\..\addons\ofxSyphon\libs;..\..\..\addons\ofxSyphon\libs\Syphon;..\..\..\addons\ofxSyphon\libs\Syphon\lib;..\..\..\addons\ofxSyphon\libs\Syphon\src;..\..\..\addons\ofxSyphon\src</AdditionalIncludeDirectories>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\Config;src\Config\Inputs;src\Config\Outputs;src\Inputs;src\Outputs;src\Shared;src\Shared\DeckLink;..\..\..\addons\ofxDeckLink\libs;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include;..\..\..\addons\ofxDeckLink\src;..\..\..\addons\ofxGuiExtended\src;..\..\..\addons\ofxGuiExtended\src\DOM;..\..\..\addons\ofxGuiExtended\src\containers;..\..\..\addons\ofxGuiExtended\src\controls;..\..\..\addons\ofxGuiExtended\src\util;..\..\..\addons\ofxGuiExtended\src\view;..\..\..\addons\ofxJSON\libs;..\..\..\addons\ofxJSON\libs\jsoncpp;..\..\..\addons\ofxJSON\libs\jsoncpp\include;..\..\..\addons\ofxJSON\libs\jsoncpp\include\json;..\..\..\addons\ofxJSON\libs\jsoncpp\src;..\..\..\addons\ofxJSON\src;..\..\..\addons\ofxNDI\libs\NDI\include;..\..\..\addons\ofxNDI\libs\utils;..\..\..\addons\ofxNDI\src;..\..\..\addons\ofxNDI\src\utils;..\..\..\addons\ofxSyphon\libs;..\..\..\addons\ofxSyphon\libs\Syphon;..\..\..\addons\ofxSyphon\libs\Syphon\lib;..\..\..\addons\ofxSyphon\libs\Syphon\src;..\..\..\addons\ofxSyphon\src</AdditionalIncludeDirectories>
 			<CompileAs>CompileAsCpp</CompileAs>
 			<ObjectFileName>$(IntDir)</ObjectFileName>
 		</ClCompile>
@@ -136,7 +120,7 @@
 			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
 			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
 			<WarningLevel>Level3</WarningLevel>
-			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\Config;src\Config\Inputs;src\Config\Outputs;src\Inputs;src\Outputs;src\Shared;src\Shared\DeckLink;..\..\..\addons\ofxDeckLink\libs;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include;..\..\..\addons\ofxDeckLink\src;..\..\..\addons\ofxGui\src;..\..\..\addons\ofxJSON\libs;..\..\..\addons\ofxJSON\libs\jsoncpp;..\..\..\addons\ofxJSON\libs\jsoncpp\include;..\..\..\addons\ofxJSON\libs\jsoncpp\include\json;..\..\..\addons\ofxJSON\libs\jsoncpp\src;..\..\..\addons\ofxJSON\src;..\..\..\addons\ofxNDI\libs\NDI\include;..\..\..\addons\ofxNDI\libs\utils;..\..\..\addons\ofxNDI\src;..\..\..\addons\ofxNDI\src\utils;..\..\..\addons\ofxSyphon\libs;..\..\..\addons\ofxSyphon\libs\Syphon;..\..\..\addons\ofxSyphon\libs\Syphon\lib;..\..\..\addons\ofxSyphon\libs\Syphon\src;..\..\..\addons\ofxSyphon\src</AdditionalIncludeDirectories>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\Config;src\Config\Inputs;src\Config\Outputs;src\Inputs;src\Outputs;src\Shared;src\Shared\DeckLink;..\..\..\addons\ofxDeckLink\libs;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include;..\..\..\addons\ofxDeckLink\src;..\..\..\addons\ofxGuiExtended\src;..\..\..\addons\ofxGuiExtended\src\DOM;..\..\..\addons\ofxGuiExtended\src\containers;..\..\..\addons\ofxGuiExtended\src\controls;..\..\..\addons\ofxGuiExtended\src\util;..\..\..\addons\ofxGuiExtended\src\view;..\..\..\addons\ofxJSON\libs;..\..\..\addons\ofxJSON\libs\jsoncpp;..\..\..\addons\ofxJSON\libs\jsoncpp\include;..\..\..\addons\ofxJSON\libs\jsoncpp\include\json;..\..\..\addons\ofxJSON\libs\jsoncpp\src;..\..\..\addons\ofxJSON\src;..\..\..\addons\ofxNDI\libs\NDI\include;..\..\..\addons\ofxNDI\libs\utils;..\..\..\addons\ofxNDI\src;..\..\..\addons\ofxNDI\src\utils;..\..\..\addons\ofxSyphon\libs;..\..\..\addons\ofxSyphon\libs\Syphon;..\..\..\addons\ofxSyphon\libs\Syphon\lib;..\..\..\addons\ofxSyphon\libs\Syphon\src;..\..\..\addons\ofxSyphon\src</AdditionalIncludeDirectories>
 			<CompileAs>CompileAsCpp</CompileAs>
 			<MultiProcessorCompilation>true</MultiProcessorCompilation>
 			<ObjectFileName>$(IntDir)</ObjectFileName>
@@ -156,7 +140,7 @@
 			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
 			<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
 			<WarningLevel>Level3</WarningLevel>
-			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\Config;src\Config\Inputs;src\Config\Outputs;src\Inputs;src\Outputs;src\Shared;src\Shared\DeckLink;..\..\..\addons\ofxDeckLink\libs;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include;..\..\..\addons\ofxDeckLink\src;..\..\..\addons\ofxGui\src;..\..\..\addons\ofxJSON\libs;..\..\..\addons\ofxJSON\libs\jsoncpp;..\..\..\addons\ofxJSON\libs\jsoncpp\include;..\..\..\addons\ofxJSON\libs\jsoncpp\include\json;..\..\..\addons\ofxJSON\libs\jsoncpp\src;..\..\..\addons\ofxJSON\src;..\..\..\addons\ofxNDI\libs\NDI\include;..\..\..\addons\ofxNDI\libs\utils;..\..\..\addons\ofxNDI\src;..\..\..\addons\ofxNDI\src\utils;..\..\..\addons\ofxSyphon\libs;..\..\..\addons\ofxSyphon\libs\Syphon;..\..\..\addons\ofxSyphon\libs\Syphon\lib;..\..\..\addons\ofxSyphon\libs\Syphon\src;..\..\..\addons\ofxSyphon\src</AdditionalIncludeDirectories>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\Config;src\Config\Inputs;src\Config\Outputs;src\Inputs;src\Outputs;src\Shared;src\Shared\DeckLink;..\..\..\addons\ofxDeckLink\libs;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include;..\..\..\addons\ofxDeckLink\src;..\..\..\addons\ofxGuiExtended\src;..\..\..\addons\ofxGuiExtended\src\DOM;..\..\..\addons\ofxGuiExtended\src\containers;..\..\..\addons\ofxGuiExtended\src\controls;..\..\..\addons\ofxGuiExtended\src\util;..\..\..\addons\ofxGuiExtended\src\view;..\..\..\addons\ofxJSON\libs;..\..\..\addons\ofxJSON\libs\jsoncpp;..\..\..\addons\ofxJSON\libs\jsoncpp\include;..\..\..\addons\ofxJSON\libs\jsoncpp\include\json;..\..\..\addons\ofxJSON\libs\jsoncpp\src;..\..\..\addons\ofxJSON\src;..\..\..\addons\ofxNDI\libs\NDI\include;..\..\..\addons\ofxNDI\libs\utils;..\..\..\addons\ofxNDI\src;..\..\..\addons\ofxNDI\src\utils;..\..\..\addons\ofxSyphon\libs;..\..\..\addons\ofxSyphon\libs\Syphon;..\..\..\addons\ofxSyphon\libs\Syphon\lib;..\..\..\addons\ofxSyphon\libs\Syphon\src;..\..\..\addons\ofxSyphon\src</AdditionalIncludeDirectories>
 			<CompileAs>CompileAsCpp</CompileAs>
 			<MultiProcessorCompilation>true</MultiProcessorCompilation>
 			<ObjectFileName>$(IntDir)</ObjectFileName>
@@ -179,7 +163,7 @@
 			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
 			<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
 			<WarningLevel>Level3</WarningLevel>
-			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\Config;src\Config\Inputs;src\Config\Outputs;src\Inputs;src\Outputs;src\Shared;src\Shared\DeckLink;..\..\..\addons\ofxDeckLink\libs;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include;..\..\..\addons\ofxDeckLink\src;..\..\..\addons\ofxGui\src;..\..\..\addons\ofxJSON\libs;..\..\..\addons\ofxJSON\libs\jsoncpp;..\..\..\addons\ofxJSON\libs\jsoncpp\include;..\..\..\addons\ofxJSON\libs\jsoncpp\include\json;..\..\..\addons\ofxJSON\libs\jsoncpp\src;..\..\..\addons\ofxJSON\src;..\..\..\addons\ofxNDI\libs\NDI\include;..\..\..\addons\ofxNDI\libs\utils;..\..\..\addons\ofxNDI\src;..\..\..\addons\ofxNDI\src\utils;..\..\..\addons\ofxSyphon\libs;..\..\..\addons\ofxSyphon\libs\Syphon;..\..\..\addons\ofxSyphon\libs\Syphon\lib;..\..\..\addons\ofxSyphon\libs\Syphon\src;..\..\..\addons\ofxSyphon\src</AdditionalIncludeDirectories>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\Config;src\Config\Inputs;src\Config\Outputs;src\Inputs;src\Outputs;src\Shared;src\Shared\DeckLink;..\..\..\addons\ofxDeckLink\libs;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI;..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include;..\..\..\addons\ofxDeckLink\src;..\..\..\addons\ofxGuiExtended\src;..\..\..\addons\ofxGuiExtended\src\DOM;..\..\..\addons\ofxGuiExtended\src\containers;..\..\..\addons\ofxGuiExtended\src\controls;..\..\..\addons\ofxGuiExtended\src\util;..\..\..\addons\ofxGuiExtended\src\view;..\..\..\addons\ofxJSON\libs;..\..\..\addons\ofxJSON\libs\jsoncpp;..\..\..\addons\ofxJSON\libs\jsoncpp\include;..\..\..\addons\ofxJSON\libs\jsoncpp\include\json;..\..\..\addons\ofxJSON\libs\jsoncpp\src;..\..\..\addons\ofxJSON\src;..\..\..\addons\ofxNDI\libs\NDI\include;..\..\..\addons\ofxNDI\libs\utils;..\..\..\addons\ofxNDI\src;..\..\..\addons\ofxNDI\src\utils;..\..\..\addons\ofxSyphon\libs;..\..\..\addons\ofxSyphon\libs\Syphon;..\..\..\addons\ofxSyphon\libs\Syphon\lib;..\..\..\addons\ofxSyphon\libs\Syphon\src;..\..\..\addons\ofxSyphon\src</AdditionalIncludeDirectories>
 			<CompileAs>CompileAsCpp</CompileAs>
 			<ObjectFileName>$(IntDir)</ObjectFileName>
 		</ClCompile>
@@ -211,8 +195,9 @@
 		<ClCompile Include="src\Config\Inputs\SyphonInputConfig.cpp" />
 		<ClCompile Include="src\Config\Inputs\DeckLinkInputConfig.cpp" />
 		<ClCompile Include="src\Config\Inputs\StaticImageInputConfig.cpp" />
+		<ClCompile Include="src\Shared\PanelCalculation.cpp" />
 		<ClCompile Include="src\Shared\DeckLink\SharedDeckLinkHelpers.cpp" />
-		<ClCompile Include="src\Shared\PanelCalculations.cpp" />
+		<ClCompile Include="src\Shared\PanelCalculator.cpp" />
 		<ClCompile Include="src\Outputs\SyphonOutput.cpp" />
 		<ClCompile Include="src\Outputs\NdiOutput.cpp" />
 		<ClCompile Include="src\Outputs\AggregateOutput.cpp" />
@@ -228,16 +213,35 @@
 		<ClCompile Include="..\..\..\addons\ofxDeckLink\src\ofxDeckLink.cpp" />
 		<ClCompile Include="..\..\..\addons\ofxDeckLink\src\ofxDeckLinkAPIConstants.cpp" />
 		<ClCompile Include="..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include\DeckLinkAPIDispatch.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxBaseGui.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxColorPicker.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxSliderGroup.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxToggle.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxButton.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxGuiGroup.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxInputField.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxLabel.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxPanel.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxSlider.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\ofxGuiElement.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\controls\ofxGuiSlider.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\controls\ofxGuiInputField.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\controls\ofxGuiValuePlotter.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\controls\ofxGuiLabel.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\controls\ofxGuiFunctionSlider.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\controls\ofxGuiGraphics.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\controls\ofxGuiZoomableGraphics.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\controls\ofxGuiRangeSlider.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\controls\ofxGuiFunctionPlotter.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\controls\ofxGuiFpsPlotter.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\controls\ofxGuiButton.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\controls\ofxGuiToggle.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\view\ofxDOMBoxLayout.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\view\JsonConfigParser.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\view\ofxDOMFlexBoxLayout.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\view\ofxDOMLayoutHelper.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\DOM\Exceptions.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\DOM\Layout.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\DOM\Events.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\DOM\Element.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\DOM\Document.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\containers\ofxGuiMenu.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\containers\ofxGuiGroup.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\containers\ofxGuiTabs.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\containers\ofxGuiPanel.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\containers\ofxGuiContainer.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\containers\ofxGuiSliderGroup.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGuiExtended\src\ofxGuiExtended.cpp" />
 		<ClCompile Include="..\..\..\addons\ofxJSON\src\ofxJSONElement.cpp" />
 		<ClCompile Include="..\..\..\addons\ofxJSON\libs\jsoncpp\src\jsoncpp.cpp" />
 		<ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDIFinder.cpp" />
@@ -251,6 +255,10 @@
 		<ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDIRecorder.cpp" />
 		<ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDIRouter.cpp" />
 		<ClCompile Include="..\..\..\addons\ofxNDI\src\ofxNDISendStream.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxSyphon\src\ofxSyphonServer.mm" />
+		<ClCompile Include="..\..\..\addons\ofxSyphon\src\ofxSyphonClient.mm" />
+		<ClCompile Include="..\..\..\addons\ofxSyphon\src\ofxSyphonServerDirectory.mm" />
+		<ClCompile Include="..\..\..\addons\ofxSyphon\libs\Syphon\src\SyphonNameboundClient.m" />
 	</ItemGroup>
 	<ItemGroup>
 		<ClInclude Include="src\ofApp.h" />
@@ -267,8 +275,9 @@
 		<ClInclude Include="src\Config\Inputs\SyphonInputConfig.hpp" />
 		<ClInclude Include="src\Config\Inputs\DeckLinkInputConfig.hpp" />
 		<ClInclude Include="src\Config\Inputs\VideoPlayerInputConfig.hpp" />
+		<ClInclude Include="src\Shared\PanelCalculator.hpp" />
 		<ClInclude Include="src\Shared\DeckLink\SharedDeckLinkHelpers.hpp" />
-		<ClInclude Include="src\Shared\PanelCalculations.hpp" />
+		<ClInclude Include="src\Shared\PanelCalculation.hpp" />
 		<ClInclude Include="src\Outputs\DeckLinkOutput.hpp" />
 		<ClInclude Include="src\Outputs\BaseOutput.hpp" />
 		<ClInclude Include="src\Outputs\AggregateOutput.hpp" />
@@ -293,18 +302,40 @@
 		<ClInclude Include="..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include\DeckLinkAPIVersion.h" />
 		<ClInclude Include="..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include\DeckLinkAPITypes.h" />
 		<ClInclude Include="..\..\..\addons\ofxDeckLink\libs\DeckLinkAPI\include\DeckLinkAPI.h" />
-		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxGuiGroup.h" />
-		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxToggle.h" />
-		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxSlider.h" />
-		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxGui.h" />
-		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxBaseGui.h" />
-		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxButton.h" />
-		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxLabel.h" />
-		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxInputField.h" />
-		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxGuiUtils.h" />
-		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxSliderGroup.h" />
-		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxColorPicker.h" />
-		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxPanel.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\ofxGuiExtended.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\util\IDGenerator.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\ofxGuiElement.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\controls\ofxGuiGraphics.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\controls\ofxGuiRangeSlider.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\controls\ofxGuiFunctionPlotter.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\controls\ofxGuiInputField.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\controls\ofxGuiLabel.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\controls\ofxGuiZoomableGraphics.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\controls\ofxGuiSlider.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\controls\ofxGuiValuePlotter.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\controls\ofxGuiToggle.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\controls\ofxGuiFunctionSlider.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\controls\ofxGuiFpsPlotter.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\controls\ofxGuiButton.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\view\JsonConfigParser.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\view\ofxGuiDefaultConfig.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\view\ofxDOMBoxLayout.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\view\ofxDOMLayoutHelper.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\view\ofxDOMFlexBoxLayout.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\DOM\Types.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\DOM\Exceptions.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\DOM\Events.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\DOM\EventTarget.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\DOM\ofxDOM.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\DOM\Layout.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\DOM\Element.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\DOM\Document.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\containers\ofxGuiGroup.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\containers\ofxGuiPanel.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\containers\ofxGuiSliderGroup.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\containers\ofxGuiMenu.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\containers\ofxGuiContainer.h" />
+		<ClInclude Include="..\..\..\addons\ofxGuiExtended\src\containers\ofxGuiTabs.h" />
 		<ClInclude Include="..\..\..\addons\ofxJSON\src\ofxJSON.h" />
 		<ClInclude Include="..\..\..\addons\ofxJSON\src\ofxJSONElement.h" />
 		<ClInclude Include="..\..\..\addons\ofxJSON\libs\jsoncpp\include\json\json-forwards.h" />
@@ -335,6 +366,11 @@
 		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.DynamicLoad.h" />
 		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.Recv.h" />
 		<ClInclude Include="..\..\..\addons\ofxNDI\libs\NDI\include\Processing.NDI.Lib.h" />
+		<ClInclude Include="..\..\..\addons\ofxSyphon\src\ofxSyphon.h" />
+		<ClInclude Include="..\..\..\addons\ofxSyphon\src\ofxSyphonServer.h" />
+		<ClInclude Include="..\..\..\addons\ofxSyphon\src\ofxSyphonClient.h" />
+		<ClInclude Include="..\..\..\addons\ofxSyphon\src\ofxSyphonServerDirectory.h" />
+		<ClInclude Include="..\..\..\addons\ofxSyphon\libs\Syphon\src\SyphonNameboundClient.h" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">
@@ -348,13 +384,6 @@
 			<AdditionalIncludeDirectories>$(OF_ROOT)\libs\openFrameworksCompiled\project\vs</AdditionalIncludeDirectories>
 		</ResourceCompile>
 	</ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\addons\ofxNDI\windows-copy-to-bin\Processing.NDI.Lib.x64.dll" />
-    <None Include="..\..\..\addons\ofxNDI\windows-copy-to-bin\Processing.NDI.Lib.x86.dll" />
-    <CopyFileToFolders Include="config.json">
-      <FileType>Document</FileType>
-    </CopyFileToFolders>
-  </ItemGroup>
 	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 	<ProjectExtensions>
 		<VisualStudio>
