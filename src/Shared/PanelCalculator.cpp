@@ -5,7 +5,13 @@ void PanelCalculator::setup(Config* config) {
     
     framebuffer.allocate(c->Inputs.inputWidth, c->Inputs.inputHeight);
     
+    panelWidth.setName("Calculated Panel Width");
+    panelHeight.setName("Calculated Panel Height");
+    
     calculate();
+    
+    savePanelLayoutE.addListener(this, &PanelCalculator::triggerSavePanelHandler,200);
+    savePanelLayoutE.setName("Save Panel Layout Image");
 }
 
 void PanelCalculator::calculate() {
@@ -43,13 +49,27 @@ void PanelCalculator::calculate() {
 }
 
 void PanelCalculator::savePanelLayoutImage() {
-    ofPixels pix;
-    pix.allocate(c->Inputs.inputWidth, c->Inputs.inputHeight, OF_IMAGE_QUALITY_BEST);
-    framebuffer.readToPixels(pix);
-    ofSaveImage(pix, ofFilePath::join(c->PanelLayoutImagePath.get(), "panel-layout.png"));
+        auto savePath = ofSystemSaveDialog("panel-layout.png","Select Save Path");
+
+        if (savePath.bSuccess){
+            ofPixels pix;
+            pix.allocate(c->Inputs.inputWidth, c->Inputs.inputHeight, OF_IMAGE_QUALITY_BEST);
+            framebuffer.readToPixels(pix);
+
+            ofSaveImage(pix, savePath.filePath);
+        }
+}
+
+void PanelCalculator::triggerSavePanelHandler() {
+    triggerSavePanel = true;
 }
 
 void PanelCalculator::draw(ofRectangle rect) {
     framebuffer.draw(rect);
+    
+    // This is more of a update activitiy but I dont want to add a update function just for the jank workaround of the button calling the event twice when using a save dialog in a event handler
+    if (triggerSavePanel) {
+        triggerSavePanel = false;
+        savePanelLayoutImage();
+    }
 }
-

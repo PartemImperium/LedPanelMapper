@@ -15,17 +15,12 @@ void Config::setup(ofxJSONElement json) {
 	// Panels
     PanelInfo.setup(json["panelInfo"]);
     add(PanelInfo);
-    
-    PanelLayoutImagePath = json["panelLayoutImagePath"].asString();
-    add(PanelLayoutImagePath);
 }
 
 void Config::save() {
     ofxJSONElement json;
     
     json["panelInfo"] = PanelInfo.getJson();
-    
-    json["panelLayoutImagePath"] = PanelLayoutImagePath.get();
-        
+            
     json.save("temp.json", true);
 }

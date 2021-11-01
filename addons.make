@@ -1,5 +1,5 @@
 ofxDeckLink
-ofxGui
+ofxGuiExtended
 ofxJSON
 ofxNDI
 ofxSyphon

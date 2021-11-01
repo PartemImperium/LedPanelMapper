@@ -25,8 +25,8 @@ class AggregateInput {
         
         ofFbo frameBuffer;
 
-        std::string getInputNames();
+        ofParameter<std::string> names;
     private:
         std::vector<std::unique_ptr<BaseInput>> inputs;
-        std::string inputNames;
+
 };

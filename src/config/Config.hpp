@@ -16,9 +16,7 @@ class Config : public ofParameterGroup {
         OutputsConfig Outputs;
             
         PanelGroupConfig PanelInfo;
-    
-        ofParameter<std::string> PanelLayoutImagePath;
-    
+        
         void setup(ofxJSONElement json);
         void save();
         Config();

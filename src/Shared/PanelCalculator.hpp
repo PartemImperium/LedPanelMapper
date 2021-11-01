@@ -15,9 +15,15 @@ class PanelCalculator {
         std::vector<PanelCalculation> panels;
         
         
-        float panelWidth;
-        float panelHeight;
+        ofParameter<float> panelWidth;
+        ofParameter<float> panelHeight;
+    
+        ofParameter<void> savePanelLayoutE;
     private:
         Config* c;
         ofFbo framebuffer;
+    
+        //For some reason when a event handler calls ofSystemSaveDialog it triggers twice. This is a workaround for that....
+        bool triggerSavePanel;
+        void triggerSavePanelHandler();
 };
