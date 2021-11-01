@@ -45,6 +45,7 @@ class ofApp : public ofBaseApp {
         ofRectangle infoUiInputRect;
         ofRectangle infoUiOutputRect;
         ofxGui gui;
+        ofJson buttonConfigJson;//TODO: Check to see if this can be done with a ofxGuiExtended theme.
         void setupInfoUi();
         void drawInfoUi();
         

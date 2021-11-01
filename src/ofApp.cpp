@@ -36,14 +36,6 @@ void ofApp::setupInfoUi() {
 
     auto mainContainer = gui.addContainer(c);
     
-    ofxGuiButton savePanelLayoutButtonG;
-    savePanelLayoutButtonG.addListener(&panelCalculator, &PanelCalculator::savePanelLayoutImage);
-    savePanelLayoutButtonG.setName("Save Panel Layout Image");
-    
-    ofParameter<void> savePanelLayoutButton;
-    savePanelLayoutButton.addListener(&panelCalculator, &PanelCalculator::savePanelLayoutImage);
-    savePanelLayoutButton.set("Save Panel Layout Image");
-    
     ofParameter<void> reloadEvent;
     reloadEvent.addListener(&panelCalculator, &PanelCalculator::calculate);
     reloadEvent.set("Refreash Calculations");
@@ -52,10 +44,11 @@ void ofApp::setupInfoUi() {
     saveEvent.addListener(&c,  &Config::save);
     saveEvent.set("Save Config");
     
+    buttonConfigJson = ofJson({{"type", "fullsize"}, {"text-align", "center"}, {"padding", "20"}});
 
-    mainContainer->add(savePanelLayoutButton, ofJson({{"type", "fullsize"}, {"text-align", "center"}}));
-    mainContainer->add(reloadEvent, ofJson({{"type", "fullsize"}, {"text-align", "center"}}));
-    mainContainer->add(saveEvent, ofJson({{"type", "fullsize"}, {"text-align", "center"}}));
+    mainContainer->add(panelCalculator.savePanelLayoutE, buttonConfigJson);
+    mainContainer->add(reloadEvent, buttonConfigJson);
+    mainContainer->add(saveEvent, buttonConfigJson);
 
     auto panel = gui.addGroup("Info", ofJson({{"width", 720}}));
     panel->setPosition(1150, 450);
