@@ -20,4 +20,6 @@ class Config : public ofParameterGroup {
         void setup(ofxJSONElement json);
         void save();
         Config();
+    
+        ofParameter<void> saveE;
 };

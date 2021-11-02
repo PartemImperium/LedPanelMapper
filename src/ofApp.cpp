@@ -40,15 +40,11 @@ void ofApp::setupInfoUi() {
     reloadEvent.addListener(&panelCalculator, &PanelCalculator::calculate);
     reloadEvent.set("Refreash Calculations");
     
-    ofParameter<void> saveEvent;
-    saveEvent.addListener(&c,  &Config::save);
-    saveEvent.set("Save Config");
-    
     buttonConfigJson = ofJson({{"type", "fullsize"}, {"text-align", "center"}, {"padding", "20"}});
 
     mainContainer->add(panelCalculator.savePanelLayoutE, buttonConfigJson);
     mainContainer->add(reloadEvent, buttonConfigJson);
-    mainContainer->add(saveEvent, buttonConfigJson);
+    mainContainer->add(c.saveE, buttonConfigJson);
 
     auto panel = gui.addGroup("Info", ofJson({{"width", 720}}));
     panel->setPosition(1150, 450);

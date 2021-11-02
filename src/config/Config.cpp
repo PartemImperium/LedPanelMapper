@@ -15,6 +15,9 @@ void Config::setup(ofxJSONElement json) {
 	// Panels
     PanelInfo.setup(json["panelInfo"]);
     add(PanelInfo);
+    
+    saveE.addListener(this, &Config::save);
+    saveE.set("Save Config");
 }
 
 void Config::save() {
