@@ -23,8 +23,11 @@ class NdiInput: public BaseInput {
         virtual void draw();
         virtual void update();
         virtual std::string InputName();
+        virtual ofTexture getTexture();
 
     private:
         ofxNDIReceiver ndiReceiver;
-        ofxNDIRecvVideoFrameSync ndiVideoFrameSync; 
+        ofxNDIRecvVideoFrameSync ndiVideoFrameSync;
+        
+        ofFbo buffer;
 };

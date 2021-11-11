@@ -17,3 +17,7 @@ void StaticImageInput::update() {
 std::string StaticImageInput::InputName() {
     return "Static Image";
 }
+
+ofTexture StaticImageInput::getTexture() {
+    return image.getTexture();
+}

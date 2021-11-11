@@ -22,3 +22,7 @@ void DeckLinkInput::update() {
 std::string DeckLinkInput::InputName() {
     return name;
 }
+
+ofTexture DeckLinkInput::getTexture() {
+    return deckLinkInput.getTexture();
+}

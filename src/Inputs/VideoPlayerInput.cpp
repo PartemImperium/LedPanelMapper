@@ -19,3 +19,7 @@ void VideoPlayerInput::draw() {
 void VideoPlayerInput::update() {
     videoPlayer.update();
 }
+
+ofTexture VideoPlayerInput::getTexture() {
+    return videoPlayer.getTexture();
+}

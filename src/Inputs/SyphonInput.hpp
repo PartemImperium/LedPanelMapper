@@ -17,6 +17,7 @@ class SyphonInput: public BaseInput {
         virtual void draw();
         virtual void update();
         virtual std::string InputName();
+        virtual ofTexture getTexture();
 
     private:
         ofxSyphonClient syphonClient;

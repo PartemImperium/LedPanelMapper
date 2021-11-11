@@ -7,7 +7,8 @@ std::string NdiInput::InputName() {
 void NdiInput::setup(Config *config) {
     NDIlib_initialize();
     DrawIndex = config->Inputs.Ndi.DrawIndex;
-
+    
+    buffer.allocate(config->Inputs.inputWidth, config->Inputs.inputHeight);
 
     ofxNDIFinder ndiFinder;
     auto sources = ndiFinder.listSources();
@@ -26,10 +27,15 @@ void NdiInput::setup(Config *config) {
 
 void NdiInput::draw() {
     if(ndiVideoFrameSync.isFrameNew()) {
+        buffer.begin();
+        
         ofPixels tempPixels;
         ndiVideoFrameSync.decodeTo(tempPixels);
         ofImage(tempPixels).draw(0,0);
+        
+        buffer.end();
     }
+    buffer.draw(0,0);
 }
 
 void NdiInput::update() {
@@ -38,3 +44,6 @@ void NdiInput::update() {
     }
 }
 
+ofTexture NdiInput::getTexture() {
+    return buffer.getTexture();
+}

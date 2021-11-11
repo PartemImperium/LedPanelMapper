@@ -20,4 +20,8 @@ void SyphonInput::update() {
     
 }
 
+ofTexture SyphonInput::getTexture() {
+    return syphonClient.getTexture();
+}
+
 #endif

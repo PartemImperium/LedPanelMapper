@@ -16,6 +16,7 @@ class DeckLinkInput: public BaseInput {
         virtual void draw();
         virtual void update();
         virtual std::string InputName();
+        virtual ofTexture getTexture();
 
     private:
         ofxDeckLinkAPI::Input deckLinkInput;

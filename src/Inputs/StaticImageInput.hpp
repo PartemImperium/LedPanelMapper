@@ -15,6 +15,7 @@ class StaticImageInput: public BaseInput {
         virtual void draw();
         virtual void update();
         virtual std::string InputName();
+        virtual ofTexture getTexture();
 
     private:
         ofImage image;
